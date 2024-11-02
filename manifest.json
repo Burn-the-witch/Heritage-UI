@@ -718,7 +718,7 @@
 			"image": "framework content/renewed.png",
 			"type": "select",
 			"group": "Destination Backgrounds",
-			"blobsFolders": ["mod content/dest bgs/HUI white/blobs"]
+			"blobsFolders": ["mod content/dest bgs/HUI White/blobs"]
 		},
 		{
 			"name": "Heritage UI| Refreshed",
@@ -726,7 +726,7 @@
 			"image": "framework content/refresh.png",
 			"type": "select",
 			"group": "Destination Backgrounds",
-			"blobsFolders": ["mod content/dest bgs/HUI grey/blobs"]
+			"blobsFolders": ["mod content/dest bgs/HUI Grey/blobs"]
 		},
 		{
 			"name": "Vanilla",
