@@ -74,10 +74,22 @@
 				"Perks": { "type": "array", "items": { "type": "string" } }
 			}
 		},
-		"Gameplay": { "type": "object", "properties": { "range": { "type": "number" }, "damage": { "type": "number" }, "clipsize": { "type": "number" }, "rateoffire": { "type": "number" } } },
+		"Gameplay": {
+			"type": "object",
+			"properties": {
+				"range": { "type": "number" },
+				"damage": { "type": "number" },
+				"clipsize": { "type": "number" },
+				"rateoffire": { "type": "number" }
+			}
+		},
 		"LoadoutSettings": {
 			"type": "object",
-			"properties": { "GearSlotsEnabledCount": { "type": "integer" }, "GearSlotsAllowContainers": { "type": "boolean" }, "ConcealedWeaponSlotEnabled": { "type": "boolean" } }
+			"properties": {
+				"GearSlotsEnabledCount": { "type": "integer" },
+				"GearSlotsAllowContainers": { "type": "boolean" },
+				"ConcealedWeaponSlotEnabled": { "type": "boolean" }
+			}
 		},
 		"Qualities": { "type": "object" },
 		"Quality": { "anyOf": [{ "type": "integer" }, { "type": "string" }] }

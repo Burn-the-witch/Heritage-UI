@@ -1,15 +1,12 @@
 {
-	"version": "7.4.5",
+	"version": "7.4.6",
 	"id": "BurnTheWitch.HeritageUI",
 	"name": "Heritage UI",
-	"updateCheck": "https://raw.githubusercontent.com/The-Jaded-Obsidian-Witch/Heritage-UI-Update-Json/main/updater.json",
+	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
 	"description": "A user interface overhaul mod for Hitman: World of Assassination.",
-	"authors": [
-		"Burn, the witch"
-	],
-	"frameworkVersion": "2.15.1",
-	"loadAfter": [ "Notex.SimpleKeyEventHelper"
-	],
+	"authors": ["Burn, the witch"],
+	"frameworkVersion": "2.33.20",
+	"loadAfter": ["Notex.SimpleKeyEventHelper"],
 	"localisation": {
 		"english": {
 			"HUI_MENU_PAGE_DESTINATION_TAB_MISSIONS": "Contracts",
@@ -134,7 +131,7 @@
 			"UI_ITEM_SUBTYPE_IN_PLURAL_EVERGREEN_KILL_METHOD_PISTOL": "Pistola a Dardi",
 			"UI_ITEM_SUBTYPE_EVERGREEN_KILL_METHOD_PISTOL": "Pistola a Dardi"
 		},
-		"german": {			
+		"german": {
 			"UI_HERITAGE_QUICK_LOAD": "Schnellladen",
 			"UI_HERITAGE_QUICK_SAVE": "Schnellspeichern",
 			"UI_HERITAGE_SEASON_1": "Season 1",
@@ -259,12 +256,12 @@
 			"UI_HERITAGE_GAMEMODE": "游戏模式",
 			"UI_HERITAGE_EVERGREEN": "自由职业者",
 			"UI_HERITAGE_DASHBOARD": "特色"
-			},
-			"chineseTraditional": {
+		},
+		"chineseTraditional": {
 			"UI_HERITAGE_GAMEMODE": "遊戲模式",
 			"UI_HERITAGE_EVERGREEN": "自由業者",
 			"UI_HERITAGE_DASHBOARD": "特色"
-			},
+		},
 		"japanese": {
 			"UI_HERITAGE_SEASON_1": "Season 1",
 			"UI_HERITAGE_SEASON_2": "Season 2",
@@ -290,14 +287,12 @@
 			"english": {
 				"1998245905": "Exfiltrate Mission"
 			},
-			"french": {
-			},
+			"french": {},
 			"italian": {
-				"1998245905": "Estrazione"	
+				"1998245905": "Estrazione"
 			},
 			"german": {},
-			"spanish": {
-			},
+			"spanish": {},
 			"russian": {},
 			"chineseSimplified": {},
 			"chineseTraditional": {},
@@ -305,20 +300,19 @@
 		},
 		"008D33DE8C75CACB": {
 			"english": {
+				"216107613": "Greenland",
 				"243861870": "Season 1",
 				"803320584": "Greenland",
-				"1174961694": "Greenland",
-				"216107613": "Greenland",
 				"839967534": "Greenland",
-				"1626680168": "ICA Facility, Greeland",
-				"1163205649": "ICA Facility, Greeland"
-
+				"1163205649": "ICA Facility, Greeland",
+				"1174961694": "Greenland",
+				"1626680168": "ICA Facility, Greeland"
 			},
 			"french": {
 				"243861870": "Saison 1"
 			},
 			"italian": {
-				"243861870": "Stagione 1"	
+				"243861870": "Stagione 1"
 			},
 			"german": {},
 			"spanish": {
@@ -334,15 +328,13 @@
 				"2023958633": "Turn VR On",
 				"2977102836": "Turn VR Off"
 			},
-			"french": {
-			},
+			"french": {},
 			"italian": {
 				"2023958633": "Attiva VR",
 				"2977102836": "Disattiva VR"
 			},
 			"german": {},
-			"spanish": {
-			},
+			"spanish": {},
 			"russian": {},
 			"chineseSimplified": {},
 			"chineseTraditional": {},
@@ -356,7 +348,7 @@
 				"2541770964": "Saison 2"
 			},
 			"italian": {
-				"2541770964": "Stagione 2"	
+				"2541770964": "Stagione 2"
 			},
 			"german": {},
 			"spanish": {
@@ -375,7 +367,7 @@
 				"3766970434": "Saison 3"
 			},
 			"italian": {
-				"3766970434": "Stagione 3"	
+				"3766970434": "Stagione 3"
 			},
 			"german": {},
 			"spanish": {
@@ -390,13 +382,10 @@
 			"english": {
 				"1694445649": "The Disruptor"
 			},
-			"french": {
-			},
-			"italian": {
-			},
+			"french": {},
+			"italian": {},
 			"german": {},
-			"spanish": {
-			},
+			"spanish": {},
 			"russian": {},
 			"chineseSimplified": {},
 			"chineseTraditional": {},
@@ -406,14 +395,12 @@
 			"english": {
 				"2563573081": "Over Gear Capacity - Return Gear To Storage"
 			},
-			"french": {
-			},
+			"french": {},
 			"italian": {
 				"2563573081": "Campienza equipaggiamento superata. Impossibile avviare la missione"
 			},
 			"german": {},
-			"spanish": {
-			},
+			"spanish": {},
 			"russian": {},
 			"chineseSimplified": {},
 			"chineseTraditional": {},
@@ -437,7 +424,7 @@
 			"blobsFolders": ["mod content/ui styles/blobs"],
 			"contentFolders": ["mod content/ui styles/heritage ui base"],
 			"enabledByDefault": true
-		},	
+		},
 		{
 			"name": "Heritage UI/Alpha Style Buttons",
 			"tooltip": "Heritage UI'S custom UI with button prompts styled after the leaked alpha build.",
@@ -688,7 +675,6 @@
 			"contentFolders": ["mod content/loading screens/H3/content"]
 		},
 		{
-			
 			"name": "Vanilla",
 			"tooltip": "Hitman WOA'S Default destination backgrounds.",
 			"image": "framework content/d_v.png",
@@ -781,10 +767,11 @@
 			"image": "framework content/hmm.png",
 			"type": "select",
 			"group": "Main Menu",
-			"blobsFolders": [
-				"mod content/menus/main menu fix/blobs"
+			"blobsFolders": ["mod content/menus/main menu fix/blobs"],
+			"peacockPlugins": [
+				"mod content/menus/main menu fix/peacock/Heritage_Dashboard.plugin.js",
+				"mod content/menus/main menu fix/peacock/Heritage_Hub.plugin.js"
 			],
-			"peacockPlugins": ["mod content/menus/main menu fix/peacock/Heritage_Dashboard.plugin.js", "mod content/menus/main menu fix/peacock/Heritage_Hub.plugin.js"],
 			"enabledByDefault": true
 		},
 		{
@@ -800,9 +787,7 @@
 			"image": "framework content/CAREER_HUI.png",
 			"type": "select",
 			"group": "Career Menu",
-			"blobsFolders": [
-				"mod content/menus/career menu/blobs"
-			],
+			"blobsFolders": ["mod content/menus/career menu/blobs"],
 			"enabledByDefault": true
 		},
 		{
@@ -818,31 +803,27 @@
 			"image": "framework content/HUI_DEST.png",
 			"type": "select",
 			"group": "Destination Menu",
-			"blobsFolders": [
-				"mod content/menus/destination menu/blobs"
-			],
+			"blobsFolders": ["mod content/menus/destination menu/blobs"],
 			"peacockPlugins": ["mod content/menus/destination menu/plugins/Destinationtweaks.plugin.js"],
 			"enabledByDefault": true
 		},
 		{
-		"name": "Vanilla",
-		"tooltip": "WOA's default location menu.",
-		"image": "framework content/vanillalocation.png",
-		"type": "select",
-		"group": "Location Menu",
-		"blobsFolders": ["mod content/menus/location menu vanilla compat/blobs"]
-	},
-	{
-		"name": "Heritage UI",
-		"tooltip": "Heritage UI'S custom location menu.",
-		"image": "framework content/locationhui.png",
-		"type": "select",
-		"group": "Location Menu",
-		"blobsFolders": [
-			"mod content/menus/location menu/blobs"
-		],
-		"enabledByDefault": true
-	},
+			"name": "Vanilla",
+			"tooltip": "WOA's default location menu.",
+			"image": "framework content/vanillalocation.png",
+			"type": "select",
+			"group": "Location Menu",
+			"blobsFolders": ["mod content/menus/location menu vanilla compat/blobs"]
+		},
+		{
+			"name": "Heritage UI",
+			"tooltip": "Heritage UI'S custom location menu.",
+			"image": "framework content/locationhui.png",
+			"type": "select",
+			"group": "Location Menu",
+			"blobsFolders": ["mod content/menus/location menu/blobs"],
+			"enabledByDefault": true
+		},
 		{
 			"name": "Vanilla",
 			"tooltip": "WOA's default story menu.",
@@ -856,9 +837,7 @@
 			"image": "framework content/cp_hui.png",
 			"type": "select",
 			"group": "Campaign Menu",
-			"blobsFolders": [
-				"mod content/menus/story menu/blobs"
-			],
+			"blobsFolders": ["mod content/menus/story menu/blobs"],
 			"enabledByDefault": true
 		},
 		{
@@ -874,9 +853,7 @@
 			"image": "framework content/hui_gm.png",
 			"type": "select",
 			"group": "Gamemodes Menu",
-			"blobsFolders": [
-				"mod content/menus/gamemodes menu/blobs"
-			],
+			"blobsFolders": ["mod content/menus/gamemodes menu/blobs"],
 			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js"],
 			"enabledByDefault": true
 		},
@@ -886,9 +863,7 @@
 			"image": "framework content/hui_gm.png",
 			"type": "select",
 			"group": "Gamemodes Menu",
-			"blobsFolders": [
-				"mod content/menus/gamemodes menu roulette/blobs"
-			],
+			"blobsFolders": ["mod content/menus/gamemodes menu roulette/blobs"],
 			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js"]
 		},
 		{
@@ -897,9 +872,7 @@
 			"image": "framework content/gm_gm.png",
 			"type": "select",
 			"group": "Gamemodes Menu",
-			"blobsFolders": [
-				"mod content/menus/gamemodes menu ghost mode/blobs"
-			],
+			"blobsFolders": ["mod content/menus/gamemodes menu ghost mode/blobs"],
 			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js"]
 		},
 		{
@@ -908,9 +881,7 @@
 			"image": "framework content/hui_gm.png",
 			"type": "select",
 			"group": "Gamemodes Menu",
-			"blobsFolders": [
-				"mod content/menus/gamemodes menu roulette ghost mode/blobs"
-			],
+			"blobsFolders": ["mod content/menus/gamemodes menu roulette ghost mode/blobs"],
 			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js"]
 		},
 		{
@@ -923,12 +894,9 @@
 			"tooltip": "Adds quick save|load buttons to the pause menu.",
 			"image": "framework content/quicksave.png",
 			"type": "select",
-			"blobsFolders": [
-				"mod content/menus/quick save/blobs"
-			],
+			"blobsFolders": ["mod content/menus/quick save/blobs"],
 			"group": "Quick Save|Load",
-			"requirements": ["Notex.SimpleKeyEventHelper"
-		],
+			"requirements": ["Notex.SimpleKeyEventHelper"],
 			"enabledByDefault": true
 		},
 		{
@@ -941,9 +909,7 @@
 			"tooltip": "Adds quick save|load bindings.",
 			"image": "framework content/QSQL.png",
 			"type": "select",
-			"contentFolders": [
-				"mod content/menus/quick save/content"
-			],
+			"contentFolders": ["mod content/menus/quick save/content"],
 			"group": "Quick Save|Load Bindings",
 			"enabledByDefault": true
 		},
@@ -963,21 +929,19 @@
 			"localisationOverrides": {
 				"0072D1A320470342": {
 					"english": {
-						"2327460968": "Striker 'El Matador'",
 						"1032737931": "Bartoli RR",
+						"1925912075": "Kalmer 1",
+						"2327460968": "Striker 'El Matador'",
 						"2467944817": "Bartoli 1CE",
+						"2839309394": "ICA19 F/A Covert",
 						"3287482919": "ICA19 Floralballer",
 						"3643036392": "Bartoli 12G Sawed-Off",
-						"3992837816": "Bartoli 12G Sawed-Off Gold ",
-						"1925912075": "Kalmer 1",
-						"2839309394": "ICA19 F/A Covert"
+						"3992837816": "Bartoli 12G Sawed-Off Gold "
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -985,66 +949,63 @@
 				},
 				"006986A5A3F98191": {
 					"english": {
-						"291383916": "Sieger 300 Rude Ruby",
-						"585698583": "ICA19 F/A Ducky Covert",
-						"1165829667": "Bartoli 0R",
-						"4292903895": "Custom 5mm Ducky",
 						"80972231": "Custom 5mm Ghost",
-						"2495675980": "Krugermeier 2-2 Ancestral",
-						"2434870416": "ICA19 Street Art",
-						"1581638557": "Serpent 666",
-						"1451051270": "Taunton 48",
-						"3255803310": "DAK X2 Brine-Damaged",
-						"3459315680": "DAK X2 Slapdash Covert",
-						"2933223810": "DAK X2 Scrap Covert",
-						"546170036": "DAK X2 Special Covert",
-						"268002322": "HX-10 Militia",
-						"2253322208": "Raptor Covert ICA",
-						"1800261393": "Raptor Covert Rude Ruby",
-						"1221743199": "DAK Covert Black",
-						"3938717844": "DAK Covert Gold",
 						"114220078": "TAC-SMG Ornamental",
-						"1918767992": "HX-7 Street Art",
-						"230765855": "Bartoli 12H Ancestral",
-						"2191608370": "Bartoli 12G Street Art",
-						"2000387264": "Bartoli 12G Sawed-Off Makeshift",
-						"3386837480": "Bartoli 12G Sawed-Off Maximalist",
-						"3201567076": "ICA TAC 12",
-						"4275385097": "ICA TAC 12 Covert",
-						"1667375680": "ICA TAC 12 Covert White",
-						"2168467540": "ICA19 Blackballer",
-						"1152286900": "ICA19 Whiteballer",
-						"4287068859": "ICA19 Redballer",
-						"3810201275": "Shashka A33 Ancestral",
-						"1667086812": "Fusil G2 Street Art",
-						"372752044": "TAC-4 AR Ornamental",
-						"3844964668": "RS-15 Makeshift",
-						"1575404294": "Shashka A33 Beast",
-						"784179770": "Kalmer 2",
-						"3491623950": "Enram HV Ornamental",
-						"3080273024": "Bartoli Hunting Rifle Covert",
-						"3732565858": "Bartoli Hunting Rifle",
-						"2066805963": "Bartoli ICA Hunting Rifle",
-						"1998520630": "Hackl Leviathan Covert",
 						"159915413": "Hackl Leviathan Ducky Covert",
-						"3489036676": "Bartoli Ancestral Hunting Rifle",
-						"2167584959": "Bartoli Dragon Hunting Rifle",
-						"2898114775": "Bartoli Majestic Hunting Rifle",
+						"230765855": "Bartoli 12H Ancestral",
+						"268002322": "HX-10 Militia",
+						"291383916": "Sieger 300 Rude Ruby",
+						"372752044": "TAC-4 AR Ornamental",
+						"546170036": "DAK X2 Special Covert",
+						"585698583": "ICA19 F/A Ducky Covert",
+						"784179770": "Kalmer 2",
+						"1152286900": "ICA19 Whiteballer",
+						"1165829667": "Bartoli 0R",
+						"1221743199": "DAK Covert Black",
+						"1451051270": "Taunton 48",
+						"1575404294": "Shashka A33 Beast",
+						"1581638557": "Serpent 666",
 						"1608846863": "Druzhina 34 Makeshift",
+						"1667086812": "Fusil G2 Street Art",
+						"1667375680": "ICA TAC 12 Covert White",
+						"1800261393": "Raptor Covert Rude Ruby",
+						"1918767992": "HX-7 Street Art",
+						"1998520630": "Hackl Leviathan Covert",
+						"2000387264": "Bartoli 12G Sawed-Off Makeshift",
+						"2058437330": "Striker Mk III",
+						"2066805963": "Bartoli ICA Hunting Rifle",
+						"2167584959": "Bartoli Dragon Hunting Rifle",
+						"2168467540": "ICA19 Blackballer",
+						"2191608370": "Bartoli 12G Street Art",
+						"2253322208": "Raptor Covert ICA",
+						"2434870416": "ICA19 Street Art",
+						"2495675980": "Krugermeier 2-2 Ancestral",
+						"2898114775": "Bartoli Majestic Hunting Rifle",
+						"2933223810": "DAK X2 Scrap Covert",
 						"2999686978": "Sieger 300 Street Art",
-						"508273131:": "Sieger 300 Ornamental",
+						"3080273024": "Bartoli Hunting Rifle Covert",
 						"3113978184": "Bartoli DTI",
+						"3201567076": "ICA TAC 12",
+						"3255803310": "DAK X2 Brine-Damaged",
+						"3386837480": "Bartoli 12G Sawed-Off Maximalist",
+						"3459315680": "DAK X2 Slapdash Covert",
+						"3489036676": "Bartoli Ancestral Hunting Rifle",
+						"3491623950": "Enram HV Ornamental",
 						"3722945924": "Bartoli 12H",
+						"3732565858": "Bartoli Hunting Rifle",
+						"3810201275": "Shashka A33 Ancestral",
+						"3844964668": "RS-15 Makeshift",
 						"3882554747": "Bartoli 12H Deluxe",
-						"2058437330": "Striker Mk III"
-		
+						"3938717844": "DAK Covert Gold",
+						"4275385097": "ICA TAC 12 Covert",
+						"4287068859": "ICA19 Redballer",
+						"4292903895": "Custom 5mm Ducky",
+						"508273131:": "Sieger 300 Ornamental"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1052,44 +1013,42 @@
 				},
 				"008322D98E1CFE04": {
 					"english": {
-						"3770174342": "Purple Streak Briefcase",
-						"4261183628": "Disruptor Kettlebell",
-						"891345639": "Resistance Band",
-						"3839233495": "Lucky Cane",
-						"1432256677": "Ancestral Knife",
-						"571095698": "Cat's Claw",
-						"2684151890": "Street Art Bat",
-						"1958976691": "Greedy Cane",
+						"264649869": "Lethal Easter Egg",
 						"378687878": "Iridescent Katana",
-						"4200240817": "Ornamental Katana",
-						"4178568037": "Majestic Sabre",
-						"4194997898": "Straitjacket Belt",
-						"1153451912": "Sedative Gum",
-						"2132802116": "Serpent's Bite",
-						"3411454055": "Roar Proximity Flash",
-						"1967478934": "Explosive Fountain Pen",
-						"3611983725": "Makeshift Katana",
-						"1596987004": "Dragon Briefcase",
-						"2359075170": "Brown Leather Briefcase",
-						"1423618173": "Emetic Guru Pen Syringe",
-						"1021829317": "Emetic Guru Grenade",
-						"1177362553": "Emetic Pen Syringe",
 						"473844920": "Sedative Proximity Mine",
+						"571095698": "Cat's Claw",
+						"743673881": "Sedative Easter Egg",
+						"835240520": "Emetic Easter Egg",
+						"891345639": "Resistance Band",
+						"912885689": "Red Flash Grenade",
+						"1021829317": "Emetic Guru Grenade",
+						"1153451912": "Sedative Gum",
+						"1177362553": "Emetic Pen Syringe",
+						"1367227604": "Club Boom Flightcase",
+						"1423618173": "Emetic Guru Pen Syringe",
+						"1432256677": "Ancestral Knife",
+						"1596987004": "Dragon Briefcase",
+						"1958976691": "Greedy Cane",
+						"1967478934": "Explosive Fountain Pen",
+						"2060281116": "Vinyl Record",
 						"2060585035": "Carte Blanche Coin",
 						"2063036796": "ICA Briefcase Mk III",
-						"264649869": "Lethal Easter Egg",
-						"835240520": "Emetic Easter Egg",
-						"743673881": "Sedative Easter Egg",
-						"1367227604": "Club Boom Flightcase",
-						"2060281116": "Vinyl Record",
-						"912885689": "Red Flash Grenade"
+						"2132802116": "Serpent's Bite",
+						"2359075170": "Brown Leather Briefcase",
+						"2684151890": "Street Art Bat",
+						"3411454055": "Roar Proximity Flash",
+						"3611983725": "Makeshift Katana",
+						"3770174342": "Purple Streak Briefcase",
+						"3839233495": "Lucky Cane",
+						"4178568037": "Majestic Sabre",
+						"4194997898": "Straitjacket Belt",
+						"4200240817": "Ornamental Katana",
+						"4261183628": "Disruptor Kettlebell"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1097,22 +1056,20 @@
 				},
 				"001F0F3B7F11E788": {
 					"english": {
-						"3578533398": "Jarl's Sabre",
+						"424313126": "Lil' Pallas Detonator",
+						"558612169": "IOI Elite Earphones",
+						"616234866": "Explosive Kronstadt Pen",
+						"924103516": "Lil' Pallas",
+						"1090098547": "Kronstadt Earphones",
 						"2161820740": "A rusty, old pirate sabre. Owned by Jarl, Son of Hanne, first mate to the Dread Pirate 'The Black Almond.'",
 						"2944947255": "ICA Briefcase Executive",
-						"3779994366": "ICA Briefcase Executive Mk II",
-						"616234866": "Explosive Kronstadt Pen",
-						"558612169": "IOI Elite Earphones",
-						"1090098547": "Kronstadt Earphones",
-						"924103516": "Lil' Pallas",
-						"424313126": "Lil' Pallas Detonator"
+						"3578533398": "Jarl's Sabre",
+						"3779994366": "ICA Briefcase Executive Mk II"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1122,12 +1079,10 @@
 					"english": {
 						"1094810605": "Druzhina 34 Arctic"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1135,22 +1090,20 @@
 				},
 				"0024A5A15AC9CC2F": {
 					"english": {
-						"1371055075": "Mixtape 47",
-						"2051974654": "Iconator",
-						"999525101": "Sabre",
-						"1845844159": "A cavalry sabre. Napoleonic era. Effective when used in close combat.",
 						"52776313": "Emetic Syringe",
-						"2885399022": "Emetic Antique Syringe",
+						"531878565": "Sedative Syringe",
 						"967425516": "Lethal Syringe",
+						"999525101": "Sabre",
+						"1371055075": "Mixtape 47",
+						"1845844159": "A cavalry sabre. Napoleonic era. Effective when used in close combat.",
+						"2051974654": "Iconator",
 						"2440511867": "Antique Lethal Syringe",
-						"531878565": "Sedative Syringe"
+						"2885399022": "Emetic Antique Syringe"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1158,70 +1111,68 @@
 				},
 				"004B8C5124A49543": {
 					"english": {
-						"598520579": "MMA Suit",
-						"2044201417": "Disruptor Suit",
-						"3944984988": "Blue Streak Suit",
-						"135933874": "Sunset Streak Suit",
-						"3199382373": "Midnight Clubbing Suit",
-						"3180102579": "Public Enemy Suit",
-						"1171393183": "Purple Streak Suit",
-						"3368934709": "Christmas Casual Suit",
-						"2874408294": "17's Signature Suit",
-						"3140229008": "Green Streak Suit",
-						"4083485844": "Black Streak Suit",
-						"1092447392": "Black & White Tuxedo",
-						"2049910903": "Black & White Tuxedo",
-						"1695519493": "Black & White Tuxedo with Gloves",
-						"1489750715": "Long Coat with Gloves",
-						"2129611827": "Long Coat",
-						"875126530": "6's Signature Coat",
-						"1635858198": "6's Signature Coat with Gloves",
-						"615312987": "Raincoat",
-						"2572931238": "Raincoat with Gloves",
-						"879295869": "White Polar Survival Suit",
-						"3362995256": "Raver Suit with Gloves",
-						"2760943898": "Lucky Ducky Suit",
-						"3191297808": "Neon Ninja Suit",
-						"630776052": "Rude Ruby Track Suit",
-						"1910239537": "Raver Suit with Bunny Mask",
-						"1667754951": "Bad Wolf Suit",
-						"2875169229": "Sandman Suit",
-						"3762946900": "Butcher Suit",
-						"2231831317": "Codename 47 Suit",
-						"1685722641": "Anthony Martinez's Suit",
-						"3223664876": "Hidden Valley Ninja Suit",
-						"1321936074": "Satu Mare Straitjacket",
-						"2803096113": "Rapacious Suit",
-						"4009319363": "Narcissus Suit",
-						"720259666": "Lotophage Suit",
-						"243279818": "Scarlet Suit",
-						"632560077": "Profligacy Suit",
-						"4188750001": "Odium Suit",
-						"2202462424": "Temper Suit",
-						"96317463": "Black Bruiser Suit",
-						"877102628": "Golden Streetwear Suit",
-						"1695305353": "Ancestral Huntsman Suit",
-						"2168599423": "Graffiti Hoody Suit",
-						"2732261783": "Scrap Poncho Suit",
-						"3617998863": "Master Freelancer Suit",
 						"60276344": "Beldingford Huntsman Suit",
-						"3750001361": "Red Dragon Suit",
-						"2887221963": "Absolution Sniping Suit",
-						"671377108": "Desert Survival Suit",
-						"1542410141": "Subject 47 Suit",
-						"1181997343": "Subject 47 Suit",
-						"3200287187": "Perpetuity Suit",
-						"691069374": "Cessation Suit",
-						"2156722350": "Neon DJ Suit",
+						"96317463": "Black Bruiser Suit",
+						"135933874": "Sunset Streak Suit",
+						"243279818": "Scarlet Suit",
+						"320948275": "Super Fan Suit",
 						"452583055": "Plague Doctor Suit",
-						"320948275": "Super Fan Suit"
+						"598520579": "MMA Suit",
+						"615312987": "Raincoat",
+						"630776052": "Rude Ruby Track Suit",
+						"632560077": "Profligacy Suit",
+						"671377108": "Desert Survival Suit",
+						"691069374": "Cessation Suit",
+						"720259666": "Lotophage Suit",
+						"875126530": "6's Signature Coat",
+						"877102628": "Golden Streetwear Suit",
+						"879295869": "White Polar Survival Suit",
+						"1092447392": "Black & White Tuxedo",
+						"1171393183": "Purple Streak Suit",
+						"1181997343": "Subject 47 Suit",
+						"1321936074": "Satu Mare Straitjacket",
+						"1489750715": "Long Coat with Gloves",
+						"1542410141": "Subject 47 Suit",
+						"1635858198": "6's Signature Coat with Gloves",
+						"1667754951": "Bad Wolf Suit",
+						"1685722641": "Anthony Martinez's Suit",
+						"1695305353": "Ancestral Huntsman Suit",
+						"1695519493": "Black & White Tuxedo with Gloves",
+						"1910239537": "Raver Suit with Bunny Mask",
+						"2044201417": "Disruptor Suit",
+						"2049910903": "Black & White Tuxedo",
+						"2129611827": "Long Coat",
+						"2156722350": "Neon DJ Suit",
+						"2168599423": "Graffiti Hoody Suit",
+						"2202462424": "Temper Suit",
+						"2231831317": "Codename 47 Suit",
+						"2572931238": "Raincoat with Gloves",
+						"2732261783": "Scrap Poncho Suit",
+						"2760943898": "Lucky Ducky Suit",
+						"2803096113": "Rapacious Suit",
+						"2874408294": "17's Signature Suit",
+						"2875169229": "Sandman Suit",
+						"2887221963": "Absolution Sniping Suit",
+						"3140229008": "Green Streak Suit",
+						"3180102579": "Public Enemy Suit",
+						"3191297808": "Neon Ninja Suit",
+						"3199382373": "Midnight Clubbing Suit",
+						"3200287187": "Perpetuity Suit",
+						"3223664876": "Hidden Valley Ninja Suit",
+						"3362995256": "Raver Suit with Gloves",
+						"3368934709": "Christmas Casual Suit",
+						"3617998863": "Master Freelancer Suit",
+						"3750001361": "Red Dragon Suit",
+						"3762946900": "Butcher Suit",
+						"3944984988": "Blue Streak Suit",
+						"4009319363": "Narcissus Suit",
+						"4083485844": "Black Streak Suit",
+						"4188750001": "Odium Suit"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1229,26 +1180,24 @@
 				},
 				"009F430D046716BE": {
 					"english": {
-						"1507656433": "Undying Suit",
-						"3885074855": "Tropical Casual Suit",
-						"1386335940": "All-Black Suit",
-						"3619146115": "Trenchcoat with Gloves",
+						"369364440": "Sandman Suit with Jack-O-Lantern Mask",
+						"836824045": "Suburban Suit with Gloves",
 						"1188663957": "Trenchcoat",
-						"3591200885": "Black Polar Survival Suit",
+						"1386335940": "All-Black Suit",
+						"1507656433": "Undying Suit",
 						"2052724919": "Casual Undercover Suit",
 						"2347383834": "Tropical Business Suit",
 						"3045378807": "Arkian Tuxedo",
 						"3236983443": "Pirate Suit",
-						"369364440": "Sandman Suit with Jack-O-Lantern Mask",
+						"3591200885": "Black Polar Survival Suit",
+						"3619146115": "Trenchcoat with Gloves",
 						"3876710900": "Cashmerian Suit",
-						"836824045": "Suburban Suit with Gloves"
+						"3885074855": "Tropical Casual Suit"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1258,12 +1207,10 @@
 					"english": {
 						"1199489516": "Gauze Suit"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1274,12 +1221,10 @@
 						"1574577192": "Santa Suit",
 						"3309453482": "Terminus Suit"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1305,16 +1250,14 @@
 			"localisationOverrides": {
 				"00B9AC4BC2618983": {
 					"english": {
+						"67212165": "Once a Opportunity has been revealed, you do not need to reveal it again.",
 						"2037552605": "Talking to certain NPCs might reveal Opportunities.",
-						"3938743496": "Opportunity Guides can be configured from the Gameplay Options menu or turned off completely.",
-						"67212165": "Once a Opportunity has been revealed, you do not need to reveal it again."
+						"3938743496": "Opportunity Guides can be configured from the Gameplay Options menu or turned off completely."
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1322,17 +1265,15 @@
 				},
 				"00F5817876E691F1": {
 					"english": {
-						"3772235161": "Opportunity Revealing",
 						"1297844023": "Opportunity Revealed",
 						"3232074948": "Would you like to follow this Opportunity?",
+						"3772235161": "Opportunity Revealing",
 						"3778156200": "View more information about this Opportunity."
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1340,23 +1281,21 @@
 				},
 				"008D33DE8C75CACB": {
 					"english": {
-						"2640001060": "Opportunities",
-						"2470456272": "You can enable Opportunities in the Options Menu.",
-						"4195740189": "Opportunities Disabled",
+						"261575956": "Full: All Guide hints are visible. In game tracker icons appear for a tracked Opportunity. Objectives are shown in the HUD.<br><br>Minimal: In game tracker icons are hidden. Guide hints can still be accessed, and Guide objectives are still tracked in the HUD.<br><br>Off: All Guide communication is turned off.",
 						"1558162771": "<li>Saves are unlimited. Autosaves are available.</li><li>All Opportunities are available.</li><li>Getting spotted by cameras will only affect your rating and score.</li><li>Combat is challenging and should be avoided.</li>",
-						"3124886732": "<li>You may only save once per mission. Autosaves are disabled.</li><li>All Opportunities are turned off.</li><li>Getting spotted by cameras will affect your rating and score. Guards will also react to illegal actions recorded by cameras.</li><li>NPCs are more perceptive, and combat is very dangerous.</li><li>Ruined disguises cannot be taken from anyone eliminated in a bloody manner.</li><li>Many items are considered suspicious when equipped.</li><li>Missions have been altered for a greater challenge.</li>",
 						"1909688181": "Opportunity Guidance",
 						"1952093123": "Opportunity",
 						"2151182684": "Follow Opportunity Guide",
+						"2470456272": "You can enable Opportunities in the Options Menu.",
+						"2640001060": "Opportunities",
+						"3124886732": "<li>You may only save once per mission. Autosaves are disabled.</li><li>All Opportunities are turned off.</li><li>Getting spotted by cameras will affect your rating and score. Guards will also react to illegal actions recorded by cameras.</li><li>NPCs are more perceptive, and combat is very dangerous.</li><li>Ruined disguises cannot be taken from anyone eliminated in a bloody manner.</li><li>Many items are considered suspicious when equipped.</li><li>Missions have been altered for a greater challenge.</li>",
 						"3589489595": "Opportunities are not available on Professional Difficulty Level.",
-						"261575956": "Full: All Guide hints are visible. In game tracker icons appear for a tracked Opportunity. Objectives are shown in the HUD.<br><br>Minimal: In game tracker icons are hidden. Guide hints can still be accessed, and Guide objectives are still tracked in the HUD.<br><br>Off: All Guide communication is turned off."
+						"4195740189": "Opportunities Disabled"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1364,24 +1303,22 @@
 				},
 				"00A0E09383CE38B1": {
 					"english": {
-						"2976570299": "Opportunity Revealing",
-						"2787287152": "Opportunity Completed",
 						"150229808": "New Opportunity Unlocked",
 						"480699831": "Opportunity Undiscovered",
-						"2773155726": "Opportunity Lost",
 						"660490744": "Opportunity Completed",
-						"4192451450": "Opportunity Failed",
-						"3904144141": "You have already eliminated the target. This Opportunity is no longer available.",
-						"4260454850": "Opportunity Missed",
+						"1534599692": "This Opportunity is no longer available",
 						"2330170755": "Opportunity Guide Updated",
-						"1534599692": "This Opportunity is no longer available"
+						"2773155726": "Opportunity Lost",
+						"2787287152": "Opportunity Completed",
+						"2976570299": "Opportunity Revealing",
+						"3904144141": "You have already eliminated the target. This Opportunity is no longer available.",
+						"4192451450": "Opportunity Failed",
+						"4260454850": "Opportunity Missed"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
@@ -1389,753 +1326,675 @@
 				},
 				"00990F92D8761960": {
 					"english": {
-						"265896673": "Opportunities",
-						"2281785568": "Show Opportunity Guide",
-						"1521793651": "Opportunity Undiscovered",
-						"2779234700": "Opportunity",
 						"54246022": "Opportunity<br>Completed",
-						"3136316500": "Opportunity Lost",
-						"3577220932": "Opportunity Completed",
-						"3265960253": "Opportunity<br>Tracked",
+						"265896673": "Opportunities",
 						"341197323": "Opportunity<br>Undiscovered",
+						"1521793651": "Opportunity Undiscovered",
 						"1735981439": "Opportunity<br>Discovered",
-						"3448487819": "Opportunity<br>Lost"
+						"2281785568": "Show Opportunity Guide",
+						"2779234700": "Opportunity",
+						"3136316500": "Opportunity Lost",
+						"3265960253": "Opportunity<br>Tracked",
+						"3448487819": "Opportunity<br>Lost",
+						"3577220932": "Opportunity Completed"
 					},
-					"french": {
-					},
+					"french": {},
 					"italian": {},
 					"german": {},
-					"spanish": {
-					},
+					"spanish": {},
 					"russian": {},
 					"chineseSimplified": {},
 					"chineseTraditional": {},
 					"japanese": {}
 				},
-			"00CA373FF455051B": {
-				"english": {
-					"3448980786": "<li>Complete all Opportunities in the mission.</li><li>Complete four assassination challenges in the mission.</li>",
-					"2482626010": "Opportunity - Something To Chew On",
-					"2955988950": "Opportunity - Light My Fire",
-					"3753132339": "Opportunity - Time To Meet The Fans",
-					"670384795": "Opportunity - An Explosive Ending"
+				"00CA373FF455051B": {
+					"english": {
+						"670384795": "Opportunity - An Explosive Ending",
+						"2482626010": "Opportunity - Something To Chew On",
+						"2955988950": "Opportunity - Light My Fire",
+						"3448980786": "<li>Complete all Opportunities in the mission.</li><li>Complete four assassination challenges in the mission.</li>",
+						"3753132339": "Opportunity - Time To Meet The Fans"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
 				},
-				"french": {
+				"0034B7D0E44452E0": {
+					"english": {
+						"3559756355": "Opportunity Step Completed"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
 				},
-				"italian": {},
-				"german": {},
-				"spanish": {
+				"0084EF3EAED78CD9": {
+					"english": {
+						"473294613": "Opportunities - Sapienza",
+						"1235432775": "<li>Complete all 3 Opportunity Challenges in Sapienza.</li>",
+						"1642779419": "Opportunity - Hostile Environment",
+						"1772887006": "Opportunity - A Case Most Peculiar",
+						"2615756991": "Opportunity - Catharsis",
+						"2706821734": "Opportunity - The Good Son",
+						"3115394011": "Opportunity - Memento",
+						"3284437563": "Opportunity - By Candlelight",
+						"3293966868": "Opportunity - First Day On The Job",
+						"3923992013": "Opportunity - Absolution",
+						"4010583648": "Opportunity - Beyond The Grave",
+						"4050608693": "Opportunity - Memory Lane"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
 				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
+				"006F74FEE85A5CF3": {
+					"english": {
+						"248081854": "Opportunity - Above The Law",
+						"995990895": "Opportunity - No Absolution For The Wicked",
+						"1334985265": "Opportunity - Dynamite Smile",
+						"2456728667": "Opportunity - Cheat Sheet",
+						"2571435518": "Opportunity - Stage Fried",
+						"2876520664": "<li>Complete all Opportunities in the mission.</li><li>Complete 5 assassination challenges in the mission.</li>"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00EFC2FD2906D1CB": {
+					"english": {
+						"252385479": "Opportunity - Open Sesame",
+						"324687204": "Opportunity - Golden Touch",
+						"372195424": "Opportunities - Marrakesh",
+						"1136235058": "<li>Complete all 3 Opportunity Challenges in Marrakesh.</li>",
+						"1820472920": "Opportunity - Cherry Blossom",
+						"3175301877": "Opportunity - Prime Time",
+						"3496325364": "Opportunity - Why We Fight",
+						"3518596059": "Opportunity - Honeycomb",
+						"3738026344": "Opportunity - Bad Blood",
+						"4045915440": "Opportunity - Down The Rabbit Hole"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0079B380B37AEAF1": {
+					"english": {
+						"544576858": "Opportunity - A Rare Scope",
+						"575984361": "Opportunity - A Drink to Die For",
+						"886911040": "Opportunity - Guest of Honor",
+						"1281048895": "Opportunity - 15 Seconds Of Fame",
+						"1299333297": "Opportunity - Playing with Fire",
+						"2572687947": "<li>Complete all 3 Opportunity Challenges in Paris.</li>",
+						"3283733360": "Opportunity- Lights Out",
+						"3411337258": "Opportunity - A Private Meeting",
+						"3436103705": "Opportunities - Paris",
+						"3732097239": "Opportunities - A Quick Break"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00B3665ACFDA22C6": {
+					"english": {
+						"1179012732": "Opportunity - Waiting for the Man",
+						"3395321272": "<li>Complete all Opportunities in the mission.</li><li>Complete five assassination challenges in the mission.</li>",
+						"3425080943": "Opportunity - Rent Due",
+						"4036818168": "Opportunity - The Future Foretold",
+						"4246604904": "Opportunity - Gone Shopping"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00DA0316FD2BFCE5": {
+					"english": {
+						"136919586": "Opportunity - Final Terms",
+						"964495185": "Opportunity - Safe Conduct",
+						"1407322559": "Opportunity - Safety First",
+						"1943930936": "Opportunity - To Fallen Comrades",
+						"2772568224": "Opportunities - ICA Facility",
+						"4040481522": "<li>Complete all 3 Opportunity Challenges in the ICA Facility.</li>"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0097B27D52CEC692": {
+					"english": {
+						"752740762": "Opportunity - It's My Party",
+						"1320308876": "Opportunity - On The House",
+						"1873024068": "Opportunity - Tick Tuk",
+						"1916960033": "Opportunity - Bugman",
+						"2227814898": "Opportunity - Man Machine",
+						"2699939003": "<li>Complete all 3 Opportunity Challenges in Bangkok.</li>",
+						"3837329651": "Opportunity - Intervention",
+						"4118486761": "Opportunities - Bangkok",
+						"4146297713": "Opportunity - The Smoking Gun",
+						"4194424764": "Opportunity - Are 'Friends' Electric"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00AC661162AAE848": {
+					"english": {
+						"76410402": "Opportunity - Doomsday Watch",
+						"324183501": "Opportunity - Unclean",
+						"1375388671": "Opportunity - Tongue Tied",
+						"2621512028": "Opportunity - Point Man",
+						"2671900885": "Opportunity - Overpowered",
+						"2714122453": "<li>Complete all 3 Opportunity Challenges in Colorado.</li>",
+						"2789705129": "Opportunity - The Audition",
+						"4098943623": "Opportunities - Colorado",
+						"4118486761": "Opportunities - Colorado"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0075D3BA287C45A5": {
+					"english": {
+						"113327758": "Opportunity - No Smoking",
+						"1958873880": "Opportunity - Makeover",
+						"2131150079": "Opportunity - Ghost in the Machine",
+						"2392795776": "Opportunity - Malpractice",
+						"2490854611": "Opportunities - Hokkaido",
+						"3010201729": "Opportunity - Tell-Tale Heart",
+						"3252797057": "<li>Complete all 3 Opportunity Challenges in Hokkaido.</li>",
+						"4156839144": "Opportunity - Thrill Seekers",
+						"4290138502": "Opportunity - Hot Springs"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"007DCD8D4F22E651": {
+					"english": {
+						"2528508651": "<li>Unlimited saves</li><li>All Opportunity guides available</li><li>Surveillance cameras active</li><li>Cameras alert guards if illegal activity is spotted</li><li>Combat is challenging but fair</li>",
+						"3098582394": "<li>Unlimited saves</li><li>All Opportunity guides available</li><li>No surveillance cameras</li><li>Less enforcers</li><li>Forgiving combat</li><li>More items are legal to carry</li><li>NPCs are less attentive to sounds</li>",
+						"3880827585": "<li>One save per mission</li><li>Opportunity guides available</li><li>Extra surveillance cameras</li><li>Extra enforcers</li><li>Ruthless and demanding combat</li><li>Bloody eliminations ruin disguises</li><li>NPCs are more attentive to sounds</li>"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00E45529FDC93B59": {
+					"english": {
+						"494963091": "Opportunity - Means, Motive And Opportunity",
+						"802211607": "Opportunity - A Day To Remember",
+						"1209424833": "<li>Complete the Opportunity 'Means, Motive And Opportunity.'</li>",
+						"2051413317": "<li>Complete the Opportunity 'A Day To Remember.'</li>",
+						"2373516590": "Complete the Opportunity 'Her Final Resting Place.'</li>",
+						"3639488380": "Opportunity - Her Final Resting Place"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"007416F01870D27E": {
+					"english": {
+						"212677830": "Opportunity - (In)Security",
+						"226780719": "<li>Complete the Opportunity 'Bird Of Prey.'</li>",
+						"1477620861": "Opportunity - Bird Of Prey",
+						"1497097876": "<li>Complete the Opportunity '(In)Security.'</li>",
+						"2201589593": "<li>Complete the Opportunity 'How The Mighty Fall.'</li>",
+						"3601810699": "Opportunity - How The Mighty Fall"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0004B3604BB1612C": {
+					"english": {
+						"151026185": "<li>Complete the Opportunity 'Over The Top.'</li>",
+						"809599208": "Opportunity - Eyes On Target",
+						"981315243": "Opportunity - The Tour",
+						"1553377371": "Opportunity - Over The Top",
+						"1708610234": "<li>Complete the Opportunity 'Eyes On Target.'</li>",
+						"1877703929": "<li>Complete the Opportunity 'The Tour.'</li>"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0004D196A5B794B5": {
+					"english": {
+						"763218008": "Complete the Opportunity 'Impulse Control.'",
+						"2028673546": "Opportunity - Impulse Control",
+						"2413041683": "Opportunity - Certainty Principle",
+						"2952292664": "Complete the Opportunity 'All-Seeing Eyes.'",
+						"3661810241": "Complete the Opportunity 'Certainty Principle.'",
+						"4201560938": "Opportunity - All-Seeing Eyes"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00E0D6A42DE598D7": {
+					"english": {
+						"487136630": "Opportunities"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"002A8555DD95FAF5": {
+					"english": {
+						"741467068": "You are the ultimate assassin. No challenge is too hard and you exist only to take out your targets in the most complicated ways possible with no assistance from anyone.<br><li>One save per mission</li><li>No Opportunities available</li><li>Extra surveillance cameras</li><li>Extra enforcers</li><li>Ruthless and demanding combat</li><li>Bloody eliminations ruin disguises</li><li>NPCs are more attentive to sounds</li>",
+						"1814091777": "Completed Opportunities",
+						"1832514662": "Opportunities are not available on Master Difficulty Level.",
+						"1948079601": "The missions in HITMAN can be solved in countless ways. One approach is to uncover some of the many Opportunities and follow them through.<BR>Since this is your first time in Miami, you may choose to have a guide active from the get go.",
+						"2337147321": "Completing a mission is just the beginning. They are meant to be played more than once.<br><br>There are multiple plots to uncover, characters to get to know and unlocks to earn.<br><br>To get the overall story of {0} we recommend that you complete the following Opportunities.",
+						"2622483408": "Opportunity Completed:",
+						"2669585447": "You experiment and have fun. Toy with targets, blow things up and take chances. This is about making a general mess, running and hiding to see what happens. And then doing it all over again.<br><li>Unlimited saves</li><li>Opportunities guides available</li><li>No surveillance cameras</li><li>Less enforcers</li><li>Forgiving combat</li><li>More items are legal to carry</li><li>NPCs are less attentive to sounds</li>",
+						"2891556380": "Opportunities",
+						"3537846798": "Play Opportunity",
+						"3705174442": "Recommended Opportunities",
+						"3950567915": "Assassination is serious business. You plan, you execute, you escape. And your handler is right there, giving you the guidance you need to succeed.<br><li>Unlimited saves</li><li>All Opportunities available</li><li>Surveillance cameras active</li><li>Cameras alert guards if illegal activity is spotted</li><li>Combat is challenging but fair</li>",
+						"4194810937": "Opportunity"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00201BC283FB5117": {
+					"english": {
+						"526300697": "Opportunities - Santa Fortuna",
+						"1044685518": "Opportunity - Submerged",
+						"1254646859": "<li>Complete all 3 Opportunity Challenges in Santa Fortuna.</li>",
+						"1611215431": "Opportunity - Half Baked",
+						"1613106983": "Opportunity - Hallowed Grounds",
+						"1724041478": "Opportunity - Backpacker",
+						"2021515163": "Opportunity - Undying Love",
+						"2556087937": "Opportunity - Heart Of Stone",
+						"3088446781": "Opportunity - Deadly Art"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00DF29FAA8AFD4A5": {
+					"english": {
+						"576030568": "Opportunity - The Munchies",
+						"608882243": "Opportunity - Intravenous",
+						"864370545": "Opportunity - Pretty In Pink",
+						"2176366995": "Opportunity - The New Army",
+						"2515985090": "Opportunities - Miami",
+						"2984842611": "Opportunity - Turbo Charged",
+						"3227529360": "<li>Complete all 3 Opportunity Challenges in Miami.</li>",
+						"3584934114": "Opportunity - A Perfect Machine"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00DF9662AA054F59": {
+					"english": {
+						"172423403": "Opportunity - Picture Perfect",
+						"189850128": "Opportunity - A Dress To Die For",
+						"507595125": "Opportunity - Flames Rekindled",
+						"810162152": "Opportunities - Mumbai",
+						"1099008216": "Opportunity - A Matter Of Discipline",
+						"1661269718": "Opportunity - Gone With The Wind",
+						"1708967354": "<li>Complete all 3 Opportunity Challenges in Mumbai.</li>",
+						"4067963763": "Opportunity - Broad Strokes",
+						"4193119979": "Opportunity - A Close Shave"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0068129DE98962A2": {
+					"english": {
+						"3569012": "Opportunity - No Smoking Area",
+						"210271168": "Opportunity - House For Sale",
+						"1422693459": "Opportunity - Breadcrumb Trail",
+						"2057003877": "Opportunity - An Apple A Day",
+						"2893048773": "Opportunity - Charbroiled",
+						"3130309896": "Opportunities - Whittleton Creek",
+						"3588584961": "Opportunity - Pest Control",
+						"4009914202": "<li>Complete all 3 Opportunity Challenges in Whittleton Creek.</li>",
+						"4041805245": "Opportunity - Whack-a-Mole"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0085A61D16D8A553": {
+					"english": {
+						"1026217010": "<li>Complete all 3 Opportunity Challenges on The Isle of Sgàil.</li>",
+						"1757152864": "Opportunities - The Isle of Sgàil",
+						"2021112041": "Opportunity - Winds Of Change",
+						"2385747356": "<li>Complete all Opportunities in 'The Ark Society.'</li>",
+						"2387536900": "Opportunity - Last Honors",
+						"2901241233": "Opportunity - A Phoenix From The Ashes",
+						"3365614281": "Opportunity - Final Club",
+						"3651763900": "Opportunity - Social Climbing",
+						"3685044174": "Complete All Opportunities",
+						"4083809356": "Opportunity - It Belongs In A Museum"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00EBD46693B8BE57": {
+					"english": {
+						"873650587": "<li>Complete the Opportunity: 'The Water Horse.'</li>",
+						"946650311": "Opportunity - A Lucrative Opportunity",
+						"1636043721": "Opportunity - The Water Horse",
+						"1845128853": "<li>Complete the Opportunity: 'A Lucrative Opportunity.'</li>",
+						"2898962489": "Opportunity - Take A Deep Breath",
+						"3015467218": "Opportunities - Haven Island",
+						"3581865865": "Opportunity - Idle Hands",
+						"3595500764": "Opportunity - The Shape Changer",
+						"3861557888": "<li>Complete all 3 Opportunity Challenges on Haven Island.</li>",
+						"4183587435": "<li>Complete the Opportunity: 'Take A Deep Breath.'</li>"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00AB1D668DC934AC": {
+					"english": {
+						"389211193": "<li>Complete the Opportunity 'The Heist.'</li>",
+						"874176276": "<li>Complete all 3 Opportunity Challenges in the Milton-Fitzpatrick bank.</li>",
+						"1118058091": "Opportunity - The Heist",
+						"1636568390": "Opportunities - The Milton-Fitzpatrick Bank",
+						"2622518238": "Opportunity - Hostile Termination",
+						"2683245342": "Opportunity - The Exposé",
+						"3019404796": "Opportunity - On And Off Again",
+						"3220329543": "Opportunity - The Job Interview",
+						"3385237900": "<li>Complete the Opportunity 'Hostile Termination.'</li>",
+						"3396976972": "<li>Complete the Opportunity 'The Exposé.'</li>"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"000BBF3BCC385E4E": {
+					"english": {
+						"113190427": "Opportunities",
+						"252275248": "This information could lead to interesting ways of luring your target out. These are called Opportunities. You can choose to be guided through Opportunities, or piece the puzzle together by yourself.",
+						"293576552": "Opportunity Complete",
+						"1907889805": "Opportunities will complete before the final blow. The trap is set. Now fetch Jasper Knight and guide him through the procedure.",
+						"2439905171": "Tracking Opportunities",
+						"2516597642": "Press {NOTEBOOK} at any time to learn more about Opportunities."
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"000044C886E43053": {
+					"english": {
+						"401964745": "This Opportunity unlocks on mission complete",
+						"1751350295": "Opportunity Guidance",
+						"3096700152": "Opportunities can guide you through the world with waypoints (currently active), or they can give minimal hints for what to do. You can also turn them off entirely."
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00740800E8D910CE": {
+					"english": {
+						"247603388": "Opportunities",
+						"975818405": "A Opportunity has been revealed. To track it click {NOTEBOOK}",
+						"1382600923": "A Opportunity has been revealed. To track it press {NOTEBOOK}"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00FD3A8B78DE4224": {
+					"english": {
+						"17776027": "Both Opportunities Seized",
+						"275673424": "Two Opportunities have been unlocked for you, to guide you through creating your first contracts. You must complete at least one of the Opportunities to complete the tutorial.<br><br>Open your log now and track one of them by pressing {ACCEPT}.",
+						"298463466": "Both Opportunities are missed. Restart to try again.",
+						"501439889": "You seized the Playful Assassin Opportunity, and Skilled Assassin is still available.<br>Restart to play from the beginning, or open your log to track the Skilled Assassin Opportunity.",
+						"538605074": "You seized the Skilled Assassin Opportunity, and Playful Assassin is still available.<br>Restart to play from the beginning, or open your log to track the Playful Assassin Opportunity.",
+						"1532241126": "Opportunity Missed",
+						"1657985396": "You pacified and dumped the guard in a container. Now he cannot be eliminated or marked.<br>Restart the mission to retry the Skilled Assassin Opportunity.",
+						"1670745770": "Track the Opportunity",
+						"1815448702": "Opportunities Revealed",
+						"1838271940": "Both Opportunities Missed",
+						"1961689847": "The remote explosive is gone.<br>Restart mission to retry the Playful Assassin Opportunity.",
+						"2102706357": "You successfully completed both Opportunities!<br>Exit the mission to edit your contract.",
+						"2527253956": "All propane flasks are gone.<br>Restart mission to retry the Playful Assassin Opportunity.",
+						"2875610433": "Opportunity success",
+						"3161574260": "You seized the Skilled Assassin Opportunity, but Playful Assassin is missed.<br>Restart the mission to complete the Playful Assassin Opportunity, or get to an exit to edit your contract.",
+						"3733198544": "You seized the Playful Assassin Opportunity, but Skilled Assassin is missed.<br>Restart the mission to complete the Skilled Assassin Opportunity, or get to an exit to edit your contract.",
+						"3959321027": "You were spotted doing something suspicious or illegal.<br>Restart mission to retry the Skilled Assassin Opportunity."
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"008D564ACEE19068": {
+					"english": {
+						"1252895656": "The remote explosive is gone. Restart the mission to retry this Opportunity.",
+						"4230722489": "All propane flasks are gone. Restart the mission to retry this Opportunity."
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"004AF8E8EF44DBF7": {
+					"english": {
+						"226303374": "You pacified and then dumped the guard in a container. Now he cannot be eliminated or marked. Restart the mission to retry this Opportunity.",
+						"4019272188": "You got spotted doing something suspicious or illegal! Restart the mission to retry this Opportunity."
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"0038670FE1D556B9": {
+					"english": {
+						"2045180541": "Opportunity - The Triumph"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00B51C0EA6881F58": {
+					"english": {
+						"284679463": "Opportunity Ended",
+						"2740787651": "A Opportunity is no longer available, due to an in-world change in conditions. Guide information will no longer be valid.",
+						"3953685410": "Opportunity Reveal"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"00A51D75421753AE": {
+					"english": {
+						"1287355109": "Opportunity Objective Surpassed"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				},
+				"009FF7117F62FE1C": {
+					"english": {
+						"1528712424": "Track the Opportunity"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				}
 			},
-			"0034B7D0E44452E0": {
-				"english": {
-					"3559756355": "Opportunity Step Completed"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0084EF3EAED78CD9": {
-				"english": {
-					"473294613": "Opportunities - Sapienza",
-					"4050608693": "Opportunity - Memory Lane",
-					"2706821734": "Opportunity - The Good Son",
-					"3115394011": "Opportunity - Memento",
-					"3293966868": "Opportunity - First Day On The Job",
-					"1642779419": "Opportunity - Hostile Environment",
-					"2615756991": "Opportunity - Catharsis",
-					"1772887006": "Opportunity - A Case Most Peculiar",
-					"1235432775": "<li>Complete all 3 Opportunity Challenges in Sapienza.</li>",
-					"3284437563": "Opportunity - By Candlelight",
-					"3923992013": "Opportunity - Absolution",
-					"4010583648": "Opportunity - Beyond The Grave"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"006F74FEE85A5CF3": {
-				"english": {
-					"2876520664": "<li>Complete all Opportunities in the mission.</li><li>Complete 5 assassination challenges in the mission.</li>",
-					"248081854": "Opportunity - Above The Law",
-					"1334985265": "Opportunity - Dynamite Smile",
-					"2456728667": "Opportunity - Cheat Sheet",
-					"2571435518": "Opportunity - Stage Fried",
-					"995990895": "Opportunity - No Absolution For The Wicked"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00EFC2FD2906D1CB": {
-				"english": {
-					"372195424": "Opportunities - Marrakesh",
-					"3518596059": "Opportunity - Honeycomb",
-					"3175301877": "Opportunity - Prime Time",
-					"3738026344": "Opportunity - Bad Blood",
-					"4045915440": "Opportunity - Down The Rabbit Hole",
-					"1136235058": "<li>Complete all 3 Opportunity Challenges in Marrakesh.</li>",
-					"252385479": "Opportunity - Open Sesame",
-					"324687204": "Opportunity - Golden Touch",
-					"3496325364": "Opportunity - Why We Fight",
-					"1820472920": "Opportunity - Cherry Blossom"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0079B380B37AEAF1": {
-				"english": {
-					"3436103705": "Opportunities - Paris",
-					"3732097239": "Opportunities - A Quick Break", 
-					"886911040": "Opportunity - Guest of Honor",
-					"1299333297": "Opportunity - Playing with Fire",
-					"1281048895": "Opportunity - 15 Seconds Of Fame",
-					"3283733360": "Opportunity- Lights Out",
-					"3411337258": "Opportunity - A Private Meeting",
-					"2572687947": "<li>Complete all 3 Opportunity Challenges in Paris.</li>",
-					"575984361": "Opportunity - A Drink to Die For",
-					"544576858": "Opportunity - A Rare Scope"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00B3665ACFDA22C6": {
-				"english": {
-					"3395321272": "<li>Complete all Opportunities in the mission.</li><li>Complete five assassination challenges in the mission.</li>",
-					"4036818168": "Opportunity - The Future Foretold",
-					"4246604904": "Opportunity - Gone Shopping",
-					"3425080943": "Opportunity - Rent Due",
-					"1179012732": "Opportunity - Waiting for the Man"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00DA0316FD2BFCE5": {
-				"english": {
-					"2772568224": "Opportunities - ICA Facility",
-					"1943930936": "Opportunity - To Fallen Comrades",
-					"1407322559": "Opportunity - Safety First",
-					"136919586": "Opportunity - Final Terms",
-					"964495185": "Opportunity - Safe Conduct",
-					"4040481522": "<li>Complete all 3 Opportunity Challenges in the ICA Facility.</li>"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0097B27D52CEC692": {
-				"english": {
-					"4118486761": "Opportunities - Bangkok",
-					"4146297713": "Opportunity - The Smoking Gun",
-					"1916960033": "Opportunity - Bugman",
-					"1873024068": "Opportunity - Tick Tuk",
-					"3837329651": "Opportunity - Intervention",
-					"752740762": "Opportunity - It's My Party",
-					"1320308876": "Opportunity - On The House",
-					"2699939003": "<li>Complete all 3 Opportunity Challenges in Bangkok.</li>",
-					"4194424764": "Opportunity - Are 'Friends' Electric",
-					"2227814898": "Opportunity - Man Machine"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00AC661162AAE848": {
-				"english": {
-					"4118486761": "Opportunities - Colorado",
-					"4098943623": "Opportunities - Colorado",
-					"324183501": "Opportunity - Unclean",
-					"76410402": "Opportunity - Doomsday Watch",
-					"2621512028": "Opportunity - Point Man",
-					"2789705129": "Opportunity - The Audition",
-					"2671900885": "Opportunity - Overpowered",
-					"2714122453": "<li>Complete all 3 Opportunity Challenges in Colorado.</li>",
-					"1375388671": "Opportunity - Tongue Tied"
-
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0075D3BA287C45A5": {
-				"english": {
-					"2490854611": "Opportunities - Hokkaido",
-					"113327758": "Opportunity - No Smoking",
-					"1958873880": "Opportunity - Makeover",
-					"2131150079": "Opportunity - Ghost in the Machine",
-					"4156839144": "Opportunity - Thrill Seekers",
-					"2392795776": "Opportunity - Malpractice",
-					"3010201729": "Opportunity - Tell-Tale Heart",
-					"4290138502": "Opportunity - Hot Springs",
-					"3252797057": "<li>Complete all 3 Opportunity Challenges in Hokkaido.</li>"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"007DCD8D4F22E651": {
-				"english": {
-					"3880827585": "<li>One save per mission</li><li>Opportunity guides available</li><li>Extra surveillance cameras</li><li>Extra enforcers</li><li>Ruthless and demanding combat</li><li>Bloody eliminations ruin disguises</li><li>NPCs are more attentive to sounds</li>",
-					"2528508651": "<li>Unlimited saves</li><li>All Opportunity guides available</li><li>Surveillance cameras active</li><li>Cameras alert guards if illegal activity is spotted</li><li>Combat is challenging but fair</li>",
-					"3098582394": "<li>Unlimited saves</li><li>All Opportunity guides available</li><li>No surveillance cameras</li><li>Less enforcers</li><li>Forgiving combat</li><li>More items are legal to carry</li><li>NPCs are less attentive to sounds</li>"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00E45529FDC93B59": {
-				"english": {
-					"494963091": "Opportunity - Means, Motive And Opportunity",
-					"1209424833": "<li>Complete the Opportunity 'Means, Motive And Opportunity.'</li>",
-					"802211607": "Opportunity - A Day To Remember",
-					"2051413317": "<li>Complete the Opportunity 'A Day To Remember.'</li>",
-					"3639488380": "Opportunity - Her Final Resting Place",
-					"2373516590": "Complete the Opportunity 'Her Final Resting Place.'</li>"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"007416F01870D27E": {
-				"english": {
-					"1477620861": "Opportunity - Bird Of Prey",
-					"2201589593": "<li>Complete the Opportunity 'How The Mighty Fall.'</li>",
-					"3601810699": "Opportunity - How The Mighty Fall",
-					"1497097876": "<li>Complete the Opportunity '(In)Security.'</li>",
-					"212677830": "Opportunity - (In)Security",
-					"226780719": "<li>Complete the Opportunity 'Bird Of Prey.'</li>"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0004B3604BB1612C": {
-				"english": {
-					"981315243": "Opportunity - The Tour",
-					"1877703929": "<li>Complete the Opportunity 'The Tour.'</li>",
-					"809599208": "Opportunity - Eyes On Target",
-					"1708610234": "<li>Complete the Opportunity 'Eyes On Target.'</li>",
-					"1553377371":"Opportunity - Over The Top",
-					"151026185": "<li>Complete the Opportunity 'Over The Top.'</li>"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0004D196A5B794B5": {
-				"english": {
-					"2413041683": "Opportunity - Certainty Principle",
-					"3661810241": "Complete the Opportunity 'Certainty Principle.'",
-					"2028673546": "Opportunity - Impulse Control",
-					"763218008": "Complete the Opportunity 'Impulse Control.'",
-					"4201560938": "Opportunity - All-Seeing Eyes",
-					"2952292664": "Complete the Opportunity 'All-Seeing Eyes.'"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00E0D6A42DE598D7": {
-				"english": {
-					"487136630": "Opportunities"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"002A8555DD95FAF5": {
-				"english": {
-					"1814091777": "Completed Opportunities",
-					"3705174442": "Recommended Opportunities",
-					"2337147321": "Completing a mission is just the beginning. They are meant to be played more than once.<br><br>There are multiple plots to uncover, characters to get to know and unlocks to earn.<br><br>To get the overall story of {0} we recommend that you complete the following Opportunities.",
-					"1948079601": "The missions in HITMAN can be solved in countless ways. One approach is to uncover some of the many Opportunities and follow them through.<BR>Since this is your first time in Miami, you may choose to have a guide active from the get go.",
-					"2891556380": "Opportunities",
-					"2669585447": "You experiment and have fun. Toy with targets, blow things up and take chances. This is about making a general mess, running and hiding to see what happens. And then doing it all over again.<br><li>Unlimited saves</li><li>Opportunities guides available</li><li>No surveillance cameras</li><li>Less enforcers</li><li>Forgiving combat</li><li>More items are legal to carry</li><li>NPCs are less attentive to sounds</li>",
-					"3950567915": "Assassination is serious business. You plan, you execute, you escape. And your handler is right there, giving you the guidance you need to succeed.<br><li>Unlimited saves</li><li>All Opportunities available</li><li>Surveillance cameras active</li><li>Cameras alert guards if illegal activity is spotted</li><li>Combat is challenging but fair</li>",
-					"741467068": "You are the ultimate assassin. No challenge is too hard and you exist only to take out your targets in the most complicated ways possible with no assistance from anyone.<br><li>One save per mission</li><li>No Opportunities available</li><li>Extra surveillance cameras</li><li>Extra enforcers</li><li>Ruthless and demanding combat</li><li>Bloody eliminations ruin disguises</li><li>NPCs are more attentive to sounds</li>",
-					"1832514662": "Opportunities are not available on Master Difficulty Level.",
-					"2622483408": "Opportunity Completed:",
-					"3537846798": "Play Opportunity",
-					"4194810937": "Opportunity"
-
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00201BC283FB5117": {
-				"english": {
-					"526300697": "Opportunities - Santa Fortuna",
-					"3088446781": "Opportunity - Deadly Art",
-					"2556087937": "Opportunity - Heart Of Stone",
-					"1613106983": "Opportunity - Hallowed Grounds",
-					"1254646859": "<li>Complete all 3 Opportunity Challenges in Santa Fortuna.</li>",
-					"1044685518": "Opportunity - Submerged",
-					"1611215431": "Opportunity - Half Baked",
-					"1724041478": "Opportunity - Backpacker",
-					"2021515163": "Opportunity - Undying Love"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00DF29FAA8AFD4A5": {
-				"english": {
-					"2515985090": "Opportunities - Miami",
-					"3584934114": "Opportunity - A Perfect Machine",
-					"2176366995": "Opportunity - The New Army",
-					"864370545": "Opportunity - Pretty In Pink",
-					"3227529360": "<li>Complete all 3 Opportunity Challenges in Miami.</li>",
-					"2984842611": "Opportunity - Turbo Charged",
-					"576030568": "Opportunity - The Munchies",
-					"608882243": "Opportunity - Intravenous"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00DF9662AA054F59": {
-				"english": {
-					"810162152": "Opportunities - Mumbai",
-					"172423403": "Opportunity - Picture Perfect",
-					"189850128": "Opportunity - A Dress To Die For",
-					"4067963763": "Opportunity - Broad Strokes",
-					"1708967354": "<li>Complete all 3 Opportunity Challenges in Mumbai.</li>",
-					"4193119979": "Opportunity - A Close Shave",
-					"1099008216": "Opportunity - A Matter Of Discipline",
-					"1661269718": "Opportunity - Gone With The Wind",
-					"507595125": "Opportunity - Flames Rekindled"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0068129DE98962A2": {
-				"english": {
-					"3130309896": "Opportunities - Whittleton Creek",
-					"4009914202": "<li>Complete all 3 Opportunity Challenges in Whittleton Creek.</li>",
-					"210271168": "Opportunity - House For Sale",
-					"1422693459": "Opportunity - Breadcrumb Trail",
-					"2057003877": "Opportunity - An Apple A Day",
-					"2893048773": "Opportunity - Charbroiled",
-					"3588584961": "Opportunity - Pest Control",
-					"4041805245": "Opportunity - Whack-a-Mole",
-					"3569012": "Opportunity - No Smoking Area"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0085A61D16D8A553": {
-				"english": {
-					"1757152864": "Opportunities - The Isle of Sgàil",
-					"3685044174": "Complete All Opportunities",
-					"2385747356": "<li>Complete all Opportunities in 'The Ark Society.'</li>",
-					"1026217010": "<li>Complete all 3 Opportunity Challenges on The Isle of Sgàil.</li>",
-					"3651763900": "Opportunity - Social Climbing",
-					"2387536900": "Opportunity - Last Honors",
-					"2021112041": "Opportunity - Winds Of Change",
-					"2901241233": "Opportunity - A Phoenix From The Ashes",
-					"3365614281": "Opportunity - Final Club",
-					"4083809356": "Opportunity - It Belongs In A Museum"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00EBD46693B8BE57": {
-				"english": {
-					"3015467218": "Opportunities - Haven Island",
-					"946650311": "Opportunity - A Lucrative Opportunity",
-					"1845128853": "<li>Complete the Opportunity: 'A Lucrative Opportunity.'</li>",
-					"1636043721": "Opportunity - The Water Horse",
-					"873650587": "<li>Complete the Opportunity: 'The Water Horse.'</li>",
-					"2898962489": "Opportunity - Take A Deep Breath",
-					"4183587435": "<li>Complete the Opportunity: 'Take A Deep Breath.'</li>",
-					"3861557888": "<li>Complete all 3 Opportunity Challenges on Haven Island.</li>",
-					"3581865865": "Opportunity - Idle Hands",
-					"3595500764": "Opportunity - The Shape Changer"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00AB1D668DC934AC": {
-				"english": {
-					"1636568390": "Opportunities - The Milton-Fitzpatrick Bank",
-					"2683245342": "Opportunity - The Exposé",
-					"3396976972": "<li>Complete the Opportunity 'The Exposé.'</li>",
-					"2622518238": "Opportunity - Hostile Termination",
-					"3385237900": "<li>Complete the Opportunity 'Hostile Termination.'</li>",
-					"1118058091": "Opportunity - The Heist",
-					"389211193": "<li>Complete the Opportunity 'The Heist.'</li>",
-					"3220329543": "Opportunity - The Job Interview",
-					"3019404796": "Opportunity - On And Off Again",
-					"874176276": "<li>Complete all 3 Opportunity Challenges in the Milton-Fitzpatrick bank.</li>"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"000BBF3BCC385E4E": {
-				"english": {
-					"2439905171": "Tracking Opportunities",
-					"293576552": "Opportunity Complete",
-					"252275248": "This information could lead to interesting ways of luring your target out. These are called Opportunities. You can choose to be guided through Opportunities, or piece the puzzle together by yourself.",
-					"2516597642": "Press {NOTEBOOK} at any time to learn more about Opportunities.",
-					"113190427": "Opportunities",
-					"1907889805": "Opportunities will complete before the final blow. The trap is set. Now fetch Jasper Knight and guide him through the procedure."
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"000044C886E43053": {
-				"english": {
-					"3096700152": "Opportunities can guide you through the world with waypoints (currently active), or they can give minimal hints for what to do. You can also turn them off entirely.",
-					"1751350295": "Opportunity Guidance",
-					"401964745": "This Opportunity unlocks on mission complete"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00740800E8D910CE": {
-				"english": {
-					"247603388": "Opportunities",
-					"975818405": "A Opportunity has been revealed. To track it click {NOTEBOOK}",
-					"1382600923": "A Opportunity has been revealed. To track it press {NOTEBOOK}"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00FD3A8B78DE4224": {
-				"english": {
-					"275673424": "Two Opportunities have been unlocked for you, to guide you through creating your first contracts. You must complete at least one of the Opportunities to complete the tutorial.<br><br>Open your log now and track one of them by pressing {ACCEPT}.",
-					"1815448702": "Opportunities Revealed",
-					"17776027": "Both Opportunities Seized",
-					"2102706357": "You successfully completed both Opportunities!<br>Exit the mission to edit your contract.",
-					"298463466": "Both Opportunities are missed. Restart to try again.",
-					"1838271940":"Both Opportunities Missed",
-					"1670745770": "Track the Opportunity",
-					"1532241126": "Opportunity Missed",
-					"1961689847": "The remote explosive is gone.<br>Restart mission to retry the Playful Assassin Opportunity.",
-					"2527253956": "All propane flasks are gone.<br>Restart mission to retry the Playful Assassin Opportunity.",
-					"3959321027": "You were spotted doing something suspicious or illegal.<br>Restart mission to retry the Skilled Assassin Opportunity.",
-					"1657985396": "You pacified and dumped the guard in a container. Now he cannot be eliminated or marked.<br>Restart the mission to retry the Skilled Assassin Opportunity.",
-					"538605074": "You seized the Skilled Assassin Opportunity, and Playful Assassin is still available.<br>Restart to play from the beginning, or open your log to track the Playful Assassin Opportunity.",
-					"2875610433": "Opportunity success",
-					"501439889": "You seized the Playful Assassin Opportunity, and Skilled Assassin is still available.<br>Restart to play from the beginning, or open your log to track the Skilled Assassin Opportunity.",
-					"3161574260": "You seized the Skilled Assassin Opportunity, but Playful Assassin is missed.<br>Restart the mission to complete the Playful Assassin Opportunity, or get to an exit to edit your contract.",
-					"3733198544": "You seized the Playful Assassin Opportunity, but Skilled Assassin is missed.<br>Restart the mission to complete the Skilled Assassin Opportunity, or get to an exit to edit your contract."
-
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"008D564ACEE19068": {
-				"english": {
-					"1252895656": "The remote explosive is gone. Restart the mission to retry this Opportunity.",
-					"4230722489": "All propane flasks are gone. Restart the mission to retry this Opportunity."
-
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"004AF8E8EF44DBF7": {
-				"english": {
-					"4019272188": "You got spotted doing something suspicious or illegal! Restart the mission to retry this Opportunity.",
-					"226303374": "You pacified and then dumped the guard in a container. Now he cannot be eliminated or marked. Restart the mission to retry this Opportunity."
-
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"0038670FE1D556B9": {
-				"english": {
-					"2045180541": "Opportunity - The Triumph"
-
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00B51C0EA6881F58": {
-				"english": {
-					"3953685410": "Opportunity Reveal",
-					"284679463": "Opportunity Ended",
-					"2740787651": "A Opportunity is no longer available, due to an in-world change in conditions. Guide information will no longer be valid."
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"00A51D75421753AE": {
-				"english": {
-					"1287355109": "Opportunity Objective Surpassed"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			},
-			"009FF7117F62FE1C": {
-				"english": {
-					"1528712424": "Track the Opportunity"
-				},
-				"french": {
-				},
-				"italian": {},
-				"german": {},
-				"spanish": {
-				},
-				"russian": {},
-				"chineseSimplified": {},
-				"chineseTraditional": {},
-				"japanese": {}
-			}
-		},
 			"group": "Localization|Mission Story Terminology"
 		},
 		{
@@ -2151,10 +2010,11 @@
 			"image": "framework content/verycool.png",
 			"type": "select",
 			"group": "Suit|Item Sorting",
-			"peacockPlugins": ["mod content/menus/item sorting/STASHPOINT TEMPLATES/Minimal/plugin/Heritage_Stashpoint.plugin.js", "mod content/menus/item sorting/modsupport.plugin.js"],
-			"contentFolders": [
-				"mod content/menus/item sorting/overridesminisorting"
+			"peacockPlugins": [
+				"mod content/menus/item sorting/STASHPOINT TEMPLATES/Minimal/plugin/Heritage_Stashpoint.plugin.js",
+				"mod content/menus/item sorting/modsupport.plugin.js"
 			],
+			"contentFolders": ["mod content/menus/item sorting/overridesminisorting"],
 			"enabledByDefault": true
 		},
 		{
@@ -2169,9 +2029,7 @@
 			"image": "framework content/favorite.png",
 			"group": "Suit|Item Sorting|Favorites",
 			"tooltip": "Adds a custom subcategory for favorite items. Tutorial for adding and removing items can be found on the Nexus mod page.",
-			"contentFolders": [
-				"mod content/menus/favorites"
-			]
+			"contentFolders": ["mod content/menus/favorites"]
 		},
 		{
 			"name": "Disabled",
@@ -2185,9 +2043,7 @@
 			"image": "framework content/vault.png",
 			"group": "Suit|Item Sorting|Vault",
 			"tooltip": "Allows you to hide disliked items in a custom 'vault' category. Tutorial for adding and removing items can be found on the Nexus mod page.",
-			"contentFolders": [
-				"mod content/menus/vault"
-			]
+			"contentFolders": ["mod content/menus/vault"]
 		}
 	],
 	"blobsFolders": ["mod content/base/blobs"],

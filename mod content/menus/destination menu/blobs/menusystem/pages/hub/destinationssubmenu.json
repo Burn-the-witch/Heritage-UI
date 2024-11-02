@@ -34,23 +34,23 @@
 							},
 							"children": [
 								{
-            "controller": "group",
-            "id": "statusline_container",
-            "view": "menu3.containers.ListContainer",
-            "direction": "horizontal",
-            "data": {
-                "direction": "horizontal"
-            },
-            "row": 3.92,
-            "col": 0,
-            "selectable": false,
-            "pressable": false,
-            "children": {
-                "$include": {
-                    "$path": "menusystem/elements/location/data/location_statuslinedata.json"
-                }
-            }
-        },
+									"controller": "group",
+									"id": "statusline_container",
+									"view": "menu3.containers.ListContainer",
+									"direction": "horizontal",
+									"data": {
+										"direction": "horizontal"
+									},
+									"row": 3.92,
+									"col": 0,
+									"selectable": false,
+									"pressable": false,
+									"children": {
+										"$include": {
+											"$path": "menusystem/elements/location/data/location_statuslinedata.json"
+										}
+									}
+								},
 								{
 									"controller": "group",
 									"navigationmode": "leaf-selection",
@@ -105,24 +105,24 @@
 								"title": "$loc $formatstring UI_HERITAGE_SEASON_2"
 							},
 							"children": [
-							{
-            "controller": "group",
-            "id": "statusline_container",
-            "view": "menu3.containers.ListContainer",
-            "direction": "horizontal",
-            "data": {
-                "direction": "horizontal"
-            },
-            "row": 3.92,
-            "col": 0,
-            "selectable": false,
-            "pressable": false,
-            "children": {
-                "$include": {
-                    "$path": "menusystem/elements/location/data/location_statuslinedata.json"
-                }
-            }
-        },
+								{
+									"controller": "group",
+									"id": "statusline_container",
+									"view": "menu3.containers.ListContainer",
+									"direction": "horizontal",
+									"data": {
+										"direction": "horizontal"
+									},
+									"row": 3.92,
+									"col": 0,
+									"selectable": false,
+									"pressable": false,
+									"children": {
+										"$include": {
+											"$path": "menusystem/elements/location/data/location_statuslinedata.json"
+										}
+									}
+								},
 								{
 									"controller": "group",
 									"navigationmode": "leaf-selection",
@@ -177,24 +177,24 @@
 								"title": "$loc $formatstring UI_HERITAGE_SEASON_3"
 							},
 							"children": [
-							{
-            "controller": "group",
-            "id": "statusline_container",
-            "view": "menu3.containers.ListContainer",
-            "direction": "horizontal",
-            "data": {
-                "direction": "horizontal"
-            },
-            "row": 3.92,
-            "col": 0,
-            "selectable": false,
-            "pressable": false,
-            "children": {
-                "$include": {
-                    "$path": "menusystem/elements/location/data/location_statuslinedata.json"
-                }
-            }
-        },
+								{
+									"controller": "group",
+									"id": "statusline_container",
+									"view": "menu3.containers.ListContainer",
+									"direction": "horizontal",
+									"data": {
+										"direction": "horizontal"
+									},
+									"row": 3.92,
+									"col": 0,
+									"selectable": false,
+									"pressable": false,
+									"children": {
+										"$include": {
+											"$path": "menusystem/elements/location/data/location_statuslinedata.json"
+										}
+									}
+								},
 								{
 									"controller": "group",
 									"navigationmode": "leaf-selection",

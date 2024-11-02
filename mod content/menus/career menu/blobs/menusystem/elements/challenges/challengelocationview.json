@@ -1,70 +1,70 @@
 {
-    "controller": "container",
-    "children": [
-        {
-            "pressable": false,
-            "selectable": false,
-            "image": "images/career_tiles/challenges.jpg",
-            "actions": {
-                "activated": [
-                    {
-                        "$if $not $.@global.NoAutoSelectChallenges": {
-                            "$then": {
-                                "set-selected": {
-                                    "target": "category_season_1"
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "set-value": {
-                            "target": "$.@global.NoAutoSelectChallenges",
-                            "value": true
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "$datacontext": {
-                "in": "$.",
-                "datavalues": {
-                    "Seasons": [
-                        {
-                            "$include": "menusystem/elements/challenges/data/data_challengelocation_season1.json"
-                        },
-                        {
-                            "$include": "menusystem/elements/challenges/data/data_challengelocation_season2.json"
-                        },
-                        {
-                            "$include": "menusystem/elements/challenges/data/data_challengelocation_season3.json"
-                        },
-                        {
-                            "$include": "menusystem/elements/challenges/data/data_challengelocation_packs.json"
-                        }
-                    ]
-                },
-                "do": {
-                    "controller": "category",
-                    "id": "sub_category_container",
-                    "row": -1.0,
-                    "_col": 0,
-                    "view": "menu3.containers.ScrollingTabsContainer",
-                    "ncols": 10,
-                    "direction": "horizontal",
-                    "submenunavigation": true,
-                    "loopedselection": false,
-                    "data": {
-                        "direction": "horizontal",
-                        "submenu": true
-                    },
-                    "children": {
-                        "$each $.Seasons": {
-                            "$include": "menusystem/elements/challenges/challengelocationviewsubtab.json"
-                        }
-                    }
-                }
-            }
-        }
-    ]
+	"controller": "container",
+	"children": [
+		{
+			"pressable": false,
+			"selectable": false,
+			"image": "images/career_tiles/challenges.jpg",
+			"actions": {
+				"activated": [
+					{
+						"$if $not $.@global.NoAutoSelectChallenges": {
+							"$then": {
+								"set-selected": {
+									"target": "category_season_1"
+								}
+							}
+						}
+					},
+					{
+						"set-value": {
+							"target": "$.@global.NoAutoSelectChallenges",
+							"value": true
+						}
+					}
+				]
+			}
+		},
+		{
+			"$datacontext": {
+				"in": "$.",
+				"datavalues": {
+					"Seasons": [
+						{
+							"$include": "menusystem/elements/challenges/data/data_challengelocation_season1.json"
+						},
+						{
+							"$include": "menusystem/elements/challenges/data/data_challengelocation_season2.json"
+						},
+						{
+							"$include": "menusystem/elements/challenges/data/data_challengelocation_season3.json"
+						},
+						{
+							"$include": "menusystem/elements/challenges/data/data_challengelocation_packs.json"
+						}
+					]
+				},
+				"do": {
+					"controller": "category",
+					"id": "sub_category_container",
+					"row": -1.0,
+					"_col": 0,
+					"view": "menu3.containers.ScrollingTabsContainer",
+					"ncols": 10,
+					"direction": "horizontal",
+					"submenunavigation": true,
+					"loopedselection": false,
+					"data": {
+						"direction": "horizontal",
+						"submenu": true
+					},
+					"children": {
+						"$each $.Seasons": {
+							"$include": "menusystem/elements/challenges/challengelocationviewsubtab.json"
+						}
+					}
+				}
+			}
+		}
+	]
 }

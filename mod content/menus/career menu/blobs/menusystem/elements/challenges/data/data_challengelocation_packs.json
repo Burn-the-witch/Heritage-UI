@@ -1,14 +1,11 @@
 {
-    "Season": "packs",
-    "ChallengeData": {
-        "$arrayfilter": {
-            "source": "$.ProfileData.ChallengeData.Children",
-            "addCondition": {
-                "$and": [
-                    "$eq($.Location.Id,LOCATION_PARENT_ICA_FACILITY)",
-                    "$not $eq($.Location.DisplayNameLocKey,$.Name)"
-                ]
-            }
-        }
-    }
+	"Season": "packs",
+	"ChallengeData": {
+		"$arrayfilter": {
+			"source": "$.ProfileData.ChallengeData.Children",
+			"addCondition": {
+				"$and": ["$eq($.Location.Id,LOCATION_PARENT_ICA_FACILITY)", "$not $eq($.Location.DisplayNameLocKey,$.Name)"]
+			}
+		}
+	}
 }

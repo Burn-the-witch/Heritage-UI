@@ -1,6 +1,6 @@
 {
-    "$if $eq (0,0)": {
-        "$then": false,
-        "$else": false,
-    },
+	"$if $eq (0,0)": {
+		"$then": false,
+		"$else": false
+	}
 }
