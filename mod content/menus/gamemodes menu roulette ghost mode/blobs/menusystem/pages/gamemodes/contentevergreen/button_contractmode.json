@@ -45,7 +45,6 @@
                         }
                     }
                 }
-            }
         ],
         "deselect": {
             "replace-children": {
