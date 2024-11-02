@@ -677,7 +677,7 @@
 			"image": "framework content/h2_ls.png",
 			"type": "select",
 			"group": "Loading Background",
-			"contentFolders": ["mod content/loading screens/h2/content"]
+			"contentFolders": ["mod content/loading screens/H2/content"]
 		},
 		{
 			"name": "Hitman 3",
@@ -685,7 +685,7 @@
 			"image": "framework content/h3_ls.png",
 			"type": "select",
 			"group": "Loading Background",
-			"contentFolders": ["mod content/loading screens/h3/content"]
+			"contentFolders": ["mod content/loading screens/H3/content"]
 		},
 		{
 			
