@@ -12,7 +12,7 @@
 	],
 	"localisation": {
 		"english": {
-				"HUI_MENU_PAGE_DESTINATION_TAB_MISSIONS": "Contracts",
+			"HUI_MENU_PAGE_DESTINATION_TAB_MISSIONS": "Contracts",
 			"UI_HERITAGE_QUICK_LOAD": "Quick Load",
 			"UI_HERITAGE_MISSIONS": "Missions",
 			"UI_HERITAGE_GHOST": "Ghost Mode",
