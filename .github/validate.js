@@ -4,7 +4,7 @@ const { validateModFolder } = require("./validate-mod-folder")
 const validation = validateModFolder(process.cwd())
 
 if (!validation[0]) {
-    throw new Error(validation[1])
+	throw new Error(validation[1])
 } else {
-    console.log("Validation passed")
+	console.log("Validation passed")
 }

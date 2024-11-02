@@ -13,14 +13,21 @@
 						"required": ["value", "op", "path"],
 						"properties": {
 							"path": { "type": "string" },
-							"op": { "description": "The operation to perform.", "type": "string", "enum": ["add", "replace", "test"] },
+							"op": {
+								"description": "The operation to perform.",
+								"type": "string",
+								"enum": ["add", "replace", "test"]
+							},
 							"value": { "description": "The value to add, replace or test." }
 						}
 					},
 					{
 						"additionalProperties": false,
 						"required": ["op", "path"],
-						"properties": { "path": { "type": "string" }, "op": { "description": "The operation to perform.", "type": "string", "enum": ["remove"] } }
+						"properties": {
+							"path": { "type": "string" },
+							"op": { "description": "The operation to perform.", "type": "string", "enum": ["remove"] }
+						}
 					},
 					{
 						"additionalProperties": false,
@@ -28,7 +35,10 @@
 						"properties": {
 							"path": { "type": "string" },
 							"op": { "description": "The operation to perform.", "type": "string", "enum": ["move", "copy"] },
-							"from": { "type": "string", "description": "A JSON Pointer path pointing to the location to move/copy from." }
+							"from": {
+								"type": "string",
+								"description": "A JSON Pointer path pointing to the location to move/copy from."
+							}
 						}
 					}
 				]

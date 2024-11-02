@@ -22,8 +22,7 @@
 				}
 			]
 		},
-		"$then": 
-		{
+		"$then": {
 			"view": "menu3.basic.MenuTileTall",
 			"_comment": "do not change this id - is used by challenge goto location!",
 			"id": "$formatstring {$.Location.Id}_tile",
@@ -33,9 +32,7 @@
 					"$if $not $.Location.Properties.IsLocked": {
 						"$then": "$loc $formatstring UI_{$.Location.Id}_CITY",
 						"$else": {
-							"$if $Location.Properties.UpcomingContent": [
-								"$loc $formatstring UI_{$.Location.Id}_COUNTRY"
-							]
+							"$if $Location.Properties.UpcomingContent": ["$loc $formatstring UI_{$.Location.Id}_COUNTRY"]
 						}
 					}
 				},
@@ -92,20 +89,20 @@
 					},
 					{
 						"replace-children": {
-                "target": "headline_container",
-                "children": [
-                    {
-                        "view": "menu3.basic.HeadlineElement",
-                        "selectable": false,
-                        "pressable": false,
-                        "data": {
-                            "header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
-                            "title": "$loc $formatstring UI_{$.Location.Id}_CITY",
-                            "typeicon": "location"
-                        }
-                    }
-				]
-            }
+							"target": "headline_container",
+							"children": [
+								{
+									"view": "menu3.basic.HeadlineElement",
+									"selectable": false,
+									"pressable": false,
+									"data": {
+										"header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
+										"title": "$loc $formatstring UI_{$.Location.Id}_CITY",
+										"typeicon": "location"
+									}
+								}
+							]
+						}
 					}
 				],
 				"deselect": [
@@ -126,16 +123,16 @@
 						}
 					},
 					{
-											"replace-children": {
-                "target": "headline_container",
-                "children": [
-                    {
-                        "view": "menu3.basic.HeadlineElement",
-                        "selectable": false,
-                        "pressable": false
-                    }
-                ]
-            }
+						"replace-children": {
+							"target": "headline_container",
+							"children": [
+								{
+									"view": "menu3.basic.HeadlineElement",
+									"selectable": false,
+									"pressable": false
+								}
+							]
+						}
 					}
 				],
 				"accept": {
