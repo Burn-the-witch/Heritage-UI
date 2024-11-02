@@ -484,7 +484,7 @@
 			"image": "framework content/v_3png.png",
 			"type": "select",
 			"group": "Boot Logo",
-			"contentFolders": ["mod content/at logos/hui"],
+			"contentFolders": ["mod content/at logos/HUI"],
 			"enabledByDefault": true
 		},
 		{
