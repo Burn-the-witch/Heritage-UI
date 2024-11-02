@@ -2557,6 +2557,12 @@ const finalDate = crc32(month.toString() + day.toString() + year.toString());
                             "url": "https://thepeacockproject.org"
                         }
                     },
+                    "actiony": {
+                     "prompt_label": "Open Peacock Web UI",
+                             "open-url": {
+                            "url": "localhost"
+                        }
+    },
                     "select": {
                         "replace-children": {
                             "target": "headline_container",
