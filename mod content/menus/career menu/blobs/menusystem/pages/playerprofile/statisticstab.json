@@ -1,0 +1,49 @@
+{
+    "view": "menu3.basic.CategoryElement",
+    "controller": "categoryitem",
+    "data": {
+        "title": "$loc UI_MENU_PAGE_PROFILE_STATISTICS",
+        "icon": "stats"
+    },
+    "children": [
+        {
+            "pressable": false,
+            "selectable": false,
+            "actions": {
+                "activated": {
+                    "set-selected": {
+                        "target": "statistic_category_season_1"
+                    }
+                }
+            }
+        },
+        {
+            "controller": "category",
+            "id": "sub_category_container",
+            "row": 0.0,
+            "col": 0,
+            "view": "menu3.containers.ScrollingTabsContainer",
+            "ncols": 10,
+            "direction": "horizontal",
+            "submenunavigation": true,
+            "loopedselection": false,
+            "data": {
+                "direction": "horizontal",
+                "submenu": true
+            },
+            "children": {
+                "$each": {
+                    "in": {
+                        "$arraygroupby": {
+                            "source": "$.SubLocationData",
+                            "property": "ParentLocation.Properties.Season"
+                        }
+                    },
+                    "do": {
+                        "$include": "menusystem/pages/playerprofile/statisticssubtab.json"
+                    }
+                }
+            }
+        }
+    ]
+}

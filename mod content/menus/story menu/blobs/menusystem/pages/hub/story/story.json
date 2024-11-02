@@ -1,0 +1,39 @@
+{
+  "controller": "list",
+  "loopedselection": false,
+  "view": "menu3.containers.ScrollingListContainer",
+  "direction": "horizontal",
+  "data": { "direction": "horizontal", "mousewheelstepsize": "480" },
+  "row": -0.75,
+  "nrows": 3,
+  "ncols": 10,
+  "children": {
+    "$each $.StoryData": {
+      "$switch $.Type": [
+        {
+          "case": "Mission",
+          "return": {
+            "$datacontext": {
+              "in": "$.Data",
+              "datavalues": {
+                "TileSize": "large",
+                "CustomId": "$formatstring story-tile-{$.Data.UserCentricContract.Contract.Metadata.Id}"
+              },
+              "do": {
+                "$include": { "$path": "menusystem/elements/contract/hit.json" }
+              }
+            }
+          }
+        },
+        {
+          "case": "Video",
+          "return": {
+            "$datacontext $.Data": {
+              "$include": { "$path": "menusystem/elements/video/video.json" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

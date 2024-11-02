@@ -1,0 +1,14 @@
+{
+	"file": "00B8052977CF6C75",
+	"type": "JSON",
+	"patch": [
+		{
+			"op": "add",
+			"path": "/$each $.Data.Hits/$datacontext/do/$if $eq($arraysize $.UserCentricContract.Contract.Metadata.Enginemodes,2)/$then/ncols/$switch $.UserCentricContract.Contract.Metadata.Type/3",
+			"value": {
+				"case": "escalation",
+				"return": 4
+			}
+		}
+	]
+}

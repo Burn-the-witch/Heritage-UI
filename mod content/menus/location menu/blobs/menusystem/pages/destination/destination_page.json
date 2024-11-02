@@ -1,0 +1,146 @@
+{
+    "$datacontext": {
+        "in": "$.data",
+        "datavalues": {
+            "ResourceAvailability": {
+                "$if $not $isnullorempty $.data.Location.Properties.Entitlements": {
+                    "$then": {
+                        "$availabilityofresources": {
+                            "resources": "$.data.Location.Properties.RequiredResources",
+                            "entitlements": "$.data.Location.Properties.Entitlements"
+                        }
+                    },
+                    "$else": {
+                        "$availabilityofresources": {
+                            "resources": "$.data.Location.Properties.RequiredResources"
+                        }
+                    }
+                }
+            }
+        },
+        "do": {
+            "controller": "container",
+            "actions": {
+                "activated": [
+                    {
+                        "trigger-ui-sound-event": {
+                            "eventname": "$formatstring {$.Location.Id}_ENTERED"
+                        }
+                    },
+                    {
+                        "call": {
+                            "onmenuframe": true,
+                            "method": "setBackground",
+                            "args": "$res $.Location.Properties.Background"
+                        }
+                    }
+                ],
+                "deactivated": {
+                    "$include": {
+                        "$path": "menusystem/elements/mastery/clearmasterydata_action.json"
+                    }
+                }
+            },
+            "children": [
+                {
+                    "$include": {
+                        "$path": "menusystem/elements/general/general_headline.json"
+                    }
+                },
+                {
+                    "controller": "category",
+                    "id": "category_controller",
+                    "view": "menu3.containers.ScrollingTabsContainer",
+                    "direction": "horizontal",
+                    "data": {
+                        "direction": "horizontal",
+                        "buttonprompts": [
+                            {
+                                "actiontype": [
+                                    "lb",
+                                    "rb"
+                                ],
+                                "actionlabel": "$loc UI_BUTTON_PROMPTS_BROWSE_CATEGORIES"
+                            }
+                        ],
+                        "topnavigation": {
+                            "header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
+                            "title": "$loc $formatstring UI_{$.Location.Id}_CITY",
+                            "icon": "location"
+                        }
+                    },
+                    "children": [
+                        {
+                            "controller": "categoryitem",
+                            "id": "destination_mission_tab",
+                            "view": "menu3.basic.CategoryElement",
+                            "data": {
+                                "title": "$loc HUI_MENU_PAGE_DESTINATION_TAB_MISSIONS",
+                                "icon": "target"
+                            },
+                            "children": [
+                                {
+                                    "$datacontext $.MissionData": {
+                                        "$include": {
+                                            "$path": "menusystem/pages/destination/content/missions.json"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "$if": {
+                                "$condition": {
+                                    "$and": [
+                                        "$eq ($.ResourceAvailability.State,available)",
+                                        "$not $isnull $.ChallengeData"
+                                    ]
+                                },
+                                "$then": {
+                                    "$include": {
+                                        "$path": "menusystem/elements/challenges/challengestab.json"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "$if": {
+                                "$condition": {
+                                    "$and": [
+                                        "$eq ($.ResourceAvailability.State,available)",
+                                        "$gt ($arraysize $.MasteryData,0) "
+                                    ]
+                                },
+                                "$then": {
+                                    "controller": "categoryitem",
+                                    "id": "destination_mastery_tab",
+                                    "view": "menu3.basic.CategoryElement",
+                                    "data": {
+                                        "title": "$loc UI_MENU_PAGE_DESTINATION_TAB_MASTERY",
+                                        "icon": "unlocked"
+                                    },
+                                    "children": {
+                                        "$if $isonline": {
+                                            "$then": {
+                                                "$include": {
+                                                    "$path": "menusystem/elements/mastery/masterytab.json"
+                                                }
+                                            },
+                                            "$else": [
+                                                {
+                                                    "$include": {
+                                                        "$path": "menusystem/elements/general/general_offline.json"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

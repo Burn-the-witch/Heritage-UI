@@ -1,0 +1,30 @@
+{
+    "id": "$formatstring statistic_category_season_{$.by, .f}",
+    "view": "menu3.basic.SubCategoryElement",
+    "controller": "categoryitem",
+    "data": {
+        "title": "$loc $formatstring UI_HERITAGE_SEASON_{$.by, .f}"
+    },
+    "children": [
+        {
+            "controller": "list",
+            "view": "menu3.containers.ScrollingListContainer",
+            "col": 0,
+            "row": 1.1,
+            "nrows": 3,
+            "ncols": 10,
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal",
+                "scrollbarspaceoffset": 50
+            },
+            "children": {
+                "$each $.group": {
+                    "$include": {
+                        "$path": "menusystem/pages/playerprofile/statisticstile.json"
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,274 @@
+{
+    "controller": "group",
+    "row": 1,
+    "layoutchildren": true,
+    "nrows": 3,
+    "ncols": 10,
+    "children": [
+        {
+            "controller": "group",
+            "id": "statusline_container",
+            "view": "menu3.containers.ListContainer",
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal"
+            },
+            "row": 3.92,
+            "col": 0,
+            "selectable": false,
+            "pressable": false,
+            "children": {
+                "$include": {
+                    "$path": "menusystem/elements/location/data/location_statuslinedata.json"
+                }
+            }
+        },
+        {
+            "controller": "list",
+            "view": "menu3.containers.ScrollingListContainer",
+            "id": "$formatstring {$.Location.Id}_container",
+            "nrows": 3,
+            "ncols": 10,
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal",
+                "overflowscrolling": "0.3"
+            },
+            "children": {
+                "$mergearrays": [
+                    {
+                        "$if": {
+                            "$condition": {
+                                "$and": [
+                                    "$not $isnullorempty $.@parent.VRTutorial",
+                                    "$isvractive"
+                                ]
+                            },
+                            "$then": {
+                                "$datacontext": {
+                                    "in": "$.@parent.VRTutorial",
+                                    "datavalues": {
+                                        "TileSize": "tall"
+                                    },
+                                    "do": {
+                                        "$include": "menusystem/elements/contract/hit2.json"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "$each $.SubLocationMissionsData": {
+                            "controller": "list",
+                            "view": "menu3.containers.ListContainer",
+                            "id": "$formatstring {$.Location.Id}_elusive_container",
+                            "direction": "horizontal",
+                            "nrows": 3,
+                            "ncols": 8,
+                            "data": {
+                                "direction": "horizontal"
+                            },
+                            "children": {
+                                "$mergearrays": [
+                                    {
+                                        "$each $.ElusiveMissions": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "TileSize": "tall"
+                                                },
+                                                "do": {
+                                                    "$include": "menusystem/elements/contract/hit2.json"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "$each $.SubLocationMissionsData": {
+                            "controller": "group",
+                            "view": "menu3.containers.ListContainerWithHeader",
+                            "id": "$formatstring {$.SubLocation.Id}_container",
+                            "layoutchildren": true,
+                            "nrows": 3,
+                            "ncols": 8,
+                            "direction": "horizontal",
+                            "data": {
+                                "direction": "horizontal",
+                                "headlinetitle": "$loc $formatstring UI_{$.SubLocation.Id}_TITLE"
+                            },
+                            "children": {
+                                "$mergearrays": [
+                                    {
+                                        "$each $.Missions": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "TileSize": {
+                                                        "$if": {
+                                                            "$condition": {
+                                                                "$if $not $isnullorempty $.UserCentricContract.Contract.Metadata.Subtype": {
+                                                                    "$then": "$eq ($.UserCentricContract.Contract.Metadata.Subtype,specialassignment)",
+                                                                    "$else": false
+                                                                }
+                                                            },
+                                                            "$then": "tall",
+                                                            "$else": "large"
+                                                        }
+                                                    }
+                                                },
+                                                "do": {
+                                                    "$include": "menusystem/elements/contract/hit2.json"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$each $.CampaignMissions": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "TileSize": "large"
+                                                },
+                                                "do": {
+                                                    "$include": "menusystem/elements/contract/hit2.json"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$each $.SarajevoSixMissions": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "TileSize": "tall"
+                                                },
+                                                "do": {
+                                                    "$include": "menusystem/elements/contract/hit2.json"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$each $.PlaceholderMissions": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "TileSize": "tall"
+                                                },
+                                                "do": {
+                                                    "$include": "menusystem/elements/contract/hit2.json"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$each $.SniperMissions": {
+                                            "$if ": {
+                                                "$condition": {
+                                                    "$and": [
+                                                        "$gt ($arraysize $.UserCentricContract.Contract.Metadata.Enginemodes,0)",
+                                                        {
+                                                            "$include": "menusystem/data/issnipermultiplayeravailable.json"
+                                                        }
+                                                    ]
+                                                },
+                                                "$then": {
+                                                    "controller": "group",
+                                                    "view": "menu3.containers.ListContainer",
+                                                    "layoutchildren": true,
+                                                    "nrows": 3,
+                                                    "ncols": 8,
+                                                    "direction": "horizontal",
+                                                    "data": {
+                                                        "direction": "horizontal"
+                                                    },
+                                                    "children": {
+                                                        "$each $.UserCentricContract.Contract.Metadata.Enginemodes": {
+                                                            "$if": {
+                                                                "$condition": {
+                                                                    "$or": [
+                                                                        "$isonline",
+                                                                        "$not $eq($.,multiplayer)"
+                                                                    ]
+                                                                },
+                                                                "$then": {
+                                                                    "$datacontext": {
+                                                                        "in": "$.@parent.",
+                                                                        "datavalues": {
+                                                                            "TileSize": "large",
+                                                                            "EngineMode": "$."
+                                                                        },
+                                                                        "do": {
+                                                                            "$include": {
+                                                                                "$path": "menusystem/elements/contract/hit2.json"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "$else": {
+                                                    "$datacontext": {
+                                                        "in": "$.",
+                                                        "datavalues": {
+                                                            "TileSize": "large"
+                                                        },
+                                                        "do": {
+                                                            "$include": {
+                                                                "$path": "menusystem/elements/contract/hit2.json"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$each $.EscalationMissions": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "TileSize": "tall"
+                                                },
+                                                "do": {
+                                                    "$if $.UserCentricContract.Contract.Metadata.IsSeasonal": {
+                                                        "$then": {
+                                                            "$include": "menusystem/elements/contract/hit2.json"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$each $.EscalationMissions": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "TileSize": "small"
+                                                },
+                                                "do": {
+                                                    "$if $not $.UserCentricContract.Contract.Metadata.IsSeasonal": {
+                                                        "$then": {
+                                                            "$include": "menusystem/elements/contract/hit2.json"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

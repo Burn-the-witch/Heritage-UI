@@ -1,0 +1,1 @@
+{"tempHash":"0092AAB2AF8AC127","tbluHash":"00FD344E2C85A39D","patch":[{"SubEntityOperation":["f55806ff6135965f",{"SetPropertyValue":{"property_name":"m_GlowVSOpponentOutlineColor","value":"#ffffffff"}}]},{"SubEntityOperation":["f55806ff6135965f",{"SetPropertyValue":{"property_name":"m_GlowVSOpponentColor","value":"#ffffff32"}}]}],"patchVersion":6}

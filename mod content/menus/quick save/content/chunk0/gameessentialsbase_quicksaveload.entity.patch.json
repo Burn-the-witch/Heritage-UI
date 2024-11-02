@@ -1,0 +1,85 @@
+{
+    "tempHash": "0093B7139387B988",
+    "tbluHash": "004D99E9BEC3EA51",
+    "patch": [
+        {
+            "AddEntity": [
+                "cafe72f9172579ee",
+                {
+                    "parent": "fffffffffffffffe",
+                    "name": "Quick Save/Load",
+                    "factory": "[modules:/zentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zentity.class].pc_entityblueprint"
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "cafeca203d82bf61",
+                {
+                    "parent": "cafe72f9172579ee",
+                    "name": "SimpleKeyEventHelper - Quickload",
+                    "factory": "[assembly:/Templates/UI/Controls/simplekeyeventhelper.template?/SimpleKeyEventHelper.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/Templates/UI/Controls/simplekeyeventhelper.template?/SimpleKeyEventHelper.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_sModifierKeyName": {
+                            "type": "ZString",
+                            "value": "None"
+                        },
+                        "m_sKeyName": {
+                            "type": "ZString",
+                            "value": "F9"
+                        }
+                    },
+                    "events": {
+                        "Down": {
+                            "LoadQuick": [
+                                "cafec255f3e19dc9"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "cafe42f78b298415",
+                {
+                    "parent": "cafe72f9172579ee",
+                    "name": "SimpleKeyEventHelper - Quisksave",
+                    "factory": "[assembly:/Templates/UI/Controls/simplekeyeventhelper.template?/SimpleKeyEventHelper.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/Templates/UI/Controls/simplekeyeventhelper.template?/SimpleKeyEventHelper.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_sModifierKeyName": {
+                            "type": "ZString",
+                            "value": "None"
+                        },
+                        "m_sKeyName": {
+                            "type": "ZString",
+                            "value": "F5"
+                        }
+                    },
+                    "events": {
+                        "Down": {
+                            "SaveQuick": [
+                                "cafec255f3e19dc9"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "cafec255f3e19dc9",
+                {
+                    "parent": "cafe72f9172579ee",
+                    "name": "LevelControl",
+                    "factory": "[modules:/zlevelcontrolentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zlevelcontrolentity.class].pc_entityblueprint"
+                }
+            ]
+        }
+    ],
+    "patchVersion": 6
+}

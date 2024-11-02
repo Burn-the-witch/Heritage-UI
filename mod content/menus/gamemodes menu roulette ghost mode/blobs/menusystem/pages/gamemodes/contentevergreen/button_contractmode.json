@@ -1,0 +1,87 @@
+{
+    "view": "menu3.basic.SimpleButtonTile",
+    "nrows": 0.5,
+    "ncols": 2,
+    "data": {
+        "header": "$loc $.Contract.Metadata.Title",
+        "title": {
+            "$if $eq($.EngineMode,multiplayer)": {
+                "$then": "$loc UI_MENU_GAME_MODE_MULTIPLAYER",
+                "$else": "$loc UI_MENU_GAME_MODE_SINGLE_PLAYER"
+            }
+        },
+        "availability": "$.ResourceAvailability.Availability"
+    },
+    "actions": {
+        "select": [
+            {
+                "replace-children": {
+                    "target": "statusline_container",
+                    "children": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/data/contract_statusline.json"
+                        }
+                    }
+                }
+            },
+            {
+                "$if": {
+                    "$condition": {
+                        "$or": [
+                            "$eq($.EngineMode,singleplayer)",
+                            "$eq($.EngineMode,multiplayer)"
+                        ]
+                    },
+                    "$then": {
+                        "$datacontext": {
+                            "in": "$.",
+                            "datavalues": {
+                            },
+                            "do": {
+                                "call": {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ],
+        "deselect": {
+            "replace-children": {
+                "target": "statusline_container",
+                "children": []
+            },
+            "call": {
+                "onmenuframe": true,
+                "method": "setBackgroundLayer",
+                "args": {
+                    "image": ""
+                }
+            }
+        },
+        "deactivated": {
+            "call": {
+                "onmenuframe": true,
+                "method": "setBackgroundLayer",
+                "args": {
+                    "image": ""
+                }
+            }
+        },
+        "accept": {
+            "$if $eq($.ResourceAvailability.State,available)": {
+                "$then": {
+                    "$include": {
+                        "$path": "menusystem/elements/contract/actions/contract_gotoplanning.json"
+                    }
+                },
+                "$else": {
+                    "$include": {
+                        "$path": "menusystem/actions/availability/not_available_action.json"
+                    }
+                }
+            }
+        }
+    }
+}

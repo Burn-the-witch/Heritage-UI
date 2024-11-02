@@ -1,0 +1,122 @@
+{
+    "$if": {
+        "$condition": {
+            "$include": "menusystem/data/ispeacock.json"
+        },
+        "$then":   {
+            "$if": {
+                "$condition": {
+                    "$and": [
+                        "$not $eq({$currentcontractcontext}.ContractType,arcade)",
+                        "$not $eq({$currentcontractcontext}.ContractType,evergreen)",
+                        "$not $eq({$currentcontractcontext}.ContractType,sniper)",
+                        "$not $eq({$currentcontractcontext}.ContractType,vsrace)"
+                    ]
+                },
+                "$then": {
+                    "$datacontext": {
+                        "in": "$.",
+                        "do": {
+                            "view": "menu3.basic.ListElementSmall",
+                            "data": {
+                                "showningame": "$isingame",
+                                "title": "$loc UI_HERITAGE_QUICK_LOAD",
+                                "icon": "load"
+                            },
+                            "actions":{
+                                "accept": [
+                                {
+                                    "set-menu-context": {
+                                        "value": {
+                                            "onpageopened": {
+                                                "set-selected": {
+                                                    "target": "id_0"
+                                                },
+                                                "trigger-input": {
+                                                    "action": "accept"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "link": {
+                                        "page": "loadpage",
+                                "args": {
+                                    "url": "load",
+                                    "args": {
+                                        "saveorload": "load"
+                                    },
+                                    "saveorload": "load",
+                                    "mainmenu": false,
+                                    "reloadonchange": true
+                                        }
+                                    }
+                                }
+                            ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "$else": {
+            "$if": {
+                "$condition": {
+                    "$and": [
+                        "$not $eq({$currentcontractcontext}.ContractType,elusive)",
+                        "$not $eq({$currentcontractcontext}.ContractType,arcade)",
+                        "$not $eq({$currentcontractcontext}.ContractType,evergreen)",
+                        "$not $eq({$currentcontractcontext}.ContractType,sniper)",
+                        "$not $eq({$currentcontractcontext}.ContractType,vsrace)"
+                    ]
+                },
+                "$then": {
+                    "$datacontext": {
+                        "in": "$.",
+                        "do": {
+                            "view": "menu3.basic.ListElementSmall",
+                            "data": {
+                                "showningame": "$isingame",
+                                "title": "$loc UI_HERITAGE_QUICK_LOAD",
+                                "icon": "load"
+                            },
+                            "actions":{
+                                "accept": [
+                                {
+                                    "set-menu-context": {
+                                        "value": {
+                                            "onpageopened": {
+                                                "set-selected": {
+                                                    "target": "id_0"
+                                                },
+                                                "trigger-input": {
+                                                    "action": "accept"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "link": {
+                                        "page": "loadpage",
+                                "args": {
+                                    "url": "load",
+                                    "args": {
+                                        "saveorload": "load"
+                                    },
+                                    "saveorload": "load",
+                                    "mainmenu": false,
+                                    "reloadonchange": true
+                                        }
+                                    }
+                                }
+                            ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

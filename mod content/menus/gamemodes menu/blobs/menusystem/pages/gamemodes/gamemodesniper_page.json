@@ -1,0 +1,220 @@
+{
+    "id": "gamemodesniper_root",
+    "controller": "container",
+    "children": [
+        {
+            "controller": "category",
+            "id": "category_controller",
+            "view": "menu3.containers.ScrollingTabsContainer",
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal",
+                "topnavigation": {
+                    "title": "$loc UI_MENU_PAGE_HUB_GAMEMODES",
+                    "icon": "mission"
+                }
+            },
+            "children": [
+                {
+                    "view": "menu3.basic.CategoryElement",
+                    "controller": "categoryitem",
+                    "data": {
+                        "title": "$loc UI_SNIPER_CHALLENGE_TITLE",
+                        "icon": "sniperrifle"
+                    },
+                    "children": [
+                        {
+                            "controller": "container",
+                            "id": "statusline_container",
+                            "view": "menu3.containers.ListContainer",
+                            "direction": "horizontal",
+                            "data": {
+                                "direction": "horizontal"
+                            },
+                            "col": 0,
+                            "row": 4.95,
+                            "selectable": false,
+                            "pressable": false,
+                            "children": []
+                        },
+                        {
+                            "controller": "container",
+                            "id": "headline_container",
+                            "view": "menu3.basic.HeadlineElement",
+                            "direction": "horizontal",
+                            "data": {
+                                "direction": "horizontal"
+                            },
+                            "col": 0,
+                            "row": 4.25,
+                            "selectable": false,
+                            "pressable": false,
+                            "children": []
+                        },
+                        {
+                            "id": "hitscategory_container",
+                            "controller": "context",
+                            "view": "menu3.containers.SimpleButtonTileScrollingListContainer",
+                            "row": 1,
+                            "nrows": 0.5,
+                            "ncols": 10,
+                            "direction": "horizontal",
+                            "data": {
+                                "direction": "horizontal",
+                                "scrollbarspaceoffset": -440
+                            },
+                            "actions": {
+                                "activated": {
+                                    "call": {
+                                        "onmenuframe": true,
+                                        "method": "setBackground",
+                                        "args": "$res images/backgrounds/menu_bg.jpg"
+                                    }
+                                }
+                            },
+                            "children": {
+                                "$each $.data.Data.Hits": {
+                                    "$datacontext": {
+                                        "in": "$.",
+                                        "datavalues": {
+                                            "Contract": "$.UserCentricContract.Contract",
+                                            "ResourceAvailability": "$availabilityofusercentriccontract $.UserCentricContract",
+                                            "ShowFlatWarning": {
+                                                "$and": [
+                                                    "$isvractive",
+                                                    "$isnullorempty $.UserCentricContract.Contract.Data.VR"
+                                                ]
+                                            },
+                                            "ShowVRIcon": {
+                                                "$and": [
+                                                    "$isvractive",
+                                                    "$not $isnullorempty $.UserCentricContract.Contract.Data.VR"
+                                                ]
+                                            },
+                                            "ShowNoVRIcon": {
+                                                "$and": [
+                                                    "$isvractive",
+                                                    "$isnullorempty $.UserCentricContract.Contract.Data.VR"
+                                                ]
+                                            }
+                                        },
+                                        "do": {
+                                            "id": "$formatstring {$.UserCentricContract.Contract.Metadata.Title}_button",
+                                            "view": "menu3.basic.MenuTileTall",
+                                            "controller": "contextitem",
+                                            "nrows": 0.5,
+                                            "ncols": 2,
+                                            "data": {
+                                                "title": "$loc $.UserCentricContract.Contract.Metadata.Title",
+                                                "header": "$loc $formatstring UI_{$.UserCentricContract.Contract.Metadata.Location}_CITY",
+                                                "image": "$res $formatstring images/heritage_sniper_tiles/{$.UserCentricContract.Contract.Metadata.Location}/image.png",
+                                                "icon": "sniperrifle",
+                                                "availability": "$.ResourceAvailability.Availability"
+                                            },
+                                            "actions": {
+                                                "select": [
+                                                    {
+                                                        "replace-children": {
+                                                            "target": "statusline_container",
+                                                            "children": {
+                                                                "$include": {
+                                                                    "$path": "menusystem/elements/contract/data/contract_statusline.json"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    {                                                    "call": {
+                                                        "onmenuframe": true,
+                                                        "method": "setBackground",
+                                                        "args": "$res images/backgrounds/menu_bg.jpg"
+                                                    }},
+                                                    {
+                                                        "set-persistent-menudata": {
+                                                            "mode": "setdata",
+                                                            "path": "destinations.sub-menu-selection",
+                                                            "value": "$formatstring destination_category_season_{$.@parent.LimitToSeason,.0f}"
+                                                        }
+                                                    },
+                                                    {
+                                                        "replace-children": {
+                                                            "target": "headline_container",
+                                                            "children": [
+                                                                {
+                                                                    "view": "menu3.basic.HeadlineElement",
+                                                                    "selectable": false,
+                                                                    "pressable": false,
+                                                                    "data": {
+                                                                        "header": "$loc $formatstring UI_{$.UserCentricContract.Contract.Metadata.Location}_CITY",
+                                                                        "title": "$loc $.UserCentricContract.Contract.Metadata.Title",
+                                                                        "typeicon": "sniperrifle"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "deselect": {
+                                                    "replace-children": {
+                                                        "target": "statusline_container",
+                                                        "children": []
+                                                    }
+                                                },
+                                                "accept": {
+                                                    "$if": {
+                                                        "$condition": {
+                                                            "$and": [
+                                                                {
+                                                                    "$include": {
+                                                                        "$path": "menusystem/data/issnipermultiplayeravailable.json"
+                                                                    }
+                                                                },
+                                                                "$eq ($platform,pc)",
+                                                                "$eq ($store,steam)",
+                                                                "$eq ($arraysize $.UserCentricContract.Contract.Metadata.Enginemodes,2)"
+                                                            ]
+                                                        },
+                                                        "$then": {},
+                                                        "$else": {
+                                                            "$if $not $eq($.ResourceAvailability.State,available)": {
+                                                                "$then": {
+                                                                    "$include": {
+                                                                        "$path": "menusystem/actions/availability/not_available_action.json"
+                                                                    }
+                                                                },
+                                                                "$else": {
+                                                                    "$include": {
+                                                                        "$path": "menusystem/elements/contract/actions/contract_gotoplanning.json"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "children": [
+                                                {
+                                                    "$if $not $eq($.ResourceAvailability.State,available)": {
+                                                        "$then": {
+                                                            "$include": {
+                                                                "$path": "menusystem/actions/availability/not_available_action.json"
+                                                            }
+                                                        },
+                                                        "$else": {
+                                                            "$include": {
+                                                                "$path": "menusystem/pages/gamemodes/contentsniper/multiplayer_select.json"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

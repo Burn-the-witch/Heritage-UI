@@ -1,0 +1,28 @@
+{
+    "id": "$formatstring mastery_location_tile_{$.Id}",
+    "view": "menu3.basic.CategoryTile",
+    "nrows": 3,
+    "ncols": 2,
+    "data": {
+        "$include": {
+            "$path": "menusystem/elements/mastery/data/masterylocation_data.json"
+        }
+    },
+    "stateproviders": [
+        {
+            "type": "resourceavailability",
+            "resources": "$.RequiredResources"
+        }
+    ],
+    "pressable": {
+        "$if $.IsLocked": {
+            "$then": false,
+            "$else": true
+        }
+    },
+    "actions": {
+        "$include": {
+            "$path": "menusystem/elements/mastery/actions/masterylocation_defaultactions.json"
+        }
+    }
+}

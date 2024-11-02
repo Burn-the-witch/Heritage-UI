@@ -1,0 +1,42 @@
+{
+    "nrows": 3,
+    "ncols": 2,
+    "id": "Dashboard_Category_Arcade",
+    "controller": "livetile",
+    "groupid": 0,
+    "data": {
+        "header": "",
+        "title": "",
+        "image": ""
+    },
+    "children": {
+        "$each $.data.Item.Data": {
+            "$datacontext": {
+                "in": "$.",
+                "datavalues": {
+                    "ResourceAvailability": "$availabilityofusercentriccontract $.",
+                    "EngineMode": ""
+                },
+                "do": {
+                    "view": "menu3.basic.LiveTileTall",
+                    "controller": "livetileitem",
+                    "pressable": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/data/contract_ispressable.json"
+                        }
+                    },
+                    "data": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/data/contract_data.json"
+                        }
+                    },
+                    "actions": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/actions/contract_defaultactions_arcade.json"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

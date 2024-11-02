@@ -1,0 +1,115 @@
+{
+    "$if $.IsLeaf": {
+        "$then": {
+            "controller": "group",
+            "view": "menu3.containers.ScrollingListContainer",
+            "row": 1,
+            "nrows": 3,
+            "ncols": 10,
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal"
+            },
+            "layoutchildren": true,
+            "children": {
+                "$include": {
+                    "$path": "menusystem/pages/inventory/content/inventorysubcategory.json"
+                }
+            }
+        },
+        "$else": {
+            "controller": "category",
+            "id": "sub_category_container",
+            "row": 0.0,
+            "col": 0,
+            "view": "menu3.containers.ScrollingTabsContainer",
+            "ncols": 10,
+            "direction": "horizontal",
+            "submenunavigation": true,
+            "loopedselection": false,
+            "data": {
+                "direction": "horizontal",
+                "submenu": true
+            },
+            "children": {
+                "$each": {
+                    "in": {
+                        "$arraysort": {
+                            "source": "$.SubCategories",
+                            "property": "Category",
+                            "order": [
+                                                                        "featured",
+                                                                        "container",
+                                                                        "pistol",
+                                                                        "evergreen_kill_method_pistol",
+                                                                        "smg",
+                                                                        "shotgun",
+                                                                        "assaultrifle",
+                                                                        "sniperrifle",
+                                                                        "melee",
+                                                                        "tool",
+                                                                        "distraction",
+                                                                        "poison",
+                                                                        "explosive",
+                                                                        "classic",
+                                                                        "formal",
+                                                                        "coats",
+                                                                        "casual",
+                                                                        "tactical",
+                                                                        "themed",
+                                                                        "S0",
+                                                                        "S1",
+                                                                        "S2",
+                                                                        "S3",
+                                                                        "S4",
+                                                                        "S5",
+                                                                        "S6",
+                                                                        "S7",
+                                                                        "S8",
+                                                                        "S8",
+                                                                        "usercreated",
+                                                                        "evergreen_safe"
+                            ]
+                        }
+                    },
+                    "do": {
+                        "$datacontext": {
+                            "in": "$.",
+                            "datavalues": {
+                                "UseTallTile": "$.@parent.UseTallTile"
+                            },
+                            "do": {
+                                "id": "$formatstring subcategory_{$.Category}",
+                                "view": "menu3.basic.SubCategoryElement",
+                                "controller": "categoryitem",
+                                "data": {
+                                    "title": "$loc $formatstring UI_ITEM_SUBTYPE_IN_PLURAL_{$.Category}"
+                                },
+                                "children": [
+                                    {
+                                        "controller": "group",
+                                        "view": "menu3.containers.ScrollingListContainer",
+                                        "id": "$formatstring {$.Category}_container",
+                                        "layoutchildren": true,
+                                        "row": 1,
+                                        "nrows": 3,
+                                        "ncols": 10,
+                                        "direction": "horizontal",
+                                        "data": {
+                                            "direction": "horizontal"
+                                        },
+                                        "children": {
+                                            "$include": {
+                                                "$path": "menusystem/pages/inventory/content/inventorysubcategory.json"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

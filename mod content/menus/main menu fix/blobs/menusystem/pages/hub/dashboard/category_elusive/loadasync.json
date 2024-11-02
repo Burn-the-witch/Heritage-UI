@@ -1,0 +1,24 @@
+{
+    "view": "menu3.basic.MenuTileTall",
+    "nrows": 3,
+    "ncols": 2,
+    "id": "Dashboard_Category_Elusive",
+    "data": {
+        "header": "",
+        "image": "",
+        "icon": "elusive",
+        "locked": true
+    },
+    "actions": {
+        "activated": {
+            "load-async": {
+                "path": "menusystem/pages/hub/dashboard/category_elusive/result.json",
+                "onfailurebehaviour": "ignorefailures",
+                "from": {
+                    "url": "$formatstring dashboard/{$.Properties.DashboardCategory}/{$.SubscriptionId}/{$.Type}/{$.Id}/dataonly"
+                },
+                "target": "Dashboard_Category_Elusive"
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "$each": {
+        "in": {
+            "$if $eq ($.Data.Type,disguise)": {
+                "$then": {
+                    "$arraysort": {
+                        "source": "$.Data.Items",
+                        "condition": {
+                            "$if $not $isnull $.Item.Unlockable.Properties.OrderIndex": {
+                                "$then": "$.Item.Unlockable.Properties.OrderIndex",
+                                "$else": 10000
+                            }
+                        }
+                    }
+                },
+                "$else": {
+                    "$arraysort": {
+                        "source": "$.Data.Items",
+                        "condition": {
+                            "$if $not $isnull $.Item.Unlockable.Properties.OrderIndex": {
+                                "$then": "$.Item.Unlockable.Properties.OrderIndex",
+                                "$else": 10000
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "do": {
+            "$include": "menusystem/pages/inventory/content/inventorytile.json"
+        }
+    }
+}

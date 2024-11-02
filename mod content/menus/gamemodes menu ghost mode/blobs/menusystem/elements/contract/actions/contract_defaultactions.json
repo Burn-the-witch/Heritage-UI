@@ -1,0 +1,129 @@
+{
+    "accept": {
+        "$if": {
+            "$condition": {
+                "$or": [
+                    "$eq($.ResourceAvailability.State,available)",
+                    "$eq($.ResourceAvailability.State,contract-notplayable_too-late)"
+                ]
+            },
+            "$then": {
+                "$include": {
+                    "$path": "menusystem/elements/contract/actions/contract_gotoplanning.json"
+                }
+            },
+            "$else": {
+                "$include": {
+                    "$path": "menusystem/actions/availability/not_available_action.json"
+                }
+            }
+        }
+    },
+    "select": [
+        {
+            "replace-children": {
+                "target": "headline_container",
+                "children": [
+                    {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/data/contract_headlineonly.json"
+                        }
+                    }
+                ]
+            }
+        },
+        {                                                    "call": {
+            "onmenuframe": true,
+            "method": "setBackground",
+            "args": "$res images/backgrounds/menu_bg.jpg"
+        }},
+        {
+            "$include": {
+                "$path": "menusystem/elements/mastery/setmasterydata_action.json"
+            }
+        }
+    ],
+    "deselect": [
+        {
+            "replace-children": {
+                "target": "headline_container",
+                "children": []
+            }
+        },
+        {
+            "$include": {
+                "$path": "menusystem/elements/mastery/clearmasterydata_action.json"
+            }
+        }
+    ],
+    "actiony": {
+        "$if": {
+            "$condition": {
+                "$and": [
+                    "$eq ($.Contract.Metadata.Type,usercreated)",
+                    "$not $isugcrestricted"
+                ]
+            },
+            "$then": {
+                "prompt_label": "$loc UI_BUTTON_PROMPTS_ACTION_REPORT_CONTRACT",
+                "link": {
+                    "page": "report",
+                    "args": {
+                        "url": "report",
+                        "args": {
+                            "contractid": "$.Contract.Metadata.Id"
+                        },
+                        "contractid": "$.Contract.Metadata.Id",
+                        "contracttitle": "$.Contract.Metadata.Title"
+                    }
+                }
+            }
+        }
+    },
+    "actionx": {
+        "$if": {
+            "$condition": {
+                "$and": [
+                    "$eq ($.Contract.Metadata.Type,usercreated)",
+                    "$not $isugcrestricted"
+                ]
+            },
+            "$then": {
+                "$if $eq ($.@parent.@parent.@parent.Category,MyPlaylist)": {
+                    "$then": {
+                        "prompt_label": {
+                            "$if $.IsMarkedForDeleteFromPlaylist": {
+                                "$then": "$loc UI_BUTTON_PROMPTS_ACTION_UNMARK_FOR_REMOVAL",
+                                "$else": "$loc UI_BUTTON_PROMPTS_ACTION_MARK_FOR_REMOVAL"
+                            }
+                        },
+                        "contractplaylist": {
+                            "mode": "togglemarkedfordelete",
+                            "contractid": "$.Contract.Metadata.Id"
+                        },
+                        "set-value": {
+                            "target": "$.@global.ValidContractPlaylist",
+                            "value": false
+                        }
+                    },
+                    "$else": {
+                        "prompt_label": {
+                            "$if $.IsInPlaylist": {
+                                "$then": "$loc UI_BUTTON_PROMPTS_ACTION_REMOVE_FROM_PLAYLIST",
+                                "$else": "$loc UI_BUTTON_PROMPTS_ACTION_ADD_TO_PLAYLIST"
+                            }
+                        },
+                        "contractplaylist": {
+                            "mode": "addordelete",
+                            "contractid": "$.Contract.Metadata.Id"
+                        },
+                        "set-value": {
+                            "target": "$.@global.ValidContractPlaylist",
+                            "value": false
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

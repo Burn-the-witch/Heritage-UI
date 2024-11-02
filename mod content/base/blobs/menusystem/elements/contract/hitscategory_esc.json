@@ -1,0 +1,93 @@
+{
+    "$datacontext": {
+        "in": "$.data",
+        "datavalues": {
+            "NextSubType": {
+                "$if": {
+                    "$condition": {
+                        "$or": [
+                            "$eq($.data.Category,MyHistory)",
+                            "$eq($.data.Category,MyPlaylist)",
+                            "$eq($.data.Category,MyContracts)"
+                        ]
+                    },
+                    "$then": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/data/contract_nextsubtype.json"
+                        }
+                    }
+                }
+            }
+        },
+        "do": {
+            "controller": "group",
+            "view": "menu3.containers.ScrollingListContainer",
+            "layoutchildren": true,
+            "id": "hitscategory_container",
+            "row": 0.8,
+            "nrows": 3,
+            "ncols": 10,
+            "pressable": false,
+            "navigationmode": "leaf-selection",
+            "data": {
+                "direction": "horizontal"
+            },
+            "hidedefaultnocontent": false,
+            "actions": {
+                "$mergeobjects": [
+                    {
+                        "$if $eq($arraysize $.Data.Hits,0)": {
+                            "$then": {
+                                "select": {
+                                    "replace-children": {
+                                        "target": "headline_container",
+                                        "children": [
+                                            {
+                                                "view": "menu3.basic.DefaultNoContentHeader",
+                                                "selectable": false,
+                                                "pressable": false,
+                                                "data": {
+                                                    "title": "$loc UI_MENU_PAGE_NO_CONTRACTS_AVAILABLE"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "deselect": {
+                                    "replace-children": {
+                                        "target": "headline_container",
+                                        "children": []
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/actions/contract_nextfilter.json"
+                        }
+                    }
+                ]
+            },
+            "children": {
+                "$mergearrays": [
+                    {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/hitscategory_previous.json"
+                        }
+                    },
+                    {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/hitscategory_contracts.json"
+                        }
+                    },
+                    {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/hitscategory_next.json"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

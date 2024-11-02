@@ -1,0 +1,255 @@
+{
+    "$datacontext": {
+        "in": "$.data",
+        "datavalues": {
+            "RequiredResources": "$.data.Location.Properties.RequiredResources",
+            "ResourceAvailability": {
+                "$if $not $isnullorempty $.data.Location.Properties.Entitlements": {
+                    "$then": {
+                        "$availabilityofresources": {
+                            "resources": "$.data.Location.Properties.RequiredResources",
+                            "entitlements": "$.data.Location.Properties.Entitlements"
+                        }
+                    },
+                    "$else": {
+                        "$availabilityofresources": {
+                            "resources": "$.data.Location.Properties.RequiredResources"
+                        }
+                    }
+                }
+            }
+        },
+        "do": {
+            "controller": "container",
+            "actions": {
+                "activated": [
+                    {
+                        "trigger-ui-sound-event": {
+                            "eventname": "$formatstring {$.Location.Id}_ENTERED"
+                        }
+                    }
+                ],
+                "deactivated": {
+                    "$include": {
+                        "$path": "menusystem/elements/mastery/clearmasterydata_action.json"
+                    }
+                }
+            },
+            "children": [
+                {
+                    "$include": {
+                        "$path": "menusystem/elements/general/general_headline.json"
+                    }
+                },
+                {
+                    "controller": "category",
+                    "id": "category_controller",
+                    "view": "menu3.containers.ScrollingTabsContainer",
+                    "direction": "horizontal",
+                    "data": {
+                        "direction": "horizontal",
+                        "buttonprompts": [
+                            {
+                                "actiontype": [
+                                    "lb",
+                                    "rb"
+                                ],
+                                "actionlabel": "$loc UI_BUTTON_PROMPTS_BROWSE_CATEGORIES"
+                            }
+                        ],
+                        "topnavigation": {
+                            "title": "$loc UI_MENU_PAGE_HUB_GAMEMODES",
+                            "icon": "mission"
+                        }
+                    },
+                    "children": [
+                        {
+                            "controller": "categoryitem",
+                            "id": "destination_mission_tab",
+                            "view": "menu3.basic.CategoryElement",
+                            "data": {
+                                "title": "$loc UI_EVERGREEN_TITLE",
+                                "icon": "evergreen_gamemode"
+                            },
+                            "children": [
+                                {
+                                    "$datacontext $.MissionData": {
+                                        "controller": "group",
+                                        "row": 1,
+                                        "layoutchildren": true,
+                                        "nrows": 3,
+                                        "ncols": 10,
+                                        "children": [
+                                            {
+                                                "controller": "group",
+                                                "id": "statusline_container",
+                                                "view": "menu3.containers.ListContainer",
+                                                "direction": "horizontal",
+                                                "data": {
+                                                    "direction": "horizontal"
+                                                },
+                                                "row": 3.92,
+                                                "col": 0,
+                                                "selectable": false,
+                                                "pressable": false,
+                                                "children": {
+                                                    "$include": {
+                                                        "$path": "menusystem/elements/location/data/location_statuslinedata.json"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "controller": "list",
+                                                "view": "menu3.containers.ScrollingListContainer",
+                                                "id": "$formatstring {$.Location.Id}_container",
+                                                "nrows": 3,
+                                                "ncols": 10,
+                                                "direction": "horizontal",
+                                                "data": {
+                                                    "direction": "horizontal",
+                                                    "overflowscrolling": "0.3"
+                                                },
+                                                "children": {
+                                                    "$mergearrays": [
+                                                        {
+                                                            "$each $.SubLocationMissionsData": {
+                                                                "controller": "group",
+                                                                "view": "menu3.containers.ListContainerWithHeader",
+                                                                "id": "$formatstring {$.SubLocation.Id}_container",
+                                                                "layoutchildren": true,
+                                                                "nrows": 3,
+                                                                "ncols": 8,
+                                                                "direction": "horizontal",
+                                                                "data": {
+                                                                    "direction": "horizontal",
+                                                                    "headlinetitle": "$loc $formatstring UI_{$.SubLocation.Id}_TITLE"
+                                                                },
+                                                                "children": {
+                                                                    "$mergearrays": [
+                                                                        {
+                                                                            "$each $.Missions": {
+                                                                                "$datacontext": {
+                                                                                    "in": "$.",
+                                                                                    "datavalues": {
+                                                                                        "TileSize": "large"
+                                                                                    },
+                                                                                    "do": {
+                                                                                        "$include": "menusystem/elements/contract/hit.json"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        [
+                                                                            {
+                                                                                "$if": {
+                                                                                    "$condition": {
+                                                                                        "$and": [
+                                                                                            "$eq($.SubLocation.Id,LOCATION_SNUG)",
+                                                                                            "$not $eq($platform,orbis)",
+                                                                                            "$not $eq($platform,ps5)"
+                                                                                        ]
+                                                                                    },
+                                                                                    "$then": {
+                                                                                        "$datacontext": {
+                                                                                            "in": "$.",
+                                                                                            "datavalues": {
+                                                                                                "VideoId": "evergreen_how_to_play",
+                                                                                                "VideoHeader": "UI_MENU_EVERGREEN_HOW_TO_PLAY_HEADER",
+                                                                                                "VideoTitle": "UI_MENU_EVERGREEN_HOW_TO_PLAY_TITLE",
+                                                                                                "VideoImage": "images/evergreen/tiles/tile_how_to_play.jpg",
+                                                                                                "ResourceAvailability": "$.@parent.@parent.ResourceAvailability",
+                                                                                                "RequiredResources": "$.@parent.@parent.RequiredResources"
+                                                                                            },
+                                                                                            "do": {
+                                                                                                "id": "$formatstring video-tile-{$.VideoId}",
+                                                                                                "view": "menu3.basic.MenuTileLarge",
+                                                                                                "nrows": 3,
+                                                                                                "ncols": 4,
+                                                                                                "data": {
+                                                                                                    "header": "$loc $.VideoHeader",
+                                                                                                    "title": "$loc $.VideoTitle",
+                                                                                                    "image": "$res $.VideoImage",
+                                                                                                    "icon": "cutscene",
+                                                                                                    "locked": "$.IsLocked",
+                                                                                                    "lockedreason": "$loc $.LockedReason",
+                                                                                                    "availability": "$.ResourceAvailability.Availability"
+                                                                                                },
+                                                                                                "actions": {
+                                                                                                    "$include": {
+                                                                                                        "$path": "menusystem/elements/video/actions/video_defaultactions.json"
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "$if": {
+                                "$condition": {
+                                    "$and": [
+                                        "$eq ($.ResourceAvailability.State,available)",
+                                        "$not $isnull $.ChallengeData"
+                                    ]
+                                },
+                                "$then": {
+                                    "$include": {
+                                        "$path": "menusystem/elements/challenges/challengestab.json"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "$if": {
+                                "$condition": {
+                                    "$and": [
+                                        "$eq ($.ResourceAvailability.State,available)",
+                                        "$gt ($arraysize $.MasteryData,0) "
+                                    ]
+                                },
+                                "$then": {
+                                    "controller": "categoryitem",
+                                    "id": "destination_mastery_tab",
+                                    "view": "menu3.basic.CategoryElement",
+                                    "data": {
+                                        "title": "$loc UI_MENU_PAGE_DESTINATION_TAB_MASTERY",
+                                        "icon": "unlocked"
+                                    },
+                                    "children": {
+                                        "$if $isonline": {
+                                            "$then": {
+                                                "$include": {
+                                                    "$path": "menusystem/elements/mastery/masterytab.json"
+                                                }
+                                            },
+                                            "$else": [
+                                                {
+                                                    "$include": {
+                                                        "$path": "menusystem/elements/general/general_offline.json"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "$datacontext": {
+        "in": "$.data",
+        "do": {
+            "id": "gamemodecontracts_root",
+            "controller": "list",
+            "children": [
+                {
+                    "$include": {
+                        "$path": "menusystem/elements/general/general_headline.json"
+                    }
+                },
+                {
+                    "controller": "category",
+                    "id": "category_controller",
+                    "view": "menu3.containers.ScrollingTabsContainer",
+                    "direction": "horizontal",
+                    "data": {
+                        "direction": "horizontal",
+                        "topnavigation": {
+                            "title": "$loc UI_MENU_PAGE_HUB_GAMEMODES",
+                            "icon": "mission"
+                        }
+                    },
+                    "children": [
+                        {
+                            "view": "menu3.basic.CategoryElement",
+                            "controller": "categoryitem",
+                            "data": {
+                                "title": "$loc UI_MENU_PAGE_HUB_CONTRACTS",
+                                "icon": "contract"
+                            },
+                            "children": [
+                                {
+                                    "controller": "container",
+                                    "id": "statusline_container",
+                                    "view": "menu3.containers.ListContainer",
+                                    "direction": "horizontal",
+                                    "data": {
+                                        "direction": "horizontal"
+                                    },
+                                    "row": 4.92,
+                                    "col": 0,
+                                    "selectable": false,
+                                    "pressable": false,
+                                    "children": []
+                                },
+                                {
+                                    "$datacontext": {
+                                        "in": "$.",
+                                        "datavalues": {
+                                            "ResourceAvailability": {
+                                                "$availabilityofresources": {
+                                                    "resources": [
+                                                        "[assembly:/_pro/scenes/missions/thefacility/_scene_polarbear_005.entity].entitytemplate"
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "do": {
+                                            "$if ": {
+                                                "$condition": {
+                                                    "$or": [
+                                                        "$not $isonline",
+                                                        "$not $eq($.ResourceAvailability.State,available)"
+                                                    ]
+                                                },
+                                                "$then": {
+                                                    "$include": {
+                                                        "$path": "menusystem/pages/gamemodes/contentcontracts/contracts_overview_locked.json"
+                                                    }
+                                                },
+                                                "$else": {
+                                                    "$include": {
+                                                        "$path": "menusystem/pages/gamemodes/contentcontracts/contracts_overview.json"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

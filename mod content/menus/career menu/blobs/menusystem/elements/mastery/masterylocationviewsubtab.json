@@ -1,0 +1,58 @@
+{
+    "id": "$formatstring category_season_{$.by, .f}",
+    "view": "menu3.basic.SubCategoryElement",
+    "row": -2,
+    "controller": "categoryitem",
+    "data": {
+        "title": "$loc $formatstring UI_HERITAGE_SEASON_{$.by, .f}"
+    },
+    "children": [
+        {
+            "controller": "list",
+            "view": "menu3.containers.ScrollingListContainer",
+            "id": "profile_mastery_location_group",
+            "row": -1,
+            "nrows": 3,
+            "ncols": 10,
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal"
+            },
+            "children": {
+                "$each $.group": {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "ParentLocationId": "$.Id",
+                            "LocationId": "$.Id",
+                            "PageLink": "masterylocation",
+                            "Url": "masterydataforlocation",
+                            "LinkArgs": {
+                                "url": "masterydataforlocation",
+                                "locationId": "$.Id"
+                            },
+                            "ResourceAvailability": {
+                                "$if $not $isnullorempty $.Location.Properties.Entitlements": {
+                                    "$then": {
+                                        "$availabilityofresources": {
+                                            "resources": "$.RequiredResources",
+                                            "entitlements": "$.Location.Properties.Entitlements"
+                                        }
+                                    },
+                                    "$else": {
+                                        "$availabilityofresources": {
+                                            "resources": "$.RequiredResources"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "do": {
+                            "$include": "menusystem/elements/mastery/masterylocationviewtile.json"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

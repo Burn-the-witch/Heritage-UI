@@ -1,0 +1,281 @@
+{
+    "$datacontext": {
+        "in": "$.",
+        "datavalues": {
+            "IsValidAndNotInvalidated": {
+                "$and": [
+                    "$.Valid",
+                    "$not $.Invalidated"
+                ]
+            },
+            "UserCentricContract": "$cachedusercentriccontract $.Id",
+            "HeaderInfo": {
+                "$if $not $isnull {$cachedusercentriccontract $.Id}.Contract.Metadata.Location": {
+                    "$then": "$loc $formatstring UI_{{$cachedusercentriccontract $.Id}.Contract.Metadata.Location}_CITY",
+                    "$else": ""
+                }
+            },
+            "DifficultyInfo": {
+                "$if $not $isnullorempty $.Difficulty": {
+                    "$then": {
+                        "$loc": {
+                            "key": "UI_MENU_PAGE_PLANNING_PLAY_DIFFICULTY_HEADER",
+                            "data": "$loc $formatstring UI_DIFFICULTY_{$.Difficulty}_TITLE"
+                        }
+                    },
+                    "$else": ""
+                }
+            }
+        },
+        "do": {
+            "view": "menu3.basic.LoadSaveTileSmall",
+            "nrows": 1.5,
+            "ncols": 2,
+            "id": "$formatstring Slot_{$.Slot, .f}",
+            "pressable": {
+                "$switch $.Type": [
+                    {
+                        "case": "auto",
+                        "return": false
+                    },
+                    {
+                        "default": "$not $issavelimitexceeded"
+                    }
+                ]
+            },
+            "data": {
+                "$if $.Occupied": {
+                    "$then": {
+                        "$if $.IsValidAndNotInvalidated": {
+                            "$then": {
+                                "disable": {
+                                    "$switch $.Type": [
+                                        {
+                                            "case": "auto",
+                                            "return": true
+                                        },
+                                        {
+                                            "default": "$issavelimitexceeded"
+                                        }
+                                    ]
+                                },
+                                "disabletext": {
+                                    "$switch $.Type": [
+                                        {
+                                            "case": "auto",
+                                            "return": "$formatstring {$loc UI_MENU_PAGE_SAVELOAD_AUTOSAVE_SELECT_QUICK}<br>{$loc UI_MENU_PAGE_SAVELOAD_AUTOSAVE_SLOT}"
+                                        },
+                                        {
+                                            "default": "$formatstring {$loc UI_MENU_PAGE_SAVELOAD_LIMIT_REACHED_DESCRIPTION}<br>{$loc UI_MENU_PAGE_SAVELOAD_LIMIT_DESCRIPTION}"
+                                        }
+                                    ]
+                                },
+                                "timestamp": "$.TimestampString",
+                                "timestampnow": "$.TimestampNowString",
+                                "header": "$.HeaderInfo",
+                                "title": {
+                                    "$if $not $isnull $.UserCentricContract.Contract.Metadata.Location": {
+                                        "$then": "$loc $.UserCentricContract.Contract.Metadata.Title",
+                                        "$else": "$loc UI_MENU_PAGE_SAVELOAD_OCCUPIED_SAVE_SLOT"
+                                    }
+                                },
+                                "occupied": "$.Occupied",
+                                "image": "$.ImageRes",
+                                "icon": "mission",
+                                "online": "$.Online",
+                                "useronline": "$isonline",
+                                "valid": "$.Valid",
+                                "vr": "$.VR",
+                                "availability": {
+                                    "available": true
+                                },
+                                "difficultyIcon": {
+                                    "$if $not $isnullorempty $.Difficulty": {
+                                        "$then": "$formatstring difficulty{$.Difficulty}",
+                                        "$else": null
+                                    }
+                                }
+                            },
+                            "$else": {
+                                "disableautosave": {
+                                    "$switch $.Type": [
+                                        {
+                                            "case": "auto",
+                                            "return": true
+                                        },
+                                        {
+                                            "default": false
+                                        }
+                                    ]
+                                },
+                                "timestamp": "$.TimestampString",
+                                "timestampnow": "$.TimestampNowString",
+                                "header": "",
+                                "title": {
+                                    "$if $not $.Valid": {
+                                        "$then": "$loc UI_DIALOG_CORRUPT_SAVE_FILE_TITLE",
+                                        "$else": "$loc UI_DIALOG_INVALID_SAVE_FILE_TITLE"
+                                    }
+                                },
+                                "occupied": "$.Occupied",
+                                "image": "$res images/ui/tiles/corrupted.jpg",
+                                "icon": "corrupt",
+                                "online": true,
+                                "useronline": true,
+                                "valid": false
+                            }
+                        }
+                    },
+                    "$else": {
+                        "disable": {
+                            "$switch $.Type": [
+                                {
+                                    "case": "auto",
+                                    "return": true
+                                },
+                                {
+                                    "default": "$issavelimitexceeded"
+                                }
+                            ]
+                        },
+                        "disabletext": {
+                            "$switch $.Type": [
+                                {
+                                    "case": "auto",
+                                    "return": "$formatstring {$loc UI_MENU_PAGE_SAVELOAD_AUTOSAVE_SELECT_QUICK}<br>{$loc UI_MENU_PAGE_SAVELOAD_AUTOSAVE_SLOT}"
+                                },
+                                {
+                                    "default": "$formatstring {$loc UI_MENU_PAGE_SAVELOAD_LIMIT_REACHED_DESCRIPTION}<br>{$loc UI_MENU_PAGE_SAVELOAD_LIMIT_DESCRIPTION}"
+                                }
+                            ]
+                        },
+                        "title": "$loc UI_MENU_PAGE_SAVELOAD_EMPTY_SAVE_SLOT",
+                        "occupied": "$.Occupied",
+                        "online": true,
+                        "image": "$res images/ui/tiles/empty_saveslot.jpg",
+                        "icon": "mission"
+                    }
+                }
+            },
+            "actions": {
+                "select": {
+                    "replace-children": {
+                        "target": "headline_container",
+                        "children": [
+                            {
+                                "view": "menu3.basic.ItemHeadlineElement",
+                                "data": {
+                                    "$if $.Occupied": {
+                                        "$then": {
+                                            "$if $.IsValidAndNotInvalidated": {
+                                                "$then": {
+                                                    "header": {
+                                                        "$if $not $isnullorempty $.DifficultyInfo": {
+                                                            "$then": "$formatstring {$.HeaderInfo} / {$.DifficultyInfo}",
+                                                            "$else": "$.HeaderInfo"
+                                                        }
+                                                    },
+                                                    "title": {
+                                                        "$if $not $isnull $.UserCentricContract.Contract.Metadata.Location": {
+                                                            "$then": "$loc $.UserCentricContract.Contract.Metadata.Title",
+                                                            "$else": "$loc UI_MENU_PAGE_SAVELOAD_OCCUPIED_SAVE_SLOT"
+                                                        }
+                                                    },
+                                                    "icon": {
+                                                        "$if": {
+                                                            "$condition": {
+                                                                "$or": [
+                                                                    "$eq($.Type,auto)",
+                                                                    "$issavelimitexceeded"
+                                                                ]
+                                                            },
+                                                            "$then": "savedisabled",
+                                                            "$else": "mission"
+                                                        }
+                                                    }
+                                                },
+                                                "$else": {
+                                                    "header": "",
+                                                    "title": {
+                                                        "$if $not $.Valid": {
+                                                            "$then": "$loc UI_DIALOG_CORRUPT_SAVE_FILE_TITLE",
+                                                            "$else": "$loc UI_DIALOG_INVALID_SAVE_FILE_TITLE"
+                                                        }
+                                                    },
+                                                    "typeicon": "corrupt"
+                                                }
+                                            }
+                                        },
+                                        "$else": {
+                                            "header": "",
+                                            "title": "$loc UI_MENU_PAGE_SAVELOAD_EMPTY_SAVE_SLOT",
+                                            "icon": {
+                                                "$if": {
+                                                    "$condition": {
+                                                        "$or": [
+                                                            "$eq($.Type,auto)",
+                                                            "$issavelimitexceeded"
+                                                        ]
+                                                    },
+                                                    "$then": "savedisabled",
+                                                    "$else": "mission"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "deselect": {
+                    "replace-children": {
+                        "target": "headline_container",
+                        "children": []
+                    }
+                },
+                "accept": {
+                    "$if $.Occupied": {
+                        "$then": {
+                            "show-modal": {
+                                "config": {
+                                    "view": "menu3.modal.ModalDialogGeneric",
+                                    "buttons": [
+                                        "$loc UI_DIALOG_CONFIRM",
+                                        {
+                                            "label": "$loc UI_DIALOG_CANCEL",
+                                            "type": "cancel"
+                                        }
+                                    ],
+                                    "data": {
+                                        "title": "$loc UI_DIALOG_OVERWRITE_SAVE_FILE_TITLE",
+                                        "description": {
+                                            "$loc": {
+                                                "key": "UI_DIALOG_CONFIRM_TEXT",
+                                                "data": "$loc UI_DIALOG_ACTION_OVERWRITE_SAVE"
+                                            }
+                                        }
+                                    }
+                                },
+                                "onbutton": [
+                                    {
+                                        "savegame-create": {
+                                            "slot": "$.Slot"
+                                        },
+                                        "request-back": {}
+                                    }
+                                ]
+                            }
+                        },
+                        "$else": {
+                            "savegame-create": {
+                                "slot": "$.Slot"
+                            },
+                            "request-back": {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

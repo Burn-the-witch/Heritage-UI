@@ -1,0 +1,140 @@
+{
+    "$if": {
+        "$condition": {
+            "$include": "menusystem/data/ispeacock.json"
+        },
+        "$then":   {
+            "$if": {
+                "$condition": {
+                    "$and": [
+                        "$not $eq({$currentcontractcontext}.ContractType,arcade)",
+                        "$not $eq({$currentcontractcontext}.ContractType,evergreen)",
+                        "$not $eq({$currentcontractcontext}.ContractType,sniper)",
+                        "$not $eq({$currentcontractcontext}.ContractType,vsrace)"
+                    ]
+                },
+                "$then": {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "CanSave": "$cansave"
+                        },
+                        "do": {
+                            "view": "menu3.basic.ListElementSmall",
+                            "selectable": "$.CanSave",
+                            "pressable": "$.CanSave",
+                            "data": {
+                                "showningame": "$isingame",
+                                "title": "$loc UI_HERITAGE_QUICK_SAVE",
+                                "icon": {
+                                    "$if $.CanSave": {
+                                        "$then": "save",
+                                        "$else": "savedisabled"
+                                    }
+                                },
+                                "greyelement": "$not $.CanSave"
+                            },
+                            "actions":{
+                                "accept": [
+                                {
+                                    "link": {
+                                        "page": "savepage",
+                                        "args": {
+                                            "url": "save",
+                                            "args": {
+                                                "saveorload": "save"
+                                            },
+                                            "saveorload": "save"
+                                        }
+                                    }
+                                },
+                                {
+                                    "set-menu-context": {
+                                        "value": {
+                                            "onpageopened": {
+                                                "set-selected": {
+                                                    "target": "id_"
+                                                },
+                                                "trigger-input": {
+                                                    "action": "accept"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "$else": {
+            "$if": {
+                "$condition": {
+                    "$and": [
+                        "$not $eq({$currentcontractcontext}.ContractType,arcade)",
+                        "$not $eq({$currentcontractcontext}.ContractType,elusive)",
+                        "$not $eq({$currentcontractcontext}.ContractType,evergreen)",
+                        "$not $eq({$currentcontractcontext}.ContractType,sniper)",
+                        "$not $eq({$currentcontractcontext}.ContractType,vsrace)"
+                    ]
+                },
+                "$then": {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "CanSave": "$cansave"
+                        },
+                        "do": {
+                            "view": "menu3.basic.ListElementSmall",
+                            "selectable": "$.CanSave",
+                            "pressable": "$.CanSave",
+                            "data": {
+                                "showningame": "$isingame",
+                                "title": "$loc UI_HERITAGE_QUICK_SAVE",
+                                "icon": {
+                                    "$if $.CanSave": {
+                                        "$then": "save",
+                                        "$else": "savedisabled"
+                                    }
+                                },
+                                "greyelement": "$not $.CanSave"
+                            },
+                            "actions":{
+                                "accept": [
+                                {
+                                    "link": {
+                                        "page": "savepage",
+                                        "args": {
+                                            "url": "save",
+                                            "args": {
+                                                "saveorload": "save"
+                                            },
+                                            "saveorload": "save"
+                                        }
+                                    }
+                                },
+                                {
+                                    "set-menu-context": {
+                                        "value": {
+                                            "onpageopened": {
+                                                "set-selected": {
+                                                    "target": "id_"
+                                                },
+                                                "trigger-input": {
+                                                    "action": "accept"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

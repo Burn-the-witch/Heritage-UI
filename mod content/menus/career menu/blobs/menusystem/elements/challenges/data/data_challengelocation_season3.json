@@ -1,0 +1,14 @@
+{
+    "Season": "3",
+    "ChallengeData": {
+        "$arrayfilter": {
+            "source": "$.ProfileData.ChallengeData.Children",
+            "addCondition": {
+                "$and": [
+                    "$eq($.Location.Properties.Season,3)",
+                    "$not $eq($.Location.Id,LOCATION_PARENT_ICA_FACILITY)"
+                ]
+            }
+        }
+    }
+}

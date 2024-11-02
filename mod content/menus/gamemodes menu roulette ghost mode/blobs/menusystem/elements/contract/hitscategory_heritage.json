@@ -1,0 +1,41 @@
+{
+    "controller": "group",
+    "view": "menu3.containers.ScrollingListContainer",
+    "layoutchildren": true,
+    "id": "hitscategory_container",
+    "pressable": false,
+    "data": {
+        "direction": "horizontal"
+    },
+    "actions": {
+        "activated": {
+            "load-async": {
+                "path": "menusystem/elements/contract/hitscategory_heritage.json",
+                "from": {
+                    "url": "hitscategory",
+                    "args": {
+                        "page": 0,
+                        "type": "$.Category",
+                        "mode": "dataonly"
+                    }
+                },
+                "target": "hitscategory_container",
+                "showloadingindicator": true,
+                "blocksinput": false,
+                "post-load-action": [
+                    {
+                        "set-selected": {
+                            "target": "hitscategory_container"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "children": [
+        {
+            "pressable": false,
+            "selectable": true
+        }
+    ]
+}

@@ -1,0 +1,157 @@
+{
+	"$if": {
+		"$condition": {
+			"$and": [
+				{
+					"$or": [
+						"$eq($.Location.Properties.Season,$.@parent.LimitToSeason)",
+						"$isnull $.Location.Properties.Season"
+					]
+				},
+				{
+					"$if $not $isnull $.@parent.MaxLocationOrder": {
+						"$then": "$le ($.Location.Properties.Order,$.@parent.MaxLocationOrder)",
+						"$else": true
+					}
+				},
+				{
+					"$if $not $isnull $.@parent.MinLocationOrder": {
+						"$then": "$ge ($.Location.Properties.Order,$.@parent.MinLocationOrder)",
+						"$else": true
+					}
+				}
+			]
+		},
+		"$then": 
+		{
+			"view": "menu3.basic.MenuTileTall",
+			"_comment": "do not change this id - is used by challenge goto location!",
+			"id": "$formatstring {$.Location.Id}_tile",
+			"pressable": "$not $.Location.Properties.IsLocked",
+			"data": {
+				"title": {
+					"$if $not $.Location.Properties.IsLocked": {
+						"$then": "$loc $formatstring UI_{$.Location.Id}_CITY",
+						"$else": {
+							"$if $Location.Properties.UpcomingContent": {
+								"$loc $formatstring UI_{$.Location.Id}_COUNTRY"
+							}
+						}
+					}
+				},
+				"icon": "location",
+				"image": {
+					"$if $not $.Location.Properties.IsLocked": {
+						"$then": "$res $formatstring images/bdm_tiles/{$.Location.Id}/background.jpg",
+						"$else": {
+							"$if $.Location.Properties.UpcomingContent": {
+								"$then": "$res $formatstring images/bdm_tiles/{$.Location.Id}/background.jpg"
+							}
+						}
+					}
+				},
+				"header": {
+					"$if $not $.Location.Properties.IsLocked": {
+						"$then": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
+						"$else": {
+							"$if $.Location.Properties.UpcomingContent": {
+								"$then": "$loc $.Location.Properties.UpcomingKey"
+							}
+						}
+					}
+				}
+			},
+			"actions": {
+				"select": [
+					{
+						"$include": {
+							"$path": "menusystem/elements/mastery/setmasterydata_action.json"
+						}
+					},
+					{
+						"emit-sound-signal": {
+							"signalname": "$formatstring {$.Location.Id}_HIGHLIGHTED"
+						}
+					},
+					{
+						"replace-children": {
+							"target": "statusline_container",
+							"children": {
+								"$include": {
+									"$path": "menusystem/elements/location/data/location_statuslinedata.json"
+								}
+							}
+						}
+					},
+					{
+						"set-persistent-menudata": {
+							"mode": "setdata",
+							"path": "destinations.sub-menu-selection",
+							"value": "$formatstring destination_category_season_{$.@parent.LimitToSeason,.0f}"
+						}
+					},
+					{
+						"replace-children": {
+                "target": "headline_container",
+                "children": [
+                    {
+                        "view": "menu3.basic.HeadlineElement",
+                        "selectable": false,
+                        "pressable": false,
+                        "data": {
+                            "header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
+                            "title": "$loc $formatstring UI_{$.Location.Id}_CITY",
+                            "typeicon": "location"
+                        }
+                    }
+				]
+            }
+					}
+				],
+				"deselect": [
+					{
+						"$include": {
+							"$path": "menusystem/elements/mastery/clearmasterydata_action.json"
+						}
+					},
+					{
+						"emit-sound-signal": {
+							"signalname": "UNHIGHLIGHT_DIFFICULTY"
+						}
+					},
+					{
+						"replace-children": {
+							"target": "statusline_container",
+							"children": []
+						}
+					},
+					{
+											"replace-children": {
+                "target": "headline_container",
+                "children": [
+                    {
+                        "view": "menu3.basic.HeadlineElement",
+                        "selectable": false,
+                        "pressable": false,
+                    }
+                ]
+            }
+					}
+				],
+				"accept": {
+					"link": {
+						"page": "destination",
+						"args": {
+							"locationId": "$.Location.Id",
+							"url": "destination",
+							"args": {
+								"locationId": "$.Location.Id"
+							}
+						}
+					}
+				}
+			}
+		},
+		"$else": null
+	}
+}

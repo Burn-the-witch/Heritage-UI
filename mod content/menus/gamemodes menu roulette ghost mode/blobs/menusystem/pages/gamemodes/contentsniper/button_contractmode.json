@@ -1,0 +1,53 @@
+{
+    "view": "menu3.basic.MenuTileTall",
+    "nrows": 0.5,
+    "ncols": 2,
+    "data": {
+        "header": "$loc $.Contract.Metadata.Title",
+        "title": {
+            "$if $eq($.EngineMode,multiplayer)": {
+                "$then": "$loc UI_MENU_GAME_MODE_MULTIPLAYER",
+                "$else": "$loc UI_MENU_GAME_MODE_SINGLE_PLAYER"
+            }
+        },
+        "image": {
+            "$include": {
+                "$path": "menusystem/elements/contract/data/contract_tileimage.json"
+            }
+        },
+        "icon": "sniperrifle",
+        "availability": "$.ResourceAvailability.Availability"
+    },
+    "actions": {
+        "select": {
+            "replace-children": {
+                "target": "statusline_container",
+                "children": {
+                    "$include": {
+                        "$path": "menusystem/elements/contract/data/contract_statusline.json"
+                    }
+                }
+            }
+        },
+        "deselect": {
+            "replace-children": {
+                "target": "statusline_container",
+                "children": []
+            }
+        },
+        "accept": {
+            "$if $eq($.ResourceAvailability.State,available)": {
+                "$then": {
+                    "$include": {
+                        "$path": "menusystem/elements/contract/actions/contract_gotoplanning.json"
+                    }
+                },
+                "$else": {
+                    "$include": {
+                        "$path": "menusystem/actions/availability/not_available_action.json"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "$datacontext": {
+        "in": "$.",
+        "datavalues": {
+            "Data": "$.UserCentricContract.Data",
+            "Contract": "$.UserCentricContract.Contract",
+            "ResourceAvailability": "$availabilityofcontract $.UserCentricContract.Contract",
+            "TileSize": "$.TileSize",
+            "CustomId": "$.CustomId",
+            "Headeroverride": "$.Headeroverride",
+            "EngineMode": {
+                "$if $isnull $.EngineMode": {
+                    "$then": "",
+                    "$else": "$.EngineMode"
+                }
+            },
+            "IsInPlaylist": {
+                "$if $not $isnull $iscontractinplaylist $.UserCentricContract.Contract.Metadata.Id": {
+                    "$then": "$iscontractinplaylist $.UserCentricContract.Contract.Metadata.Id",
+                    "$else": "$.UserCentricContract.Data.PlaylistData.IsAdded"
+                }
+            },
+            "IsMarkedForDeleteFromPlaylist": "$iscontractinplaylistmarkedfordeletion $.UserCentricContract.Contract.Metadata.Id"
+        },
+        "do": {
+            "$mergeobjects": [
+                {
+                    "$switch $.TileSize": [
+                        {
+                            "case": "small",
+                            "return": {
+                                "view": "menu3.basic.MenuTileSmall",
+                                "nrows": 1.5,
+                                "ncols": 2
+                            }
+                        },
+                        {
+                            "case": "large",
+                            "return": {
+                                "view": "menu3.basic.MenuTileLarge",
+                                "nrows": 3,
+                                "ncols": 4
+                            }
+                        },
+                        {
+                            "case": "tall",
+                            "return": {
+                                "view": "menu3.basic.MenuTileTall",
+                                "nrows": 3,
+                                "ncols": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": {
+                        "$if $not $isnullorempty $.CustomId": {
+                            "$then": "$.CustomId",
+                            "$else": "$formatstring {$.UserCentricContract.Contract.Metadata.Id}_contractTile"
+                        }
+                    },
+                    "pressable": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/data/contract_ispressable.json"
+                        }
+                    },
+                    "data": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/data/contract_data.json"
+                        }
+                    },
+                    "actions": {
+                        "$include": {
+                            "$path": "menusystem/elements/contract/actions/contract_defaultactions2.json"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

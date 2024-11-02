@@ -1,0 +1,248 @@
+{
+	"controller": "list",
+	"view": "menu3.containers.ListContainer",
+	"id": "profile_challenge_location_group",
+	"direction": "horizontal",
+	"row": 1.0,
+	"data": {
+		"direction": "horizontal"
+	},
+	"children": [
+		{
+			"$datacontext": {
+				"in": "$.",
+				"do": {
+					"controller": "category",
+					"id": "sub_category_container",
+					"view": "menu3.containers.ScrollingListContainer",
+					"ncols": 12,
+					"direction": "horizontal",
+					"submenunavigation": true,
+					"loopedselection": false,
+					"data": {
+						"direction": "horizontal",
+						"submenu": true
+					},
+					"children": [
+						{
+							"id": "category_season_1",
+							"view": "menu3.basic.SubCategoryElement",
+							"controller": "categoryitem",
+							"row": -1.0,
+							"data": {
+								"title": "$loc $formatstring UI_HERITAGE_SEASON_1"
+							},
+							"children": [
+								{
+            "controller": "group",
+            "id": "statusline_container",
+            "view": "menu3.containers.ListContainer",
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal"
+            },
+            "row": 3.92,
+            "col": 0,
+            "selectable": false,
+            "pressable": false,
+            "children": {
+                "$include": {
+                    "$path": "menusystem/elements/location/data/location_statuslinedata.json"
+                }
+            }
+        },
+								{
+									"controller": "group",
+									"navigationmode": "leaf-selection",
+									"autoselectchildren": true,
+									"id": "sub_category_controller",
+									"container": "sub_category_container",
+									"view": "menu3.containers.SimpleButtonTileScrollingListContainer",
+									"direction": "horizontal",
+									"nrows": 3,
+									"ncols": 10,
+									"data": {
+										"direction": "horizontal"
+									},
+									"children": [
+										{
+											"$datacontext": {
+												"in": "$.",
+												"datavalues": {
+													"LimitToSeason": 1,
+													"MaxLocationOrder": 199
+												},
+												"do": {
+													"controller": "list",
+													"id": "destination_category_season_1",
+													"view": "menu3.containers.ListContainer",
+													"navigationmode": "forward-to-parent",
+													"autoselectchildren": true,
+													"direction": "horizontal",
+													"data": {
+														"direction": "horizontal"
+													},
+													"children": [
+														{
+															"$include": {
+																"$path": "menusystem/pages/hub/destinations.json"
+															}
+														}
+													]
+												}
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "category_season_2",
+							"view": "menu3.basic.SubCategoryElement",
+							"controller": "categoryitem",
+							"row": -1.0,
+							"data": {
+								"title": "$loc $formatstring UI_HERITAGE_SEASON_2"
+							},
+							"children": [
+							{
+            "controller": "group",
+            "id": "statusline_container",
+            "view": "menu3.containers.ListContainer",
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal"
+            },
+            "row": 3.92,
+            "col": 0,
+            "selectable": false,
+            "pressable": false,
+            "children": {
+                "$include": {
+                    "$path": "menusystem/elements/location/data/location_statuslinedata.json"
+                }
+            }
+        },
+								{
+									"controller": "group",
+									"navigationmode": "leaf-selection",
+									"autoselectchildren": true,
+									"id": "sub_category_controller2",
+									"container": "sub_category_container",
+									"view": "menu3.containers.SimpleButtonTileScrollingListContainer",
+									"direction": "horizontal",
+									"nrows": 3,
+									"ncols": 10,
+									"data": {
+										"direction": "horizontal"
+									},
+									"children": [
+										{
+											"$datacontext": {
+												"in": "$.",
+												"datavalues": {
+													"LimitToSeason": 2,
+													"MaxLocationOrder": 199
+												},
+												"do": {
+													"controller": "list",
+													"id": "destination_category_season_2",
+													"view": "menu3.containers.ListContainer",
+													"navigationmode": "forward-to-parent",
+													"autoselectchildren": true,
+													"direction": "horizontal",
+													"data": {
+														"direction": "horizontal"
+													},
+													"children": [
+														{
+															"$include": {
+																"$path": "menusystem/pages/hub/destinations.json"
+															}
+														}
+													]
+												}
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "category_season_3",
+							"view": "menu3.basic.SubCategoryElement",
+							"controller": "categoryitem",
+							"row": -1.0,
+							"data": {
+								"title": "$loc $formatstring UI_HERITAGE_SEASON_3"
+							},
+							"children": [
+							{
+            "controller": "group",
+            "id": "statusline_container",
+            "view": "menu3.containers.ListContainer",
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal"
+            },
+            "row": 3.92,
+            "col": 0,
+            "selectable": false,
+            "pressable": false,
+            "children": {
+                "$include": {
+                    "$path": "menusystem/elements/location/data/location_statuslinedata.json"
+                }
+            }
+        },
+								{
+									"controller": "group",
+									"navigationmode": "leaf-selection",
+									"autoselectchildren": true,
+									"id": "sub_category_controller3",
+									"container": "sub_category_container",
+									"view": "menu3.containers.SimpleButtonTileScrollingListContainer",
+									"nrows": 3,
+									"ncols": 10,
+									"direction": "horizontal",
+									"data": {
+										"direction": "horizontal"
+									},
+									"children": [
+										{
+											"$datacontext": {
+												"in": "$.",
+												"datavalues": {
+													"LimitToSeason": 3,
+													"MaxLocationOrder": 1000
+												},
+												"do": {
+													"controller": "list",
+													"id": "destination_category_season_3",
+													"view": "menu3.containers.ListContainer",
+													"navigationmode": "forward-to-parent",
+													"autoselectchildren": true,
+													"direction": "horizontal",
+													"data": {
+														"direction": "horizontal"
+													},
+													"children": [
+														{
+															"$include": {
+																"$path": "menusystem/pages/hub/destinations.json"
+															}
+														}
+													]
+												}
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		}
+	]
+}

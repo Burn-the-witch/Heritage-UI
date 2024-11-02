@@ -1,0 +1,57 @@
+{
+    "id": "sub_list",
+    "controller": "list",
+    "view": "menu3.containers.ScrollingListContainer",
+    "nrows": 0.5,
+    "ncols": 10,
+    "direction": "horizontal",
+    "data": {
+        "direction": "horizontal",
+        "scrollbarspaceoffset": -440
+    },
+    "actions": {
+        "activated": {
+            "call": {
+                "onmenuframe": true,
+                "method": "setBackground",
+                "args": {
+                    "$include": {
+                        "$path": "menusystem/elements/contract/data/contract_backgroundimage.json"
+                    }
+                }
+            }
+        }
+    },
+    "children": [
+        {
+            "$datacontext": {
+                "in": "$.",
+                "datavalues": {
+                    "Contract": "$.Contract",
+                    "ResourceAvailability": "$.ResourceAvailability",
+                    "EngineMode": "$.Contract.Metadata.Enginemodes[0]"
+                },
+                "do": {
+                    "$include": {
+                        "$path": "menusystem/pages/gamemodes/contentsniper/button_contractmode.json"
+                    }
+                }
+            }
+        },
+        {
+            "$datacontext": {
+                "in": "$.",
+                "datavalues": {
+                    "Contract": "$.Contract",
+                    "ResourceAvailability": "$.ResourceAvailability",
+                    "EngineMode": "$.Contract.Metadata.Enginemodes[1]"
+                },
+                "do": {
+                    "$include": {
+                        "$path": "menusystem/pages/gamemodes/contentsniper/button_contractmode.json"
+                    }
+                }
+            }
+        }
+    ]
+}

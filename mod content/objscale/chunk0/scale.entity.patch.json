@@ -1,0 +1,29 @@
+{
+    "tempHash": "0093B7139387B988",
+    "tbluHash": "004D99E9BEC3EA51",
+    "patch": [
+        {
+            "SubEntityOperation": [
+                "e8443db6ea12b268",
+                {
+                    "SetPropertyValue": {
+                        "property_name": "m_vPositionOffset",
+                        "value": { "x": 36.8, "y": 36.8, "z": 0 }
+                    }
+                }
+            ]
+        },
+        {
+            "SubEntityOperation": [
+                "e8443db6ea12b268",
+                {
+                    "SetPropertyValue": {
+                        "property_name": "m_vSize",
+                        "value": { "x": 130, "y": 130 }
+                    }
+                }
+            ]
+        }
+    ],
+    "patchVersion": 6
+}

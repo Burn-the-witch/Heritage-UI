@@ -1,0 +1,222 @@
+{
+    "controller": "categoryitem",
+    "view": "menu3.basic.CategoryElement",
+    "id": "category_gamemodes",
+    "data": {
+        "title": "$loc UI_HERITAGE_GAMEMODES",
+        "icon": "mission"
+    },
+    "children": [
+        {
+            "id": "gamemodes_container_context",
+            "controller": "context",
+            "view": "menu3.containers.SimpleButtonTileScrollingListContainer",
+            "direction": "horizontal",
+            "data": {
+                "direction": "horizontal"
+            },
+            "row": 1,
+            "nrows": 3,
+            "header": "UI_HERITAGE_GAMEMODES",
+            "ncols": 10,
+            "children": [
+                {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "Title": "$loc UI_MENU_PAGE_HUB_CONTRACTS",
+                            "header": "UI_HERITAGE_GAMEMODES",
+                            "Icon": "contract",
+                            "image": "$res images/challenges/profile_challenges/classics_normal_47_silent_assassin.jpg",
+                            "ExtraActions": {
+                                "accept": {
+                                    "link": {
+                                        "page": "gamemode_contracts",
+                                        "args": {
+                                            "url": "contracts"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "do": {
+                            "$include": {
+                                "$path": "menusystem/pages/careermenu/Gamemodestile.JSON"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "Title": "$loc UI_HERITAGE_ESC_TITLE",
+                            "Icon": "54",
+                            "image": "$res images/challenges/profile_challenges/escalation_s2_tier_9.jpg",
+                            "Category": "ContractAttack"
+                        },
+                        "do": {
+                            "$mergeobjects": [
+                                {
+                                    "$include": {
+                                        "$path": "menusystem/pages/careermenu/Gamemodestile.JSON"
+                                    }
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "controller": "container",
+                                            "children": [
+                                                {
+                                                    "$include": {
+                                                        "$path": "menusystem/elements/contract/contractshitcategoryloading.json"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "Title": "$loc UI_SNIPER_CHALLENGE_TITLE",
+                            "Icon": "sniperrifle",
+                            "image": "$res images/backgrounds/gamemode_sniper.jpg",
+                            "Id": "mastery_tile",
+                            "ExtraActions": {
+                                "accept": {
+                                    "link": {
+                                        "page": "gamemode_sniper",
+                                        "args": {
+                                            "url": "hitscategory",
+                                            "type": "Sniper",
+                                            "mode": "dataonly"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "do": {
+                            "$mergeobjects": [
+                                {
+                                    "$include": {
+                                        "$path": "menusystem/pages/careermenu/Gamemodestile.JSON"
+                                    }
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "controller": "container",
+                                            "row": -0.75,
+                                            "children": [
+                                                {
+                                                    "$include": {
+                                                        "$path": "menusystem/elements/mastery/masterylocationview.json"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "Title": "$loc UI_HERITAGE_GHOST",
+                            "Icon": "versus",
+                            "image": "$res images/backgrounds/gamemode_ghostmode.jpg",
+                            "Id": "mastery_tile",
+                            "ExtraActions": {
+                                "accept": {
+                                    "$include": {
+                                        "$path": "menusystem/elements/multiplayer/gotomultiplayerpresets_actions.json"
+                                    }
+                                }
+                            }
+                        },
+                        "do": {
+                            "$mergeobjects": [
+                                {
+                                    "$include": {
+                                        "$path": "menusystem/pages/careermenu/Gamemodestile.JSON"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "Title": "$loc UI_ARCADE_TITLE",
+                            "Icon": "arcademode",
+                            "image": "$res images/backgrounds/gamemode_arcade.jpg",
+                            "Id": "gamemodes_category_arcade",
+                            "ExtraActions": {
+                                "accept": {
+                                    "link": {
+                                        "page": "gamemode_arcade",
+                                        "args": {
+                                            "url": "hitscategory",
+                                    "type": "Arcade",
+                                    "mode": "dataonly"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "do": {
+                            "$mergeobjects": [
+                                {
+                                    "$include": {
+                                        "$path": "menusystem/pages/careermenu/Gamemodestile.JSON"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "$datacontext": {
+                        "in": "$.",
+                        "datavalues": {
+                            "Title": "$loc UI_EVERGREEN_TITLE",
+                            "Icon": "evergreen_gamemode",
+                            "image": "$res images/livetile/tile_gamemode_evergreen.jpg",
+                            "Id": "challenge_tile",
+                            "ExtraActions": {
+                                "accept": {
+                                    "link": {
+                                        "page": "gamemode_evergreen",
+                                        "args": {
+                                            "locationId": "LOCATION_PARENT_SNUG"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "do": {
+                            "$mergeobjects": [
+                                {
+                                    "$include": {
+                                        "$path": "menusystem/pages/careermenu/Gamemodestile.JSON"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

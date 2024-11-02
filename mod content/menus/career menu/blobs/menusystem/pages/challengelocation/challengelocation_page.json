@@ -1,0 +1,80 @@
+{
+    "$datacontext": {
+        "in": "$.data",
+        "do": {
+            "controller": "list",
+            "data": {
+                "direction": "vertical"
+            },
+            "actions": {
+                "activated": [
+                ],
+                "deactivated": [
+                    {
+                        "$include": {
+                            "$path": "menusystem/elements/mastery/clearmasterydata_action.json"
+                        }
+                    }
+                ]
+            },
+            "children": [
+                {
+                    "$include": {
+                        "$path": "menusystem/elements/general/general_headline.json"
+                    }
+                },
+                {
+                    "controller": "list",
+                    "id": "category_container"
+                },
+                {
+                    "controller": "category",
+                    "container": "category_container",
+                    "view": "menu3.containers.ScrollingTabsContainer",
+                    "direction": "horizontal",
+                    "ncols": 10,
+                    "data": {
+                        "direction": "horizontal",
+                        "buttonprompts": [
+                            {
+                                "actiontype": [
+                                    "lb",
+                                    "rb"
+                                ],
+                                "actionlabel": "$loc UI_BUTTON_PROMPTS_BROWSE_CATEGORIES"
+                            }
+                        ],
+                        "topnavigation": {
+                            "title": "$loc UI_MENU_PAGE_PROFILE_CHALLENGES",
+                            "icon": "challenge"
+                        }
+                    },
+                    "children": [
+                        {
+                            "id": "$formatstring challengelocation_difficulty_normal_tab",
+                            "controller": "categoryitem",
+                            "view": "menu3.basic.CategoryElement",
+                            "data": {
+                                "header": "$loc UI_MENU_PAGE_PROFILE_CHALLENGES",
+                                "title": {
+                                    "$if $not $isnull $.Location": {
+                                        "$then": "$loc $formatstring UI_{$.Location.Id}_TITLE",
+                                        "$else": "$loc $.Name"
+                                    }
+                                },
+                                "icon": "challenge"
+                            },
+                            "children": [
+                                {
+                                    "$include": {
+                                        "$path": "menusystem/elements/challenges/challengessubmenuview.json"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

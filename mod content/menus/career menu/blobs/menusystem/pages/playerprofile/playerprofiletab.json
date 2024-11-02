@@ -1,0 +1,127 @@
+{
+    "view": "menu3.basic.CategoryElement",
+    "controller": "categoryitem",
+    "data": {
+        "title": "$loc UI_MENU_PAGE_PROFILE_PLAYER_PROFILE",
+        "icon": "profile"
+    },
+    "children": [
+        {
+            "pressable": false,
+            "selectable": false,
+            "actions": {
+                "activated": {
+                    "set-selected": {
+                        "target": "profile_category_season_3"
+                    }
+                }
+            }
+        },
+        {
+            "view": "menu3.basic.PlayerProfileBadgeElement",
+            "col": 6.4,
+            "row": 1.23,
+            "pressable": false,
+            "selectable": false,
+            "data": {
+                "title": "$user $profileid",
+                "level": "{$.Level,.0f}",
+                "badgesize": 540,
+                "animate": true
+            },
+            "actions": {
+                "activated": {
+                    "emit-sound-signal": {
+                        "signalname": "MENU_PROFILEPAGE_PLAYERBADGE_ACTIVATED"
+                    }
+                }
+            }
+        },
+        {
+            "controller": "category",
+            "id": "sub_category_container",
+            "row": 0.0,
+            "col": 0,
+            "view": "menu3.containers.ScrollingTabsContainer",
+            "ncols": 10,
+            "direction": "horizontal",
+            "submenunavigation": true,
+            "loopedselection": false,
+            "data": {
+                "direction": "horizontal",
+                "submenu": true
+            },
+            "children": {
+                "$each $.Seasons": {
+                    "id": "$formatstring profile_category_season_{$.Number,.0f}",
+                    "view": "menu3.basic.SubCategoryElement",
+                    "controller": "categoryitem",
+                    "data": {
+                        "title": "$loc $formatstring UI_SEASON_{$.Number,.0f}"
+                    },
+                    "children": [
+                        {
+                            "controller": "list",
+                            "view": "menu3.containers.ListContainer",
+                            "col": -0.05,
+                            "row": 1,
+                            "nrows": 3,
+                            "ncols": 10,
+                            "direction": "horizontal",
+                            "data": {
+                                "direction": "horizontal"
+                            },
+                            "children": [
+                                {
+                                    "view": "menu3.basic.PlayerProfileListElementHeader",
+                                    "col": 0,
+                                    "row": 0,
+                                    "pressable": false,
+                                    "selectable": true,
+                                    "data": {
+                                        "title": "$user $profileid",
+                                        "level": "$formatstring {$loc UI_DIALOG_ESCALATION_LEVEL} {$.@parent.Level,.0f}",
+                                        "xp": "$formatstring {$formatint $.@parent.Total} {$loc UI_PERFORMANCE_MASTERY_XP}"
+                                    }
+                                },
+                                {
+                                    "view": "menu3.basic.PlayerProfileListElementBig",
+                                    "col": 0,
+                                    "row": 0.6,
+                                    "nrows": 0,
+                                    "ncols": 0,
+                                    "selectable": false,
+                                    "pressable": false,
+                                    "data": {
+                                        "title": "$loc UI_MENU_PAGE_HUB_LOCATIONS",
+                                        "value1": "$loc UI_MENU_PAGE_PROFILE_MASTERY",
+                                        "value2": "$loc UI_MENU_PAGE_PROFILE_CHALLENGES",
+                                        "value3": "$loc UI_MENU_ACTIONREWARD_CATEGORY_TITLE",
+                                        "style": "headline"
+                                    }
+                                },
+                                {
+                                    "controller": "list",
+                                    "view": "menu3.containers.ScrollingListContainer",
+                                    "col": 0,
+                                    "row": 0.8,
+                                    "nrows": 3.1,
+                                    "ncols": 5,
+                                    "direction": "vertical",
+                                    "data": {
+                                        "direction": "vertical"
+                                    },
+                                    "children": {
+                                        "$each $.Locations": {
+                                            "$include": "menusystem/pages/playerprofile/playerprofileentry.json"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

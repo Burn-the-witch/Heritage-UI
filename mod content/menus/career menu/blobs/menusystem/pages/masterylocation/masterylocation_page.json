@@ -1,0 +1,126 @@
+{
+    "$datacontext": {
+        "in": "$.data",
+        "do": {
+            "id": "root_list",
+            "controller": "list",
+            "data": {
+                "direction": "vertical"
+            },
+            "actions": {
+                "activated": [
+                ],
+                "deactivated": [
+                    {
+                        "$include": {
+                            "$path": "menusystem/elements/mastery/clearmasterydata_action.json"
+                        }
+                    }
+                ]
+            },
+            "children": [
+                {
+                    "$include": {
+                        "$path": "menusystem/elements/general/general_headline.json"
+                    }
+                },
+                {
+                    "controller": "list",
+                    "id": "mastery_category_container"
+                },
+                {
+                    "id": "mastery_category_controller",
+                    "controller": "category",
+                    "container": "mastery_category_container",
+                    "view": "menu3.containers.ScrollingTabsContainer",
+                    "direction": "horizontal",
+                    "ncols": 10,
+                    "data": {
+                        "direction": "horizontal",
+                        "overflowscrolling": "0.45",
+                        "buttonprompts": [
+                            {
+                                "actiontype": [
+                                    "lb",
+                                    "rb"
+                                ],
+                                "actionlabel": "$loc UI_BUTTON_PROMPTS_BROWSE_CATEGORIES"
+                            }
+                        ],
+                        "topnavigation": {
+                            "title": "$loc UI_MENU_PAGE_MASTERY_TITLE",
+                            "icon": "unlocked"
+                        }
+                    },
+                    "actions": {
+                        "select": {
+                            "set-selected": {
+                                "target": "mastery-tile-unlocked",
+                                "last-found": true
+                            }
+                        }
+                    },
+                    "children": [
+                        {
+                            "id": "$formatstring mastery_category_{$.Location.Id}",
+                            "controller": "categoryitem",
+                            "view": "menu3.basic.CategoryElement",
+                            "data": {
+                                "title": "$loc $formatstring UI_{$.Location.Id}_CITY",
+                                "icon": "unlocked"
+                            },
+                            "children": [
+                                {
+                                    "controller": "category",
+                                    "id": "sub_category_controller",
+                                    "container": "sub_category_container",
+                                    "view": "menu3.containers.ScrollingTabsContainer",
+                                    "direction": "horizontal",
+                                    "submenunavigation": true,
+                                    "prevnextnav": true,
+                                    "ncols": 10,
+                                    "visible": "$gt($arraysize $.MasteryData, 1)",
+                                    "data": {
+                                        "direction": "horizontal",
+                                        "submenu": true
+                                    },
+                                    "children": {
+                                        "$each $.MasteryData": {
+                                            "$datacontext": {
+                                                "in": "$.",
+                                                "datavalues": {
+                                                    "IsUpgradeMastery": "$not $isnull $.Unlockable",
+                                                    "OverrideUnlockableTileImage": "$not $isnull $.Unlockable"
+                                                },
+                                                "do": {
+                                                    "controller": "categoryitem",
+                                                    "id": "$formatstring mastery_category_{$.Name}",
+                                                    "view": "menu3.basic.SubCategoryElement",
+                                                    "data": {
+                                                        "title": {
+                                                            "$if $not $isnull $.Unlockable": {
+                                                                "$then": "$loc {$item $.Unlockable}.name",
+                                                                "$else": "$loc UI_MENU_PAGE_PROFILE_LOCATION_MASTERY"
+                                                            }
+                                                        }
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "$include": {
+                                                                "$path": "menusystem/elements/mastery/masterysubtab.json"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

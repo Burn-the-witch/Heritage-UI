@@ -1,0 +1,56 @@
+{
+    "controller": "container",
+    "children": [
+        {
+            "pressable": false,
+            "selectable": false,
+            "actions": {
+                "activated": [
+                    {
+                        "$if $not $.@global.NoAutoSelectMastery": {
+                            "$then": {
+                                "set-selected": {
+                                    "target": "category_season_1"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "set-value": {
+                            "target": "$.@global.NoAutoSelectMastery",
+                            "value": true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "controller": "category",
+            "id": "sub_category_container",
+            "row": 1,
+            "_col": 0,
+            "view": "menu3.containers.ScrollingTabsContainer",
+            "ncols": 10,
+            "direction": "horizontal",
+            "submenunavigation": true,
+            "loopedselection": false,
+            "data": {
+                "direction": "horizontal",
+                "submenu": true
+            },
+            "children": {
+                "$each": {
+                    "in": {
+                        "$arraygroupby": {
+                            "source": "$.ProfileData.MasteryData",
+                            "property": "Location.Properties.Season"
+                        }
+                    },
+                    "do": {
+                        "$include": "menusystem/elements/mastery/masterylocationviewsubtab.json"
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{ 
+  "controller": "contextitem",
+  "id": "$formatstring story_category_{$.Name}",
+  "view": "menu3.basic.MenuTileTall",
+  "row": -0.75,
+  "nrows": 3,
+  "ncols": 2,
+  "data": {
+    "title": "$loc $.Name",
+    "icon": "story",
+    "image": "$res $formatstring images/story_tiles/{$.Name}/background.jpg",
+    "header": "$loc $formatstring {$.Name}_HEADER"
+  },
+  "children": [
+    {
+      "$if": {
+        "$condition": "$gt($arraysize $.Subgroups, 0)",
+        "$then": {
+          "$include": {
+            "$path": "menusystem/pages/hub/story/storysubgroup.json"
+          }
+        },
+        "$else": {
+          "$if": {
+            "$condition": {
+              "$or": [
+                "$isuser h1legacyexpansion",
+                "$not $eq($.Name,UI_CONTRACT_CAMPAIGN_WHITE_SPIDER_TITLE)"
+              ]
+            },
+            "$then": {
+              "$include": { "$path": "menusystem/pages/hub/story/story.json" }
+            },
+            "$else": {
+              "$include": {
+                "$path": "menusystem/pages/hub/story/storywhitespidernotowned.json"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "actions": {
+    "select": {
+        "replace-children": {
+            "target": "headline_container",
+            "children": [
+                {
+                    "view": "menu3.basic.HeadlineElement",
+                    "selectable": false,
+                    "pressable": false,
+                    "data": {
+                        "header": "$loc $formatstring {$.Name}_HEADER",
+                        "title": "$loc $.Name",
+                        "typeicon": "story"
+                    }
+                }
+            ]
+        }
+    },
+    "deselect": [
+    
+        {
+                                "replace-children": {
+    "target": "headline_container",
+    "children": [
+        {
+            "view": "menu3.basic.HeadlineElement",
+            "selectable": false,
+            "pressable": false
+        }
+    ]
+}
+        }
+    ]
+  }
+}

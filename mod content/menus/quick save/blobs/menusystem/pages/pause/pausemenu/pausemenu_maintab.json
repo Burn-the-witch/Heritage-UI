@@ -1,0 +1,96 @@
+{
+    "id": "category_pausemain",
+    "view": "menu3.basic.CategoryElement",
+    "controller": "categoryitem",
+    "data": {
+        "title": "$loc UI_MENU_PAGE_PAUSE_MAIN",
+        "icon": "game"
+    },
+    "children": [
+        {
+            "controller": "list",
+            "children": [
+                {
+                    "$if $not $eq($platform,stadia)": {
+                        "$then": {
+                            "view": {
+                                "$switch {$currentcontractcontext}.ContractType": [
+                                    {
+                                        "case": "sniper",
+                                        "return": "menu3.ControllerLayoutSniper"
+                                    },
+                                    {
+                                        "default": "menu3.ControllerLayout"
+                                    }
+                                ]
+                            },
+                            "id": "controller_layout",
+                            "selectable": false,
+                            "pressable": false,
+                            "row": 1,
+                            "col": 2.15,
+                            "data": {
+                                "emotesenabled": "$eq({$currentcontractcontext}.ContractType,vsrace)"
+                            }
+                        }
+                    }
+                },
+                {
+                    "view": "menu3.containers.ScrollingListContainer",
+                    "direction": "vertical",
+                    "row": 1,
+                    "col": 0,
+                    "nrows": 3,
+                    "ncols": 4,
+                    "controller": "list",
+                    "data": {
+                        "direction": "vertical",
+                        "overflowscrolling": "1.0"
+                    },
+                    "children": [
+                        {
+                            "$include": {
+                                "$path": "menusystem/heritage/quick_save.JSON"
+                            }
+                        },
+                        {
+                            "$include": {
+                                "$path": "menusystem/heritage/quick_load.JSON"
+                            }
+                        },
+                        {
+                            "$include": {
+                                "$path": "menusystem/pages/pause/pausemenu/save.json"
+                            }
+                        },
+                        {
+                            "$include": {
+                                "$path": "menusystem/pages/pause/pausemenu/load.json"
+                            }
+                        },
+                        {
+                            "$include": {
+                                "$path": "menusystem/pages/pause/pausemenu/nvidiahighlights.json"
+                            }
+                        },
+                        {
+                            "$include": {
+                                "$path": "menusystem/pages/pause/pausemenu/restart.json"
+                            }
+                        },
+                        {
+                            "$include": {
+                                "$path": "menusystem/pages/pause/pausemenu/replan.json"
+                            }
+                        },
+                        {
+                            "$include": {
+                                "$path": "menusystem/pages/pause/pausemenu/exit.json"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

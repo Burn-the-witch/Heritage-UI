@@ -1,0 +1,258 @@
+{
+    "$if $.Occupied": {
+        "$then": {
+            "$datacontext": {
+                "in": "$.",
+                "datavalues": {
+                    "Index": "$._index",
+                    "Pressable": {
+                        "$if $isingame": {
+                            "$then": "$eq ($.VR,$isvractive)",
+                            "$else": {
+                                "$or": [
+                                    "$not $.VR",
+                                    "$isvrdeviceavailable"
+                                ]
+                            }
+                        }
+                    },
+                    "IsValidAndNotInvalidated": {
+                        "$and": [
+                            "$.Valid",
+                            "$not $.Invalidated"
+                        ]
+                    },
+                    "UserCentricContract": "$cachedusercentriccontract $.Id",
+                    "Contract": "{$cachedusercentriccontract $.Id}.Contract",
+                    "ResourceAvailability": "$availabilityofcontract {$cachedusercentriccontract $.Id}.Contract",
+                    "HeaderInfo": {
+                        "$if $not $isnull {$cachedusercentriccontract $.Id}.Contract.Metadata.Location": {
+                            "$then": "$loc $formatstring UI_{{$cachedusercentriccontract $.Id}.Contract.Metadata.Location}_CITY",
+                            "$else": ""
+                        }
+                    },
+                    "DifficultyInfo": {
+                        "$if $not $isnullorempty $.Difficulty": {
+                            "$then": {
+                                "$loc": {
+                                    "key": "UI_MENU_PAGE_PLANNING_PLAY_DIFFICULTY_HEADER",
+                                    "data": "$loc $formatstring UI_DIFFICULTY_{$.Difficulty}_TITLE"
+                                }
+                            },
+                            "$else": ""
+                        }
+                    }
+                },
+                "do": {
+                    "view": "menu3.basic.LoadSaveTileSmall",
+                    "nrows": 1.5,
+                    "ncols": 2,
+                    "id": "$formatstring id_{$.Index,.0f}",
+                    "pressable": "$.Pressable",
+                    "data": {
+                        "$if $.IsValidAndNotInvalidated": {
+                            "$then": {
+                                "timestamp": "$.TimestampString",
+                                "timestampnow": "$.TimestampNowString",
+                                "header": "$.HeaderInfo",
+                                "title": {
+                                    "$if $not $isnull $.UserCentricContract.Contract.Metadata.Location": {
+                                        "$then": "$loc $.UserCentricContract.Contract.Metadata.Title",
+                                        "$else": "$loc UI_MENU_PAGE_SAVELOAD_OCCUPIED_SAVE_SLOT"
+                                    }
+                                },
+                                "online": "$.Online",
+                                "useronline": "$isonline",
+                                "occupied": true,
+                                "image": "$.ImageRes",
+                                "icon": "mission",
+                                "difficultyIcon": {
+                                    "$if $not $isnullorempty $.Difficulty": {
+                                        "$then": "$formatstring difficulty{$.Difficulty}",
+                                        "$else": null
+                                    }
+                                },
+                                "valid": true,
+                                "availability": "$.ResourceAvailability.Availability",
+                                "vr": "$.VR"
+                            },
+                            "$else": {
+                                "timestamp": "$.TimestampString",
+                                "timestampnow": "$.TimestampNowString",
+                                "header": "",
+                                "title": {
+                                    "$if $not $.Valid": {
+                                        "$then": "$loc UI_DIALOG_CORRUPT_SAVE_FILE_TITLE",
+                                        "$else": "$loc UI_DIALOG_INVALID_SAVE_FILE_TITLE"
+                                    }
+                                },
+                                "online": true,
+                                "useronline": true,
+                                "occupied": true,
+                                "image": "$res images/ui/tiles/corrupted.jpg",
+                                "icon": "corrupt",
+                                "valid": false
+                            }
+                        }
+                    },
+                    "actions": {
+                        "$mergeobjects": [
+                            {
+                                "select": {
+                                    "replace-children": {
+                                        "target": "headline_container",
+                                        "children": [
+                                            {
+                                                "id": "headline-element",
+                                                "view": "menu3.basic.ItemHeadlineElement",
+                                                "data": {
+                                                    "$if $.IsValidAndNotInvalidated": {
+                                                        "$then": {
+                                                            "header": {
+                                                                "$if $not $isnullorempty $.DifficultyInfo": {
+                                                                    "$then": "$formatstring {$.HeaderInfo} / {$.DifficultyInfo}",
+                                                                    "$else": "$.HeaderInfo"
+                                                                }
+                                                            },
+                                                            "title": {
+                                                                "$if $not $isnull $.UserCentricContract.Contract.Metadata.Location": {
+                                                                    "$then": "$loc $.UserCentricContract.Contract.Metadata.Title",
+                                                                    "$else": "$loc UI_MENU_PAGE_SAVELOAD_OCCUPIED_SAVE_SLOT"
+                                                                }
+                                                            },
+                                                            "icon": "mission"
+                                                        },
+                                                        "$else": {
+                                                            "header": "",
+                                                            "title": {
+                                                                "$if $not $.Valid": {
+                                                                    "$then": "$loc UI_DIALOG_CORRUPT_SAVE_FILE_TITLE",
+                                                                    "$else": "$loc UI_DIALOG_INVALID_SAVE_FILE_TITLE"
+                                                                }
+                                                            },
+                                                            "typeicon": "corrupt"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "deselect": {
+                                    "replace-children": {
+                                        "target": "headline_container",
+                                        "children": []
+                                    }
+                                },
+                                "accept": {
+                                    "$if $.Pressable": {
+                                        "$then": {
+                                            "$if $not $.IsValidAndNotInvalidated": {
+                                                "$then": {
+                                                    "show-modal": {
+                                                        "config": {
+                                                            "view": "menu3.modal.ModalDialogGeneric",
+                                                            "buttons": [
+                                                                "$loc UI_DIALOG_CONFIRM",
+                                                                {
+                                                                    "label": "$loc UI_DIALOG_CANCEL",
+                                                                    "type": "cancel"
+                                                                }
+                                                            ],
+                                                            "data": {
+                                                                "title": {
+                                                                    "$if $not $.Valid": {
+                                                                        "$then": "$loc UI_DIALOG_CORRUPT_SAVE_FILE_TITLE",
+                                                                        "$else": "$loc UI_DIALOG_INVALID_SAVE_FILE_TITLE"
+                                                                    }
+                                                                },
+                                                                "description": {
+                                                                    "$if $not $.Valid": {
+                                                                        "$then": "$loc UI_LOAD_FAILED_CORRUPT",
+                                                                        "$else": "$loc UI_LOAD_FAILED_INVALID"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "onbutton": [
+                                                            {
+                                                                "savegame-delete": {
+                                                                    "name": "$.SaveName"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "$else": {
+                                                    "$if ": {
+                                                        "$condition": {
+                                                            "$or": [
+                                                                "$eq($.ResourceAvailability.State,available)",
+                                                                {
+                                                                    "$and": [
+                                                                        "$isineditor",
+                                                                        "$isnullorempty $.Contract"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "$then": {
+                                                            "$include": {
+                                                                "$path": "menusystem/pages/saveload/content/vr_warningcheck.json"
+                                                            }
+                                                        },
+                                                        "$else": {
+                                                            "$include": {
+                                                                "$path": "menusystem/actions/availability/not_available_action.json"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "$else": {
+            "view": "menu3.basic.LoadSaveTileSmall",
+            "nrows": 1.5,
+            "ncols": 2,
+            "pressable": false,
+            "data": {
+                "title": "$loc UI_MENU_PAGE_SAVELOAD_EMPTY_SAVE_SLOT",
+                "occupied": "$.Occupied",
+                "online": true,
+                "image": "$res images/ui/tiles/empty_saveslot.jpg",
+                "icon": "mission"
+            },
+            "actions": {
+                "select": {
+                    "replace-children": {
+                        "target": "headline_container",
+                        "children": [
+                            {
+                                "id": "headline-element",
+                                "view": "menu3.basic.ItemHeadlineElement",
+                                "data": {
+                                    "title": "$loc UI_MENU_PAGE_SAVELOAD_EMPTY_SAVE_SLOT",
+                                    "icon": "mission"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "deselect": {
+                    "replace-children": {
+                        "target": "headline_container",
+                        "children": []
+                    }
+                }
+            }
+        }
+    }
+}
