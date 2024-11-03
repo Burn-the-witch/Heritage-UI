@@ -421,18 +421,32 @@
 			"image": "framework content/UI_heritage.png",
 			"type": "select",
 			"group": "UI Style",
-			"blobsFolders": ["mod content/ui styles/blobs"],
-			"contentFolders": ["mod content/ui styles/heritage ui base"],
-			"enabledByDefault": true
+			"contentFolders": ["mod content/ui styles/heritage ui base"]
 		},
 		{
-			"name": "Heritage UI/Alpha Style Buttons",
+			"name": "Heritage UI| Minimal Crosshair",
+			"tooltip": "Heritage UI'S custom UI with a minimal dot styled crosshair.",
+			"image": "framework content/UI_heritage_minimal.png",
+			"type": "select",
+			"group": "UI Style",
+			"contentFolders": ["mod content/ui styles/heritage ui base minimal crosshair"]
+		},
+		{
+			"name": "Heritage UI| Alpha Style Buttons",
 			"tooltip": "Heritage UI'S custom UI with button prompts styled after the leaked alpha build.",
 			"image": "framework content/UI_heritage_alpha.png",
 			"type": "select",
 			"group": "UI Style",
-			"contentFolders": ["mod content/ui styles/heritage ui alpha"],
-			"blobsFolders": ["mod content/ui styles/blobs"]
+			"contentFolders": ["mod content/ui styles/heritage ui alpha"]
+		},
+		{
+			"name": "Heritage UI| Alpha Style Buttons and Minimal Crosshair",
+			"tooltip": "Heritage UI'S custom UI with a minimal dot styled crosshair and button prompts styled after the leaked alpha build.",
+			"image": "framework content/ui_heritage_alpha_minimal.png",
+			"type": "select",
+			"group": "UI Style",
+			"contentFolders": ["mod content/ui styles/heritage ui alpha minimal crosshair"],
+			"enabledByDefault": true
 		},
 		{
 			"name": "Vanilla",
