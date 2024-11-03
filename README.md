@@ -6,4 +6,4 @@ A user interface overhaul mod for Hitman: World of Assassination.
 
 ---
 
-`BurnTheWitch.HeritageUI` v7.4.7, by Burn, the witch. This README was automatically generated from the mod's manifest.
+`BurnTheWitch.HeritageUI` v7.4.8, by Burn, the witch. This README was automatically generated from the mod's manifest.

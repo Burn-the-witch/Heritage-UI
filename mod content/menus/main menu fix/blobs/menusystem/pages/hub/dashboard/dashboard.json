@@ -129,45 +129,45 @@
 				}
 			},
 			{
-                "view": "menu3.basic.ButtonTileXXSmall",
-                "row": 3,
-                "col": 8,
-                "nrows": 3,
-                "ncols": 2,
-                "data":{
-                    "title": "$loc UI_HERITAGE_GO_OFFLINE",
-                    "icon": "goonline",
-                    "image": "$res images/ui/tiles/button_goonline.jpg"
-                },
-                "actions": {
-                    "accept": {
-                        "force-offline": {}
-                    },
-                    "select": {
-                        "replace-children": {
-                            "target": "headline_container",
-                            "children": [
-                                {
-                                    "view": "menu3.basic.HeadlineElement",
-                                    "selectable": false,
-                                    "pressable": false,
-                                    "data": {
-                                        "header": "",
-                                        "title": "$loc UI_PEACOCK_GO_OFFLINE",
-                                        "typeicon": "goonline"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    "deselect": {
-                        "replace-children": {
-                            "target": "headline_container",
-                            "children": []
-                        }
-                    }
-                }
-            },
+				"view": "menu3.basic.ButtonTileXXSmall",
+				"row": 3,
+				"col": 8,
+				"nrows": 3,
+				"ncols": 2,
+				"data": {
+					"title": "$loc UI_HERITAGE_GO_OFFLINE",
+					"icon": "goonline",
+					"image": "$res images/ui/tiles/button_goonline.jpg"
+				},
+				"actions": {
+					"accept": {
+						"force-offline": {}
+					},
+					"select": {
+						"replace-children": {
+							"target": "headline_container",
+							"children": [
+								{
+									"view": "menu3.basic.HeadlineElement",
+									"selectable": false,
+									"pressable": false,
+									"data": {
+										"header": "",
+										"title": "$loc UI_PEACOCK_GO_OFFLINE",
+										"typeicon": "goonline"
+									}
+								}
+							]
+						}
+					},
+					"deselect": {
+						"replace-children": {
+							"target": "headline_container",
+							"children": []
+						}
+					}
+				}
+			},
 			{
 				"view": "menu3.basic.MenuTileTall",
 				"row": 0,
