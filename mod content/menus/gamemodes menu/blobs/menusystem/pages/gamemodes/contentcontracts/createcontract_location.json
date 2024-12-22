@@ -1,0 +1,68 @@
+{
+	"$datacontext": {
+		"in": "$.",
+		"datavalues": {
+			"ResourceAvailability": "$availabilityofusercentriccontract $."
+		},
+		"do": {
+			"view": "menu3.basic.MenuTileTall",
+			"nrows": 3,
+			"ncols": 2,
+			"data": {
+				"$datacontext": {
+					"in": "$.SubLocation",
+					"datavalues": {
+						"ResourceAvailability": "$.ResourceAvailability"
+					},
+					"do": {
+						"$include": {
+							"$path": "menusystem/elements/location/data/sublocation_data.json"
+						}
+					}
+				}
+			},
+			"actions": {
+				"accept": {
+					"$if $eq($.ResourceAvailability.State,available)": {
+						"$then": {
+							"link": {
+								"page": "contractcreation_planning",
+								"args": {
+									"url": "contractcreation/planning",
+									"location": "$.SubLocation.Id",
+									"contractCreationIdOverwrite": "$.SubLocation.Properties.CreateContractId",
+									"contractid": "$.SubLocation.Properties.CreateContractId"
+								}
+							}
+						},
+						"$else": {
+							"$include": {
+								"$path": "menusystem/actions/availability/not_available_action.json"
+							}
+						}
+					}
+				},
+				"select": {
+                        "select": {
+                            "set-background": "$res images/backgrounds/menu_bg.jpg"},
+					"replace-children": {
+						"target": "headline_container",
+						"children": [
+							{
+								"$include": {
+									"$path": "menusystem/elements/location/data/sublocation_headline.json"
+								}
+							}
+						]
+					}
+				},
+				"deselect": {
+					"replace-children": {
+						"target": "headline_container",
+						"children": []
+					}
+				}
+			}
+		}
+	}
+}

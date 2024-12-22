@@ -22,6 +22,11 @@
 							"icon": "mission"
 						}
 					},
+					"actions": {
+							"select": {
+								"set-background": "$res images/backgrounds/menu_bg.jpg"
+							}
+						},
 					"children": [
 						{
 							"view": "menu3.basic.CategoryElement",
@@ -30,6 +35,11 @@
 								"title": "$loc UI_MENU_PAGE_HUB_CONTRACTS",
 								"icon": "contract"
 							},
+							"actions": {
+							"select": {
+								"set-background": "$res images/backgrounds/menu_bg.jpg"
+							}
+						},
 							"children": [
 								{
 									"controller": "container",

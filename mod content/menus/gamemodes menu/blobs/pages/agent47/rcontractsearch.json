@@ -1,0 +1,1952 @@
+{
+	"buttons": [
+		{
+			"actiontype": "accept",
+			"actionlabel": "$loc UI_BUTTON_PROMPTS_ACTION_SELECT"
+		},
+		{
+			"actiontype": "cancel",
+			"actionlabel": "$loc UI_BUTTON_PROMPTS_ACTION_BACK"
+		}
+	],
+	"body": {
+		"$setupcomponents": {
+			"favorites-removal": {}
+		},
+		"id": "root_list",
+		"controller": "list",
+		"data": {
+			"direction": "vertical"
+		},
+		"children": [
+			{
+				"$include": "common/data/general_headline.json"
+			},
+			{
+				"controller": "list",
+				"id": "category_container"
+			},
+			{
+				"id": "category_controller",
+				"controller": "category",
+				"container": "category_container",
+				"view": "menu3.containers.ScrollingTabsContainer",
+				"direction": "horizontal",
+				"ncols": 10,
+				"data": {
+					"direction": "horizontal",
+					"overflowscrolling": "0.45",
+					"buttonprompts": [
+						{
+							"actiontype": ["lb", "rb"],
+							"actionlabel": "$loc UI_BUTTON_PROMPTS_BROWSE_CATEGORIES"
+						}
+					],
+					"topnavigation": {
+						"title": "Game Modes",
+						"icon": "mission"
+					}
+				},
+				"children": [
+					{
+						"view": "menu3.basic.CategoryElement",
+						"data": {
+							"title": "Trilogy Roulette",
+							"icon": "bulletdancer"
+						},
+						"actions": {
+							"select": {
+								"set-background": "$res images/backgrounds/menu_bg.jpg"
+							}
+						},
+						"children": {
+							"controller": "list",
+							"row": 0.75,
+							"children": {
+								"$include": "hub/contractsearchcomponents/rcontractsearch.json"
+							}
+						}
+					},
+					{
+						"view": "menu3.basic.CategoryElement",
+						"id": "test",
+						"data": {
+							"title": "Random Roulette",
+							"icon": "bulletdancer"
+						},
+						"actions": {
+							"select": {
+								"set-background": "$res images/backgrounds/menu_bg.jpg"
+							}
+						},
+						"children": {
+							"controller": "list",
+							"row": 1,
+							"id": "sub_category_container",
+							"view": "menu3.containers.ScrollingListContainer",
+							"ncols": 10,
+							"direction": "horizontal",
+							"submenunavigation": true,
+							"loopedselection": false,
+							"data": {
+								"direction": "horizontal",
+								"submenu": true
+							},
+							"children": [
+								{
+									"view": "menu3.basic.MenuTileTall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_RR_DAILY",
+										"icon": "bulletdancer",
+										"image": "$res images/Contracts/RandomRoulette/RR_DAILY.png"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "218313f3-2b5e-4a8b-b916-ab5862b7874f",
+															"resetescalation": true
+														},
+														"contractid": "218313f3-2b5e-4a8b-b916-ab5862b7874f"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_RR_DAILY",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_POLARBEAR_MODULE_002_B_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/polarbear/module_002_b/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "1024ba27-f0fa-486e-b067-5cb0594afce8",
+															"resetescalation": true
+														},
+														"contractid": "1024ba27-f0fa-486e-b067-5cb0594afce8"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_POLARBEAR_MODULE_002_B_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 2,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_POLARBEAR_GRADUATION_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/polarbear/graduation/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "9fa789e5-ad9b-47d9-a273-4de53ec12fda",
+															"resetescalation": true
+														},
+														"contractid": "9fa789e5-ad9b-47d9-a273-4de53ec12fda"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_POLARBEAR_GRADUATION_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_PEACOCK_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/novikov_and_magolis/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "36b3dcb4-2e22-4b7e-b1b0-3e8708bf52b5",
+															"resetescalation": true
+														},
+														"contractid": "36b3dcb4-2e22-4b7e-b1b0-3e8708bf52b5"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_PEACOCK_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 4,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_PARISNOEL_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/parisnoel/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "499281d3-a697-4ae5-85ba-e533a17d5d53",
+															"resetescalation": true
+														},
+														"contractid": "499281d3-a697-4ae5-85ba-e533a17d5d53"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_PARISNOEL_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_OCTOPUS_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/surveillance_portofino/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "36b3dcb4-2e22-4b7e-b1b0-3e8708bf52t44",
+															"resetescalation": true
+														},
+														"contractid": "36b3dcb4-2e22-4b7e-b1b0-3e8708bf52t4"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_OCTOPUS_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 6,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_COPPERHEAD_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/copperhead/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "d37426cd-7907-4c5e-99ed-bbe95205a7d1",
+															"resetescalation": true
+														},
+														"contractid": "d37426cd-7907-4c5e-99ed-bbe95205a7d1"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_COPPERHEAD_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_MAMBA_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/mamba/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "4ebedf46-31b5-4d10-8a8d-2b3bbd55f85b",
+															"resetescalation": true
+														},
+														"contractid": "4ebedf46-31b5-4d10-8a8d-2b3bbd55f85b"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_MAMBA_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 8,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_EBOLA_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/whitespider/002_ebola/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "a2566b41-26b3-4f27-b76c-9f831aae6780",
+															"resetescalation": true
+														},
+														"contractid": "a2566b41-26b3-4f27-b76c-9f831aae6780"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_EBOLA_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_SPIDER_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/spider/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "68b5b045-6e05-4461-9155-3be4b63064c2",
+															"resetescalation": true
+														},
+														"contractid": "68b5b045-6e05-4461-9155-3be4b63064c2"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_SPIDER_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 10,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_PYTHON_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/python/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "3fd4ec10-7d6b-45de-b9cf-5b532d48bba2",
+															"resetescalation": true
+														},
+														"contractid": "3fd4ec10-7d6b-45de-b9cf-5b532d48bba2"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_PYTHON_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_TIGER_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/Contracts/Tiger/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "108aa785-6ca7-4a60-8ca7-b66e347026a4",
+															"resetescalation": true
+														},
+														"contractid": "108aa785-6ca7-4a60-8ca7-b66e347026a4"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_TIGER_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 12,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_ZIKA_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/whitespider/001_zika/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "c01c4061-6821-4e6a-8fdf-6e535401878e",
+															"resetescalation": true
+														},
+														"contractid": "c01c4061-6821-4e6a-8fdf-6e535401878e"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_ZIKA_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_BULL_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/Bull/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "095b7bdb-c95f-4112-9cfe-21e533c3a300",
+															"resetescalation": true
+														},
+														"contractid": "095b7bdb-c95f-4112-9cfe-21e533c3a300"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_BULL_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 14,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_RABIES_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/whitespider/003_rabies/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "3bf5da92-f387-4fae-a12c-e56cf9b93834",
+															"resetescalation": true
+														},
+														"contractid": "3bf5da92-f387-4fae-a12c-e56cf9b93834"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_RABIES_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_SNOW_CRANE_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/Contracts/SnowCrane/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "335984ac-5d96-4f81-a1af-4cb9975b4b34",
+															"resetescalation": true
+														},
+														"contractid": "335984ac-5d96-4f81-a1af-4cb9975b4b34"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_SNOW_CRANE_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 16,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_FLU_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/whitespider/004_flu/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "910dc548-6845-47cb-a09f-c77edcdebfbe",
+															"resetescalation": true
+														},
+														"contractid": "910dc548-6845-47cb-a09f-c77edcdebfbe"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_FLU_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_MAMUSHI_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/Contracts/Mamushi/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "047e0364-4b26-4679-b637-cb939b9f415d",
+															"resetescalation": true
+														},
+														"contractid": "047e0364-4b26-4679-b637-cb939b9f415d"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_MAMUSHI_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 18,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_SHEEP_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/sheep/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "f475c192-5eab-4a3f-b62d-68bbd6de6724",
+															"resetescalation": true
+														},
+														"contractid": "f475c192-5eab-4a3f-b62d-68bbd6de6724"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_SHEEP_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_FLAMINGO_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/flamingo/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "b22d78ec-f12b-46f8-89f9-93cb82dc6d714",
+															"resetescalation": true
+														},
+														"contractid": "b22d78ec-f12b-46f8-89f9-93cb82dc6d71"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_FLAMINGO_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 20,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_COTTONMOUTH_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res Images/Contracts/Cottonmouth/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+															"resetescalation": true
+														},
+														"contractid": "7c9e6679-7425-40de-944b-e07fc1f90ae7"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_COTTONMOUTH_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_HIPPO_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/hippo/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "c5a88b3b-d3af-4691-9ec7-72128c921b55",
+															"resetescalation": true
+														},
+														"contractid": "c5a88b3b-d3af-4691-9ec7-72128c921b55"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_HIPPO_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 22,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_ANACONDA_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res Images/Contracts/Anaconda/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "d64f2431-6e43-4b14-a42f-ffb82de870a8",
+															"resetescalation": true
+														},
+														"contractid": "d64f2431-6e43-4b14-a42f-ffb82de870a8"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_ANACONDA_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_MONGOOSE_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/mongoose/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "2a9266f3-2d58-4e68-a9bb-07d8bb7f4e1f",
+															"resetescalation": true
+														},
+														"contractid": "2a9266f3-2d58-4e68-a9bb-07d8bb7f4e1f"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_MONGOOSE_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 24,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_KINGCOBRA_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res Images/Contracts/KingCobra/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "29c5e92d-b650-4c1a-8809-55fa8e511562",
+															"resetescalation": true
+														},
+														"contractid": "29c5e92d-b650-4c1a-8809-55fa8e511562"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_KINGCOBRA_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_SKUNK_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/skunk/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "e880d5d4-84b4-4a91-8925-1b9f61c21d8a",
+															"resetescalation": true
+														},
+														"contractid": "e880d5d4-84b4-4a91-8925-1b9f61c21d8a"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_SKUNK_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 26,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_GARTERSNAKE_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res Images/Contracts/GarterSnake/Tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "b539a067-1763-4b97-b9c4-1ed69b8d6b02",
+															"resetescalation": true
+														},
+														"contractid": "b539a067-1763-4b97-b9c4-1ed69b8d6b02"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_GARTERSNAKE_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_MAGPIE_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/magpie/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "ee7b2b1a-0d9d-437e-b42e-1b527799a91b",
+															"resetescalation": true
+														},
+														"contractid": "ee7b2b1a-0d9d-437e-b42e-1b527799a91b"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_MAGPIE_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 28,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_RACCOON_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/raccoon/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "d1aa7ad3-1b9e-4e36-8d48-9c5bc7e3e618",
+															"resetescalation": true
+														},
+														"contractid": "d1aa7ad3-1b9e-4e36-8d48-9c5bc7e3e618"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_RACCOON_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_STINGRAY_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/stingray/tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "ed5ff1f8-dbee-4439-a48e-8cb3a0536be2",
+															"resetescalation": true
+														},
+														"contractid": "ed5ff1f8-dbee-4439-a48e-8cb3a0536be2"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_STINGRAY_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 30,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_GECKO_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/gecko/gecko_tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "c67c7a11-01f7-434e-976e-901c20be8fc2",
+															"resetescalation": true
+														},
+														"contractid": "c67c7a11-01f7-434e-976e-901c20be8fc2"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_GECKO_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_BULLDOG_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/bulldog/bulldog_tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "f0d66a38-24d7-4cf4-9a71-b98d35fb1b1a",
+															"resetescalation": true
+														},
+														"contractid": "f0d66a38-24d7-4cf4-9a71-b98d35fb1b1a"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_BULLDOG_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 32,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_SMOOTHSNAKE_GROUP_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/escalation/ContractEscalation_Ancestral_SmoothSnake.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "1f23ff13-f1f4-49c8-936f-d405d7af0252",
+															"resetescalation": true
+														},
+														"contractid": "1f23ff13-f1f4-49c8-936f-d405d7af0252"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_SMOOTHSNAKE_GROUP_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_FOX_MAIN_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/fox/fox_tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "968153b5-5467-4b1a-b29f-18ae5828f125",
+															"resetescalation": true
+														},
+														"contractid": "968153b5-5467-4b1a-b29f-18ae5828f125"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_FOX_MAIN_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 34,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_RAT_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/rat/rat_tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "b4f27b27-ec9f-4f78-a583-6dcb6d6a3f52",
+															"resetescalation": true
+														},
+														"contractid": "b4f27b27-ec9f-4f78-a583-6dcb6d6a3f52"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_RAT_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_LLAMA_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/llama/llama_tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "45fd071a-9f8e-4cb2-a3de-ec1a4f7a1c0c",
+															"resetescalation": true
+														},
+														"contractid": "45fd071a-9f8e-4cb2-a3de-ec1a4f7a1c0c"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_LLAMA_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								},
+								{
+									"view": "menu3.basic.MenuTileSmall",
+									"col": 36,
+									"row": 1.5,
+									"data": {
+										"header": "$loc RR_OG",
+										"title": "$loc UI_CONTRACT_DUGONG_TITLE",
+										"icon": "bulletdancer",
+										"image": "$res images/contracts/Dugong/Dugong_tile.jpg"
+									},
+									"actions": {
+										"accept": [
+											{
+												"link": {
+													"page": "planning",
+													"args": {
+														"url": "planning",
+														"args": {
+															"contractid": "8bde3c9a-09cb-4f45-b21b-8b0a02f9ac26",
+															"resetescalation": true
+														},
+														"contractid": "8bde3c9a-09cb-4f45-b21b-8b0a02f9ac26"
+													}
+												}
+											}
+										],
+										"select": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": [
+													{
+														"view": "menu3.basic.HeadlineElement",
+														"selectable": false,
+														"pressable": false,
+														"data": {
+															"header": "$loc RR_OG",
+															"title": "$loc UI_CONTRACT_DUGONG_TITLE",
+															"typeicon": "bulletdancer"
+														}
+													}
+												]
+											}
+										},
+										"deselect": {
+											"replace-children": {
+												"target": "headline_container",
+												"children": []
+											}
+										}
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}

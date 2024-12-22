@@ -153,7 +153,7 @@
                                     "pressable": false,
                                     "data": {
                                         "header": "",
-                                        "title": "$loc UI_PEACOCK_GO_OFFLINE",
+                                        "title": "$loc UI_HERITAGE_GO_OFFLINE",
                                         "typeicon": "goonline"
                                     }
                                 }

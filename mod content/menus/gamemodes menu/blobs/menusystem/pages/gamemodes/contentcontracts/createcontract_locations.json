@@ -1,0 +1,157 @@
+{
+	"controller": "container",
+	"children": [
+		{
+			"pressable": false,
+			"selectable": false,
+			"actions": {
+				"activated": [
+					{
+						"$if $not $.@global.NoAutoSelectCreateContract": {
+							"$then": {
+								"set-selected": {
+									"target": "category_season_3"
+								}
+							}
+						}
+					},
+                    {"set-background": "$res images/backgrounds/menu_bg.jpg"
+							},
+					{
+						"set-value": {
+							"target": "$.@global.NoAutoSelectCreateContract",
+							"value": true
+						}
+					}
+				]
+			}
+		},
+		{
+			"$datacontext": {
+				"in": "$.",
+				"datavalues": {
+					"LocationsSeason1": {
+						"$include": "menusystem/pages/gamemodes/contentcontracts/data/data_createcontract_locations_season1.json"
+					},
+					"LocationsSeason2": {
+						"$include": "menusystem/pages/gamemodes/contentcontracts/data/data_createcontract_locations_season2.json"
+					},
+					"LocationsSeason3": {
+						"$include": "menusystem/pages/gamemodes/contentcontracts/data/data_createcontract_locations_season3.json"
+					}
+				},
+				"do": {
+					"controller": "category",
+					"id": "sub_category_container",
+					"row": -1,
+					"_col": 0,
+					"view": "menu3.containers.ScrollingTabsContainer",
+					"ncols": 10,
+					"direction": "horizontal",
+                    "actions":[
+							{"select": {
+								"set-background": "$res images/backgrounds/menu_bg.jpg"
+                }}],
+					"submenunavigation": true,
+					"loopedselection": false,
+					"data": { "direction": "horizontal", "submenu": true },
+					"children": [
+						{
+							"id": "category_season_1",
+							"view": "menu3.basic.SubCategoryElement",
+							"controller": "categoryitem",
+							"data": {
+								"title": "$loc $formatstring UI_SEASON_1"
+							},
+							"children": [
+								{
+									"controller": "list",
+									"view": "menu3.containers.ScrollingListContainer",
+									"id": "contracts_container",
+									"layoutchildren": true,
+									"row": 1,
+									"nrows": 3,
+									"ncols": 10,
+									"direction": "horizontal",
+									"data": { "direction": "horizontal" },
+									"children": {
+										"$each $.LocationsSeason1": {
+											"$include": {
+												"$path": "menusystem/pages/gamemodes/contentcontracts/createcontract_location.json"
+											}
+										}
+									}
+								}
+							]
+						},
+						{
+							"id": "category_season_2",
+							"view": "menu3.basic.SubCategoryElement",
+							"controller": "categoryitem",
+							"data": {
+								"title": "$loc $formatstring UI_SEASON_2"
+							},
+							"children": [
+								{
+									"controller": "list",
+									"view": "menu3.containers.ScrollingListContainer",
+									"id": "contracts_container",
+									"layoutchildren": true,
+									"row": 1,
+									"nrows": 3,
+									"ncols": 10,
+									"direction": "horizontal",
+									"data": { "direction": "horizontal" },
+									"children": {
+										"$each $.LocationsSeason2": {
+											"$include": {
+												"$path": "menusystem/pages/gamemodes/contentcontracts/createcontract_location.json"
+											}
+										}
+									}
+								}
+							]
+						},
+						{
+							"id": "category_season_3",
+							"view": "menu3.basic.SubCategoryElement",
+							"controller": "categoryitem",
+							"data": {
+								"title": "$loc $formatstring UI_SEASON_3"
+							},
+							"children": [
+								{
+									"controller": "list",
+									"view": "menu3.containers.ScrollingListContainer",
+									"id": "contracts_container",
+									"layoutchildren": true,
+									"row": 1,
+									"nrows": 3,
+									"ncols": 10,
+									"direction": "horizontal",
+									"data": { "direction": "horizontal" },
+									"children": {
+										"$mergearrays": [
+											{
+												"$include": {
+													"$path": "menusystem/pages/gamemodes/contentcontracts/createcontracttutorialtile.json"
+												}
+											},
+											{
+												"$each $.LocationsSeason3": {
+													"$include": {
+														"$path": "menusystem/pages/gamemodes/contentcontracts/createcontract_location.json"
+													}
+												}
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		}
+	]
+}

@@ -366,103 +366,103 @@
 	"TOKEN_OUTFIT_NORTHSEA_HERO_NORTHSEASUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 11
+			"OrderIndex": 12
 		}
 	},
 	"TOKEN_OUTFIT_MAGPIE_ELUSIVE_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 12
+			"OrderIndex": 13
 		}
 	},
 	"TOKEN_OUTFIT_GREEDY_HERO_GREEDYSUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 13
+			"OrderIndex": 14
 		}
 	},
 	"TOKEN_OUTFIT_BANK_STARTING_SUIT_REWARD": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 14
+			"OrderIndex": 15
 		}
 	},
 	"TOKEN_OUTFIT_OPULENT_HERO_OPULENTSUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 15
+			"OrderIndex": 16
 		}
 	},
 	"TOKEN_OUTFIT_STINGRAY_MASTERY_REWARD_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 16
+			"OrderIndex": 17
 		}
 	},
 	"TOKEN_OUTFIT_CLASSICS_REWARD_BLACK_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 17
+			"OrderIndex": 18
 		}
 	},
 	"TOKEN_OUTFIT_ELUSIVE_COMPLETE_15_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 18
+			"OrderIndex": 19
 		}
 	},
 	"TOKEN_OUTFIT_MIDNIGHT_BLACK_COLLECTORS": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 19
+			"OrderIndex": 20
 		}
 	},
 	"TOKEN_OUTFIT_ARCTICPACK_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 20
+			"OrderIndex": 21
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_CHLORINE_FLAMINGO_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 21
+			"OrderIndex": 22
 		}
 	},
 	"TOKEN_OUTFIT_HOT_SUMMER_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 22
+			"OrderIndex": 23
 		}
 	},
 	"TOKEN_OUTFIT_URBAN_CLASSIC": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 23
+			"OrderIndex": 24
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_HERO_FALCON_ICE_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 24
+			"OrderIndex": 25
 		}
 	},
 	"TOKEN_OUTFIT_SNAKE_CHARMER_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 25
+			"OrderIndex": 26
 		}
 	},
 	"TOKEN_OUTFIT_GOLDEN_MASK": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 26
+			"OrderIndex": 27
 		}
 	},
 	"TOKEN_OUTFIT_HERO_PIRATE_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 27
+			"OrderIndex": 28
 		}
 	},
 	"TRAVELLER_CHALLENGE_STARTING_OUTFIT": {
@@ -630,13 +630,13 @@
 	"TOKEN_OUTFIT_REWARD_HERO_PUBLICENEMY_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 30
+			"OrderIndex": 11
 		}
 	},
 	"TOKEN_OUTFIT_HERO_H3_LEGACYREWARD_SUIT": {
 		"Subtype": "S3",
 		"Properties": {
-			"OrderIndex": 29
+			"OrderIndex": 30
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_HERO_CHRISTMASJUMPER_SUIT": {
@@ -645,34 +645,58 @@
 			"OrderIndex": 28
 		}
 	},
-	"TOKEN_OUTFIT_HERO_BUTCHER_SUIT": {
+	"TOKEN_OUTFIT_REWARD_HERO_CHRISTMAS_SUIT": {
 		"Subtype": "S3",
 		"Properties": {
-			"OrderIndex": 30
+			"OrderIndex": 29
 		}
 	},
-	"TOKEN_OUTFIT_REWARD_HERO_SB_SUIT": {
+	"TOKEN_OUTFIT_HERO_BUTCHER_SUIT": {
 		"Subtype": "S3",
 		"Properties": {
 			"OrderIndex": 31
 		}
 	},
-	"TOKEN_OUTFIT_REWARD_HERO_SB_PATCH_SUIT": {
+	"TOKEN_OUTFIT_REWARD_HERO_SB_SUIT": {
 		"Subtype": "S3",
 		"Properties": {
 			"OrderIndex": 32
 		}
 	},
-	"TOKEN_OUTFIT_REWARD_HERO_PEN_FIGHT_SUIT": {
+	"TOKEN_OUTFIT_REWARD_HERO_SB_PATCH_SUIT": {
 		"Subtype": "S3",
 		"Properties": {
 			"OrderIndex": 33
 		}
 	},
-	"TOKEN_OUTFIT_REWARD_HERO_PEN_COAT_SUIT": {
+	"TOKEN_OUTFIT_REWARD_HERO_PEN_FIGHT_SUIT": {
 		"Subtype": "S3",
 		"Properties": {
 			"OrderIndex": 34
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_PEN_COAT_SUIT": {
+		"Subtype": "S3",
+		"Properties": {
+			"OrderIndex": 35
+		}
+	},
+	"TOKEN_OUTFIT_LAMBIC_KICKBOXER_REWARD": {
+		"Subtype": "S3",
+		"Properties": {
+			"OrderIndex": 36
+		}
+	},
+	"TOKEN_OUTFIT_LAMBIC_KICKBOXER_REWARD_PURPLE": {
+		"Subtype": "S3",
+		"Properties": {
+			"OrderIndex": 37
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_LAMBIC_SUIT": {
+		"Subtype": "S3",
+		"Properties": {
+			"OrderIndex": 38
 		}
 	},
 	"TOKEN_OUTFIT_HITMANSUIT": {
@@ -853,6 +877,11 @@
 	"FIREARMS_HERO_PISTOL_CONCRETEART": {
 		"Properties": {
 			"OrderIndex": 111
+		}
+	},
+	"FIREARMS_PISTOL_SILVERBALLER_PURPLE": {
+		"Properties": {
+			"OrderIndex": 112
 		}
 	},
 	"FIREARMS_PISTOL_CLASSIC_SILVERBALLER": {
@@ -1118,6 +1147,11 @@
 	"FIREARMS_HERO_SMG_TAC_SMG_CONCRETEART": {
 		"Properties": {
 			"OrderIndex": 101
+		}
+	},
+	"FIREARMS_HERO_SMG_HX_10_LAMBIC": {
+		"Properties": {
+			"OrderIndex": 102
 		}
 	},
 	"FIREARMS_HERO_SMG_MAC10_COVERT": {
@@ -1492,6 +1526,11 @@
 			"OrderIndex": 101
 		}
 	},
+	"PROP_DEVICE_ICA_MODULAR_PROXIMITY_EMP": {
+		"Properties": {
+			"OrderIndex": 102
+		}
+	},
 	"PROP_DEVICE_ICA_PROXIMITY_TASER": {
 		"Properties": {
 			"OrderIndex": 111
@@ -1510,6 +1549,11 @@
 	"PROP_DEVICE_ICA_MODULAR_PROXIMITY_MICRO_TASER": {
 		"Properties": {
 			"OrderIndex": 132
+		}
+	},
+	"PROP_DEVICE_ICA_RFID_COIN_TASER": {
+		"Properties": {
+			"OrderIndex": 133
 		}
 	},
 	"PROP_DEVICE_EVERGREEN_OILSPILL_CANISTER": {
@@ -1670,6 +1714,11 @@
 	"PROP_DEVICE_ACTIONFIGURE_PROXIMITY_EXPLOSIVE": {
 		"Properties": {
 			"OrderIndex": 281
+		}
+	},
+	"PROP_DEVICE_ICA_LUCKYCAT_PROXIMITY_EXPLOSIVE": {
+		"Properties": {
+			"OrderIndex": 282
 		}
 	},
 	"PROP_DEVICE_ICA_RUBBERDUCK_PROXIMITY_EXPLOSIVE": {
@@ -2281,6 +2330,11 @@
 	"PROP_MELEE_CRYSTALBALL": {
 		"Properties": {
 			"OrderIndex": 351
+		}
+	},
+	"PROP_MELEE_VHS_LAMBIC": {
+		"Properties": {
+			"OrderIndex": 352
 		}
 	},
 	"PROP_MELEE_SHOWGLOBE": {
