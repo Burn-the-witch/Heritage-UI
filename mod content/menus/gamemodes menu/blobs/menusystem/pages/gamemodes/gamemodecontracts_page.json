@@ -23,10 +23,10 @@
 						}
 					},
 					"actions": {
-							"select": {
-								"set-background": "$res images/backgrounds/menu_bg.jpg"
-							}
-						},
+						"select": {
+							"set-background": "$res images/backgrounds/menu_bg.jpg"
+						}
+					},
 					"children": [
 						{
 							"view": "menu3.basic.CategoryElement",
@@ -36,10 +36,10 @@
 								"icon": "contract"
 							},
 							"actions": {
-							"select": {
-								"set-background": "$res images/backgrounds/menu_bg.jpg"
-							}
-						},
+								"select": {
+									"set-background": "$res images/backgrounds/menu_bg.jpg"
+								}
+							},
 							"children": [
 								{
 									"controller": "container",

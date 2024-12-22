@@ -5,8 +5,8 @@
 	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
 	"description": "A user interface overhaul mod for Hitman: World of Assassination.",
 	"authors": ["Burn, the witch"],
-	"frameworkVersion": "2.33.20",
-	"loadAfter": ["Notex.SimpleKeyEventHelper","HITMAPS.GhostModeEnabler","BurnthewitchRiisikumi.Roulette"],
+	"frameworkVersion": "2.33.23",
+	"loadAfter": ["Notex.SimpleKeyEventHelper", "HITMAPS.GhostModeEnabler", "BurnthewitchRiisikumi.Roulette"],
 	"localisation": {
 		"english": {
 			"UI_HERITAGE_GO_OFFLINE": "Go Offline",
@@ -815,9 +815,7 @@
 			"type": "select",
 			"group": "Location Menu",
 			"blobsFolders": ["mod content/menus/location menu/blobs"],
-			"peacockPlugins": [
-				"mod content/menus/location menu/plugins/featuredcontracts.plugin.js"
-			],
+			"peacockPlugins": ["mod content/menus/location menu/plugins/featuredcontracts.plugin.js"],
 			"enabledByDefault": true
 		},
 		{
@@ -850,7 +848,10 @@
 			"type": "select",
 			"group": "Gamemodes Menu",
 			"blobsFolders": ["mod content/menus/gamemodes menu/blobs"],
-			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js","mod content/menus/gamemodes menu/plugins/menuEdit.plugin.js"],
+			"peacockPlugins": [
+				"mod content/menus/gamemodes menu/plugins/arcade.plugin.js",
+				"mod content/menus/gamemodes menu/plugins/menuEdit.plugin.js"
+			],
 			"enabledByDefault": true
 		},
 		{
@@ -860,7 +861,10 @@
 			"type": "select",
 			"group": "Gamemodes Menu",
 			"blobsFolders": ["mod content/menus/gamemodes menu ghost mode/blobs"],
-			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js","mod content/menus/gamemodes menu/plugins/menuEditghost.plugin.js"]
+			"peacockPlugins": [
+				"mod content/menus/gamemodes menu/plugins/arcade.plugin.js",
+				"mod content/menus/gamemodes menu/plugins/menuEditghost.plugin.js"
+			]
 		},
 		{
 			"name": "Off",
@@ -940,8 +944,6 @@
 				},
 				"006986A5A3F98191": {
 					"english": {
-						"2219651365": "Splitter SMG",
-						"3326048998": "ICA19 Purple Streak",
 						"80972231": "Custom 5mm Ghost",
 						"114220078": "TAC-SMG Ornamental",
 						"159915413": "Hackl Leviathan Ducky Covert",
@@ -970,6 +972,7 @@
 						"2167584959": "Bartoli Dragon Hunting Rifle",
 						"2168467540": "ICA19 Blackballer",
 						"2191608370": "Bartoli 12G Street Art",
+						"2219651365": "Splitter SMG",
 						"2253322208": "Raptor Covert ICA",
 						"2434870416": "ICA19 Street Art",
 						"2495675980": "Krugermeier 2-2 Ancestral",
@@ -980,6 +983,7 @@
 						"3113978184": "Bartoli DTI",
 						"3201567076": "ICA TAC 12",
 						"3255803310": "DAK X2 Brine-Damaged",
+						"3326048998": "ICA19 Purple Streak",
 						"3386837480": "Bartoli 12G Sawed-Off Maximalist",
 						"3459315680": "DAK X2 Slapdash Covert",
 						"3489036676": "Bartoli Ancestral Hunting Rifle",
@@ -1006,9 +1010,6 @@
 				},
 				"008322D98E1CFE04": {
 					"english": {
-						"1089186032": "Lucky Cat",
-						"1940653787": "Customized Kukri Knife",
-						"2913254817": "VHS Tape",
 						"264649869": "Lethal Easter Egg",
 						"378687878": "Iridescent Katana",
 						"473844920": "Sedative Proximity Mine",
@@ -1018,12 +1019,14 @@
 						"891345639": "Resistance Band",
 						"912885689": "Red Flash Grenade",
 						"1021829317": "Emetic Guru Grenade",
+						"1089186032": "Lucky Cat",
 						"1153451912": "Sedative Gum",
 						"1177362553": "Emetic Pen Syringe",
 						"1367227604": "Club Boom Flightcase",
 						"1423618173": "Emetic Guru Pen Syringe",
 						"1432256677": "Ancestral Knife",
 						"1596987004": "Dragon Briefcase",
+						"1940653787": "Customized Kukri Knife",
 						"1958976691": "Greedy Cane",
 						"1967478934": "Explosive Fountain Pen",
 						"2060281116": "Vinyl Record",
@@ -1032,6 +1035,7 @@
 						"2132802116": "Serpent's Bite",
 						"2359075170": "Brown Leather Briefcase",
 						"2684151890": "Street Art Bat",
+						"2913254817": "VHS Tape",
 						"3411454055": "Roar Proximity Flash",
 						"3611983725": "Makeshift Katana",
 						"3770174342": "Purple Streak Briefcase",
@@ -1107,12 +1111,10 @@
 				},
 				"004B8C5124A49543": {
 					"english": {
-						"101846510": "Movie Star Suit",
-						"2846183182": "Christmas Cosplay Suit",
-						"4168197591": "Bloody Boxer Suit",
 						"39609674": "Bruised Boxer Suit",
 						"60276344": "Beldingford Huntsman Suit",
 						"96317463": "Black Bruiser Suit",
+						"101846510": "Movie Star Suit",
 						"135933874": "Sunset Streak Suit",
 						"243279818": "Scarlet Suit",
 						"320948275": "Super Fan Suit",
@@ -1150,6 +1152,7 @@
 						"2732261783": "Scrap Poncho Suit",
 						"2760943898": "Lucky Ducky Suit",
 						"2803096113": "Rapacious Suit",
+						"2846183182": "Christmas Cosplay Suit",
 						"2874408294": "17's Signature Suit",
 						"2875169229": "Sandman Suit",
 						"2887221963": "Absolution Sniping Suit",
@@ -1167,6 +1170,7 @@
 						"3944984988": "Blue Streak Suit",
 						"4009319363": "Narcissus Suit",
 						"4083485844": "Black Streak Suit",
+						"4168197591": "Bloody Boxer Suit",
 						"4188750001": "Odium Suit"
 					},
 					"french": {},
