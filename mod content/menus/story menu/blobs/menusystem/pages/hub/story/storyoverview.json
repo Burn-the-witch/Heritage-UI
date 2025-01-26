@@ -1,0 +1,17 @@
+{
+	"controller": "context",
+	"id": "story_context_controller",
+	"view": "menu3.containers.SimpleButtonTileScrollingListContainer",
+	"direction": "horizontal",
+	"data": { "direction": "horizontal" },
+	"row": 1,
+	"nrows": 3,
+	"ncols": 10,
+	"children": {
+		"$each $.StoryData": {
+			"$include": {
+				"$path": "menusystem/pages/hub/story/storygrouptile.json"
+			}
+		}
+	}
+}

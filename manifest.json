@@ -1,5 +1,5 @@
 {
-	"version": "8.0.0",
+	"version": "9.0.0",
 	"id": "BurnTheWitch.HeritageUI",
 	"name": "Heritage UI",
 	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
@@ -7,6 +7,11 @@
 	"authors": ["Burn, the witch"],
 	"frameworkVersion": "2.33.20",
 	"loadAfter": ["Notex.SimpleKeyEventHelper","HITMAPS.GhostModeEnabler","BurnthewitchRiisikumi.Roulette"],
+	"incompatibilities": [
+        "Atampy26.ReadableUI",
+		"palach2018.DotCrosshair",
+		"AlteredBeast.DotCrosshairMinimalHUD"
+    ],
 	"localisation": {
 		"english": {
 			"UI_HERITAGE_GO_OFFLINE": "Go Offline",
@@ -27,6 +32,7 @@
 			"UI_SEASON_1_HEADER": "HITMAN",
 			"UI_SEASON_2_HEADER": "HITMAN 2",
 			"UI_SEASON_3_HEADER": "HITMAN 3",
+			"UI_CAMPAIGN_KILLEVERYONE_HEADER": "The Peacock Project",
 			"UI_HERITAGE_ESC_TITLE": "Escalations",
 			"UI_HERITAGE_GAMEMODES": "Game Modes",
 			"UI_MENU_PAGE_SIDE_MISSIONS_TITLE_HEADER": "Expansion Content",
@@ -286,30 +292,23 @@
 		}
 	},
 	"localisationOverrides": {
-		"00F5817876E691F1": {
-			"english": {
-				"1998245905": "Exfiltrate Mission"
-			},
-			"french": {},
-			"italian": {
-				"1998245905": "Estrazione"
-			},
-			"german": {},
-			"spanish": {},
-			"russian": {},
-			"chineseSimplified": {},
-			"chineseTraditional": {},
-			"japanese": {}
+		"localisationOverrides": {
+	"003131BA6C4C5074": {
+		"english": {
+			"2078084571": "The Splitter"
 		},
+		"french": {},
+		"italian": {},
+		"german": {},
+		"spanish": {},
+		"russian": {},
+		"chineseSimplified": {},
+		"chineseTraditional": {},
+		"japanese": {}
+	},
 		"008D33DE8C75CACB": {
 			"english": {
-				"216107613": "Greenland",
-				"243861870": "Season 1",
-				"803320584": "Greenland",
-				"839967534": "Greenland",
-				"1163205649": "ICA Facility, Greenland",
-				"1174961694": "Greenland",
-				"1626680168": "ICA Facility, Greenland"
+				"243861870": "Season 1"
 			},
 			"french": {
 				"243861870": "Saison 1"
@@ -409,35 +408,45 @@
 			"chineseTraditional": {},
 			"japanese": {}
 		}
+	}
 	},
 	"options": [
 		{
 			"name": "Vanilla",
 			"tooltip": "HITMAN WOA's default UI.",
-			"image": "framework content/UI_Base.png",
+			"image": "framework content/UI_Base.webp",
 			"type": "select",
 			"group": "UI Style"
 		},
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI'S custom UI.",
-			"image": "framework content/UI_heritage_alpha.png",
+			"image": "framework content/UI_heritage_alpha.webp",
 			"type": "select",
 			"group": "UI Style",
 			"contentFolders": ["mod content/ui styles/heritage ui alpha"],
 			"blobsFolders": ["mod content/ui styles/blobs"]
 		},
 		{
+			"name": "Heritage UI (Minimal Crosshair)",
+			"tooltip": "Heritage UI'S custom UI with a minimal style crosshair.",
+			"image": "framework content/ui_heritage_alpha_minimal.webp",
+			"type": "select",
+			"group": "UI Style",
+			"contentFolders": ["mod content/ui styles/heritage ui alpha buttons"],
+			"blobsFolders": ["mod content/ui styles/blobs"]
+		},
+		{
 			"name": "Vanilla",
 			"tooltip": "HITMAN WOA'S default objective size.",
-			"image": "framework content/small.jpg",
+			"image": "framework content/small.webp",
 			"type": "select",
 			"group": "Objective Scale"
 		},
 		{
 			"name": "2016 ",
 			"tooltip": "Scales the objectives to match hitman 2016.",
-			"image": "framework content/large.jpg",
+			"image": "framework content/large.webp",
 			"type": "select",
 			"group": "Objective Scale",
 			"contentFolders": ["mod content/objscale"],
@@ -446,14 +455,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "HITMAN WOA'S Vanilla boot logo.",
-			"image": "framework content/v_l.png",
+			"image": "framework content/v_l.webp",
 			"type": "select",
 			"group": "Boot Logo"
 		},
 		{
 			"name": "Legacy",
 			"tooltip": "A boot logo inspired by legacy Hitman games.",
-			"image": "framework content/v_l1png.png",
+			"image": "framework content/v_l1png.webp",
 			"type": "select",
 			"group": "Boot Logo",
 			"contentFolders": ["mod content/at logos/legacy"]
@@ -461,7 +470,7 @@
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI's custom logo.",
-			"image": "framework content/v_3png.png",
+			"image": "framework content/v_3png.webp",
 			"type": "select",
 			"group": "Boot Logo",
 			"contentFolders": ["mod content/at logos/HUI"],
@@ -470,7 +479,7 @@
 		{
 			"name": "2016",
 			"tooltip": "HITMAN 2016's classic logo",
-			"image": "framework content/hm.png",
+			"image": "framework content/hm.webp",
 			"type": "select",
 			"group": "Boot Logo",
 			"contentFolders": ["mod content/at logos/2016"]
@@ -478,14 +487,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "Hitman WOA's default Attraction Screen.",
-			"image": "framework content/as_base.png",
+			"image": "framework content/as_base.webp",
 			"type": "select",
 			"group": "Attraction Screen Background"
 		},
 		{
 			"name": "Heritage UI| Redux",
 			"tooltip": "Heritage UI'S custom attraction screen, made for the WOA rerelease.",
-			"image": "framework content/as_hui_redux.png",
+			"image": "framework content/as_hui_redux.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/heritage redux attraction screen/blobs"],
@@ -494,7 +503,7 @@
 		{
 			"name": "Heritage UI| Classic",
 			"tooltip": "Heritage UI'S old custom attraction screen, made for H3.",
-			"image": "framework content/as_hui_classic.png",
+			"image": "framework content/as_hui_classic.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/heritage classic attraction screen/blobs"]
@@ -502,7 +511,7 @@
 		{
 			"name": "Hitman 2016",
 			"tooltip": "Hitman 2016's timeless attraction screen.",
-			"image": "framework content/2016 background.png",
+			"image": "framework content/2016 background.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/2016 attraction screen/blobs"]
@@ -510,7 +519,7 @@
 		{
 			"name": "Hitman 2016 GOTY (Variation 1)",
 			"tooltip": "Hitman 2016's GOTY's attraction screen with the ingame filter.",
-			"image": "framework content/h1gotyvar1.png",
+			"image": "framework content/h1gotyvar1.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/2016 goty/blobs"]
@@ -518,7 +527,7 @@
 		{
 			"name": "Hitman 2016 GOTY (Variation 2)",
 			"tooltip": "Hitman 2016's GOTY's attraction screen without the ingame filter..",
-			"image": "framework content/gotyas.png",
+			"image": "framework content/gotyas.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/2016 goty var 2/blobs"]
@@ -526,7 +535,7 @@
 		{
 			"name": "Hitman 2",
 			"tooltip": "Hitman 2's attraction screen.",
-			"image": "framework content/h2as.png",
+			"image": "framework content/h2as.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/h2/blobs"]
@@ -534,7 +543,7 @@
 		{
 			"name": "Hitman 3",
 			"tooltip": "Hitman 3's attraction screen.",
-			"image": "framework content/h3as.png",
+			"image": "framework content/h3as.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/h3/blobs"]
@@ -542,7 +551,7 @@
 		{
 			"name": "HITMAN WOA| Beta Style",
 			"tooltip": "Hitman WOA's attraction screen modified to look similar to art from the 2016 open beta.",
-			"image": "framework content/woabeta.png",
+			"image": "framework content/woabeta.webp",
 			"type": "select",
 			"group": "Attraction Screen Background",
 			"blobsFolders": ["mod content/attraction screen/beta/blobs"]
@@ -550,14 +559,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "HITMAN 3's default main menu background.",
-			"image": "framework content/menu_base.png",
+			"image": "framework content/menu_base.webp",
 			"type": "select",
 			"group": "Main Menu Background"
 		},
 		{
 			"name": "Heritage UI| Redux",
 			"tooltip": "Heritage UI'S custom main menu background, made for the WOA rerelease.",
-			"image": "framework content/menu_hui.png",
+			"image": "framework content/menu_hui.webp",
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/heritage redux background/blobs"],
@@ -566,7 +575,7 @@
 		{
 			"name": "Heritage UI| Classic",
 			"tooltip": "Heritage UI'S old main menu background, made for H3.",
-			"image": "framework content/menu_classic.png",
+			"image": "framework content/menu_classic.webp",
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/heritage classic background/blobs"]
@@ -574,7 +583,7 @@
 		{
 			"name": "Hitman 2016 (Variation 1)",
 			"tooltip": "One of Hitman 2016's timeless backgrounds.",
-			"image": "framework content/2016_menu.png",
+			"image": "framework content/2016_menu.webp",
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/2016 background/blobs"]
@@ -582,7 +591,7 @@
 		{
 			"name": "Hitman 2016 (Variation 2)",
 			"tooltip": "Hitman 2016's original menu background.",
-			"image": "framework content/classic_r.png",
+			"image": "framework content/classic_r.webp",
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/2016 background var 2/blobs"]
@@ -590,7 +599,7 @@
 		{
 			"name": "Hitman 2016 GOTY (Variation 1)",
 			"tooltip": "Hitman 2016 GOTY's in game background.",
-			"image": "framework content/classic_w1.png",
+			"image": "framework content/classic_w1.webp",
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/2016 background goty/blobs"]
@@ -598,7 +607,7 @@
 		{
 			"name": "Hitman 2016 GOTY (Variation 2)",
 			"tooltip": "Hitman 2016 GOTY's background, without the ingame filter.",
-			"image": "framework content/classic_w2.png",
+			"image": "framework content/classic_w2.webp",
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/2016 background goty var 2/blobs"]
@@ -606,7 +615,7 @@
 		{
 			"name": "Hitman 2",
 			"tooltip": "Hitman 2's background.",
-			"image": "framework content/h2.png",
+			"image": "framework content/h2.webp",
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/h2 background/blobs"]
@@ -614,14 +623,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "Hitman WOA'S default loading screen.",
-			"image": "framework content/ls_v.png",
+			"image": "framework content/ls_v.webp",
 			"type": "select",
 			"group": "Loading Background"
 		},
 		{
 			"name": "Heritage UI| Redux",
 			"tooltip": "Heritage UI's loading screen, remade for the WOA release.",
-			"image": "framework content/ls_R.png",
+			"image": "framework content/ls_R.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/Heritage Redux/content"],
@@ -630,7 +639,7 @@
 		{
 			"name": "Heritage UI| Classic",
 			"tooltip": "Heritage UI's classic loading screen, made for H3.",
-			"image": "framework content/ls_c.png",
+			"image": "framework content/ls_c.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/Heritage Classic/content"]
@@ -638,7 +647,7 @@
 		{
 			"name": "Hitman 2016",
 			"tooltip": "Hitman 2016's timeless loading screen.",
-			"image": "framework content/LS_16.png",
+			"image": "framework content/LS_16.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/2016/content"]
@@ -646,7 +655,7 @@
 		{
 			"name": "Hitman 2016 GOTY",
 			"tooltip": "Hitman 2016 GOTY's loading screen.",
-			"image": "framework content/gotyls.png",
+			"image": "framework content/gotyls.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/2016 GOTY/content"]
@@ -654,7 +663,7 @@
 		{
 			"name": "Hitman 2",
 			"tooltip": "Hitman 2's loading screen.",
-			"image": "framework content/h2_ls.png",
+			"image": "framework content/h2_ls.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/H2/content"]
@@ -662,7 +671,7 @@
 		{
 			"name": "Hitman 3",
 			"tooltip": "Hitman 3's original loading screen.",
-			"image": "framework content/h3_ls.png",
+			"image": "framework content/h3_ls.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/H3/content"]
@@ -670,14 +679,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "Hitman WOA'S Default destination backgrounds.",
-			"image": "framework content/d_v.png",
+			"image": "framework content/d_v.webp",
 			"type": "select",
 			"group": "Destination Backgrounds"
 		},
 		{
 			"name": "Heritage UI| Classic",
 			"tooltip": "Heritage UI's classic destination backgrounds, made for H3.",
-			"image": "framework content/d_c.png",
+			"image": "framework content/d_c.webp",
 			"type": "select",
 			"group": "Destination Backgrounds",
 			"blobsFolders": ["mod content/dest bgs/HUI Classic/blobs"]
@@ -685,7 +694,7 @@
 		{
 			"name": "Heritage UI| Redux",
 			"tooltip": "Heritage UI's destination backgrounds, remade for the WOA release.",
-			"image": "framework content/d_r.png",
+			"image": "framework content/d_r.webp",
 			"type": "select",
 			"group": "Destination Backgrounds",
 			"blobsFolders": ["mod content/dest bgs/HUI Redux/blobs"],
@@ -694,7 +703,7 @@
 		{
 			"name": "Heritage UI| Renewed",
 			"tooltip": "Heritage UI's destination backgrounds, inspired by the GOTY backgrounds, made for Variation 1.",
-			"image": "framework content/renewed.png",
+			"image": "framework content/renewed.webp",
 			"type": "select",
 			"group": "Destination Backgrounds",
 			"blobsFolders": ["mod content/dest bgs/HUI White/blobs"]
@@ -702,7 +711,7 @@
 		{
 			"name": "Heritage UI| Refreshed",
 			"tooltip": "Heritage UI's destination backgrounds, inspired by the GOTY backgrounds, made for Variation 2.",
-			"image": "framework content/refresh.png",
+			"image": "framework content/refresh.webp",
 			"type": "select",
 			"group": "Destination Backgrounds",
 			"blobsFolders": ["mod content/dest bgs/HUI Grey/blobs"]
@@ -710,14 +719,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "Hitman WOA's default debriefing image.",
-			"image": "framework content/woadb.png",
+			"image": "framework content/woadb.webp",
 			"type": "select",
 			"group": "Debriefing Image"
 		},
 		{
 			"name": "Hitman Contracts: Asylum Aftermath ",
 			"tooltip": "Custom debriefing image made from Hitman Contract's loading screen for Asylum Aftermath.",
-			"image": "framework content/AA.png",
+			"image": "framework content/AA.webp",
 			"blobsFolders": ["mod content/debriefing/AA/blobs"],
 			"type": "select",
 			"group": "Debriefing Image",
@@ -726,21 +735,21 @@
 		{
 			"name": "Hitman 2 ",
 			"tooltip": "Hitman 2's debriefing image with color grading adjusted to be more neutral.",
-			"image": "framework content/h2db.png",
+			"image": "framework content/h2db.webp",
 			"blobsFolders": ["mod content/debriefing/H2/blobs"],
 			"type": "select",
 			"group": "Debriefing Image"
 		},
 		{
 			"name": "Vanilla",
-			"image": "framework content/vanilla_maps.png",
+			"image": "framework content/vanilla_maps.webp",
 			"type": "select",
 			"tooltip": "Hitman WOA'S default map colors.",
 			"group": "Map Colors"
 		},
 		{
 			"name": "Heritage UI",
-			"image": "framework content/2016_maps.png",
+			"image": "framework content/2016_maps.webp",
 			"type": "select",
 			"group": "Map Colors",
 			"tooltip": "Heritage UI's custom map colors, mimicking Hitman 2016.",
@@ -750,14 +759,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "HITMAN WOA's vanilla main menu.",
-			"image": "framework content/menu_base.png",
+			"image": "framework content/menu_base.webp",
 			"type": "select",
 			"group": "Main Menu"
 		},
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI'S custom main menu, combining the featured and live categories to make the dashboard. It also moves the VR button as to not impede menu flow.",
-			"image": "framework content/hmm.png",
+			"image": "framework content/hmm.webp",
 			"type": "select",
 			"group": "Main Menu",
 			"blobsFolders": ["mod content/menus/main menu fix/blobs"],
@@ -770,14 +779,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "WOA's default custom career menu.",
-			"image": "framework content/vanilla_career.png",
+			"image": "framework content/vanilla_career.webp",
 			"type": "select",
 			"group": "Career Menu"
 		},
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI'S custom career menu.",
-			"image": "framework content/CAREER_HUI.png",
+			"image": "framework content/CAREER_HUI.webp",
 			"type": "select",
 			"group": "Career Menu",
 			"blobsFolders": ["mod content/menus/career menu/blobs"],
@@ -786,14 +795,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "WOA's default destination menu.",
-			"image": "framework content/vanilla_d.png",
+			"image": "framework content/vanilla_d.webp",
 			"type": "select",
 			"group": "Destination Menu"
 		},
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI'S custom destination menu.",
-			"image": "framework content/HUI_DEST.png",
+			"image": "framework content/HUI_DEST.webp",
 			"type": "select",
 			"group": "Destination Menu",
 			"blobsFolders": ["mod content/menus/destination menu/blobs"],
@@ -803,7 +812,7 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "WOA's default location menu.",
-			"image": "framework content/vanillalocation.png",
+			"image": "framework content/vanillalocation.webp",
 			"type": "select",
 			"group": "Location Menu",
 			"blobsFolders": ["mod content/menus/location menu vanilla compat/blobs"]
@@ -811,7 +820,7 @@
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI'S custom location menu.",
-			"image": "framework content/locationhui.png",
+			"image": "framework content/locationhui.webp",
 			"type": "select",
 			"group": "Location Menu",
 			"blobsFolders": ["mod content/menus/location menu/blobs"],
@@ -823,14 +832,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "WOA's default story menu.",
-			"image": "framework content/camp_v.png",
+			"image": "framework content/camp_v.webp",
 			"group": "Campaign Menu",
 			"type": "select"
 		},
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI'S custom story menu.",
-			"image": "framework content/cp_hui.png",
+			"image": "framework content/cp_hui.webp",
 			"type": "select",
 			"group": "Campaign Menu",
 			"blobsFolders": ["mod content/menus/story menu/blobs"],
@@ -839,14 +848,14 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "WOA's default gamemodes menu.",
-			"image": "framework content/GM_V.png",
+			"image": "framework content/GM_V.webp",
 			"type": "select",
 			"group": "Gamemodes Menu"
 		},
 		{
 			"name": "Heritage UI",
 			"tooltip": "Heritage UI'S custom gamemodes menu.",
-			"image": "framework content/hui_gm.png",
+			"image": "framework content/hui_gm.webp",
 			"type": "select",
 			"group": "Gamemodes Menu",
 			"blobsFolders": ["mod content/menus/gamemodes menu/blobs"],
@@ -856,7 +865,7 @@
 		{
 			"name": "Heritage UI + Ghost Mode",
 			"tooltip": "Heritage UI'S custom gamemodes menu with Ghost Mode support.",
-			"image": "framework content/gm_gm.png",
+			"image": "framework content/gm_gm.webp",
 			"type": "select",
 			"group": "Gamemodes Menu",
 			"blobsFolders": ["mod content/menus/gamemodes menu ghost mode/blobs"],
@@ -870,7 +879,7 @@
 		{
 			"name": "On",
 			"tooltip": "Adds quick save|load buttons to the pause menu.",
-			"image": "framework content/quicksave.png",
+			"image": "framework content/quicksave.webp",
 			"type": "select",
 			"blobsFolders": ["mod content/menus/quick save/blobs"],
 			"group": "Quick Save|Load",
@@ -884,7 +893,7 @@
 		{
 			"name": "On",
 			"tooltip": "Adds quick save|load bindings.",
-			"image": "framework content/QSQL.png",
+			"image": "framework content/QSQL.webp",
 			"type": "select",
 			"contentFolders": ["mod content/menus/quick save/content"],
 			"group": "Quick Save|Load Bindings",
@@ -895,7 +904,7 @@
 			"name": "Vanilla",
 			"type": "select",
 			"tooltip": "HITMAN WOA's default item names.",
-			"image": "framework content/defaultnames.png",
+			"image": "framework content/defaultnames.webp",
 			"group": "Localization|Item Names"
 		},
 		{
@@ -903,21 +912,8 @@
 			"type": "select",
 			"tooltip": "Attempts to make item and suit names more consistent, following a naming scheme similar to HITMAN 2016.",
 			"group": "Localization|Item Names",
-			"image": "framework content/heritagenames.png",
+			"image": "framework content/heritagenames.webp",
 			"localisationOverrides": {
-				"003131BA6C4C5074": {
-					"english": {
-						"2078084571": "The Splitter"
-					},
-					"french": {},
-					"italian": {},
-					"german": {},
-					"spanish": {},
-					"russian": {},
-					"chineseSimplified": {},
-					"chineseTraditional": {},
-					"japanese": {}
-				},
 				"0072D1A320470342": {
 					"english": {
 						"1032737931": "Bartoli RR",
@@ -940,7 +936,7 @@
 				},
 				"006986A5A3F98191": {
 					"english": {
-						"2219651365": "Splitter SMG",
+						"2219651365": "HX-10 Splitter",
 						"3326048998": "ICA19 Purple Streak",
 						"80972231": "Custom 5mm Ghost",
 						"114220078": "TAC-SMG Ornamental",
@@ -1238,14 +1234,14 @@
 			"name": "Vanilla",
 			"type": "select",
 			"tooltip": "HITMAN WOA's default name for Mission Stories.",
-			"image": "framework content/MissionStories.png",
+			"image": "framework content/MissionStories.webp",
 			"group": "Localization|Mission Story Terminology"
 		},
 		{
 			"name": "Heritage",
 			"type": "select",
 			"tooltip": "Heritage UI's renaming of Mission Stories to Opportunities to match HITMAN 2016.",
-			"image": "framework content/ops.png",
+			"image": "framework content/ops.webp",
 			"enabledByDefault": true,
 			"localisationOverrides": {
 				"00B9AC4BC2618983": {
@@ -1999,15 +1995,83 @@
 		},
 		{
 			"name": "Vanilla",
+			"type": "select",
+			"tooltip": "HITMAN WOA's custom objective text for the Mission Exit Objective. 'Locate the Exit'",
+			"image": "framework content/MissionStories.webp",
+			"group": "Localization|Mission Exit Terminology"
+		},
+		{
+			"name": "Heritage",
+			"type": "select",
+			"tooltip": "Heritage UI's improved objective text for the Mission Exit Objective. 'Exfiltrate Mission'",
+			"enabledByDefault": true,
+			"localisationOverrides": {
+		"00F5817876E691F1": {
+			"english": {
+				"1998245905": "Exfiltrate Mission"
+			},
+			"french": {},
+			"italian": {
+				"1998245905": "Estrazione"
+			},
+			"german": {},
+			"spanish": {},
+			"russian": {},
+			"chineseSimplified": {},
+			"chineseTraditional": {},
+			"japanese": {}
+		}
+	},
+			"group": "Localization|Mission Exit Terminology"
+		},
+		{
+			"name": "Vanilla",
+			"type": "select",
+			"tooltip": "HITMAN WOA's default text for the ICA Facility. 'ICA Facility, Classified'",
+			"image": "framework content/MissionStories.webp",
+			"group": "Localization|ICA Facility Terminology"
+		},
+		{
+			"name": "Heritage",
+			"type": "select",
+			"tooltip": "Heritage UI's custom text for the ICA Facility. Reflects the cannonical location that is no longer a secret. 'ICA Facility, Greenland'",
+			"enabledByDefault": true,
+			"localisationOverrides": {
+		"008D33DE8C75CACB": {
+			"english": {
+				"216107613": "Greenland",
+				"803320584": "Greenland",
+				"839967534": "Greenland",
+				"1163205649": "ICA Facility, Greenland",
+				"1174961694": "Greenland",
+				"1626680168": "ICA Facility, Greenland"
+			},
+			"french": {
+			},
+			"italian": {
+			},
+			"german": {},
+			"spanish": {
+			},
+			"russian": {},
+			"chineseSimplified": {},
+			"chineseTraditional": {},
+			"japanese": {}
+		}
+	},
+			"group": "Localization|ICA Facility Terminology"
+		},
+		{
+			"name": "Vanilla",
 			"tooltip": "HITMAN WOA'S default item/suit sorting.",
-			"image": "framework content/sortdefault.png",
+			"image": "framework content/sortdefault.webp",
 			"type": "select",
 			"group": "Suit|Item Sorting"
 		},
 		{
 			"name": "Heritage UI (Peacock Only)",
 			"tooltip": "Heritage UI'S more organized item/suit sorting.",
-			"image": "framework content/verycool.png",
+			"image": "framework content/verycool.webp",
 			"type": "select",
 			"group": "Suit|Item Sorting",
 			"peacockPlugins": [
@@ -2026,7 +2090,7 @@
 		{
 			"name": "Enabled (Peacock Only, HUI Sorting MUST be enabled)",
 			"type": "select",
-			"image": "framework content/favorite.png",
+			"image": "framework content/favorite.webp",
 			"group": "Suit|Item Sorting|Favorites",
 			"tooltip": "Adds a custom subcategory for favorite items. Tutorial for adding and removing items can be found on the Nexus mod page.",
 			"contentFolders": ["mod content/menus/favorites"]
@@ -2040,7 +2104,7 @@
 		{
 			"name": "Enabled (Peacock Only, HUI Sorting MUST be enabled)",
 			"type": "select",
-			"image": "framework content/vault.png",
+			"image": "framework content/vault.webp",
 			"group": "Suit|Item Sorting|Vault",
 			"tooltip": "Allows you to hide disliked items in a custom 'vault' category. Tutorial for adding and removing items can be found on the Nexus mod page.",
 			"contentFolders": ["mod content/menus/vault"]

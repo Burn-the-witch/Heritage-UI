@@ -2222,6 +2222,59 @@ module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 					}
 				}
 			}
+		},
+		{
+			view: "menu3.basic.MenuTileTall",
+			row: 0,
+			col: 6,
+			nrows: 3,
+			ncols: 4,
+			data: {
+				title: "$loc UI_CONTRACT_LAMBIC_TITLE",
+				header: "$loc UI_HERITAGE_ET",
+				icon: "elusive",
+				image: "$res Images/Contracts/Elusive/S3_Lambic/Title.jpg"
+			},
+			actions: {
+				accept: [
+					{
+						link: {
+							page: "planning",
+							args: {
+								url: "planning",
+								args: {
+									contractid: "699ec9a3-102e-499b-ad60-6a329cc2054c",
+									resetescalation: false
+								},
+								contractid: "699ec9a3-102e-499b-ad60-6a329cc2054c"
+							}
+						}
+					}
+				],
+				select: {
+					"replace-children": {
+						target: "headline_container",
+						children: [
+							{
+								view: "menu3.basic.HeadlineElement",
+								selectable: false,
+								pressable: false,
+								data: {
+									title: "$loc UI_CONTRACT_LAMBIC_TITLE",
+									header: "$loc UI_HERITAGE_ET",
+									typeicon: "elusive"
+								}
+							}
+						]
+					}
+				},
+				deselect: {
+					"replace-children": {
+						target: "headline_container",
+						children: []
+					}
+				}
+			}
 		}
 	]
 

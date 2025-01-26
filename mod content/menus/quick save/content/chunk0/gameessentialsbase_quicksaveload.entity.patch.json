@@ -26,15 +26,10 @@
 							"type": "ZString",
 							"value": "None"
 						},
-						"m_sKeyName": {
-							"type": "ZString",
-							"value": "F9"
-						}
+						"m_sKeyName": { "type": "ZString", "value": "F9" }
 					},
 					"events": {
-						"Down": {
-							"LoadQuick": ["cafec255f3e19dc9"]
-						}
+						"Down": { "LoadQuick": ["cafec255f3e19dc9"] }
 					}
 				}
 			]
@@ -52,15 +47,10 @@
 							"type": "ZString",
 							"value": "None"
 						},
-						"m_sKeyName": {
-							"type": "ZString",
-							"value": "F5"
-						}
+						"m_sKeyName": { "type": "ZString", "value": "F5" }
 					},
 					"events": {
-						"Down": {
-							"SaveQuick": ["cafec255f3e19dc9"]
-						}
+						"Down": { "SaveQuick": ["cafec255f3e19dc9"] }
 					}
 				}
 			]
@@ -73,6 +63,242 @@
 					"name": "LevelControl",
 					"factory": "[modules:/zlevelcontrolentity.class].pc_entitytype",
 					"blueprint": "[modules:/zlevelcontrolentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe4aa1287386a6",
+				{
+					"parent": "fffffffffffffffe",
+					"name": "Remove Silencer",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef6c96b32643d",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "SilverBaller ID Check",
+					"factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_ItemKeyToFind": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe11e78f6a80fd"
+						},
+						"m_bCheckEquippedItem": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bCheckInventory": {
+							"type": "bool",
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea658e94a771a",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "Check Bool",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rValueEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "cafef6c96b32643d"
+						}
+					},
+					"events": {
+						"PollTrue": {
+							"SpawnItem": ["cafe7ce466d108a9"],
+							"In": ["cafe26ea08155ace"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafead0577511e02",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "Trigger Key Event",
+					"factory": "[assembly:/Templates/UI/Controls/simplekeyeventhelper.template?/SimpleKeyEventHelper.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/Templates/UI/Controls/simplekeyeventhelper.template?/SimpleKeyEventHelper.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_sModifierKeyName": {
+							"type": "ZString",
+							"value": "None"
+						},
+						"m_sKeyName": { "type": "ZString", "value": "L" },
+						"m_bEnabled": { "type": "bool", "value": true }
+					},
+					"events": { "Down": { "Poll": ["cafea658e94a771a"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe11e78f6a80fd",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "Silverballer ID",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "e70adb5b-0646-4f88-bd4a-85bea7a2a654"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7ce466d108a9",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "UnsilencedPistolSpawner",
+					"factory": "[modules:/zitemspawner.class].pc_entitytype",
+					"blueprint": "[modules:/zitemspawner.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0,
+									"y": 0,
+									"z": -46.44890218466408
+								},
+								"position": {
+									"x": 18.93832015991211,
+									"y": 13.000089645385742,
+									"z": 17.271379470825195
+								}
+							}
+						},
+						"m_bUsePlacementAttach": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rMainItemKey": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe7cccd97fa130"
+						},
+						"m_bSpawnOnStart": {
+							"type": "bool",
+							"value": false
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe4aa1287386a6"
+						},
+						"m_eRoomBehaviour": {
+							"type": "ZSpatialEntity.ERoomBehaviour",
+							"value": "ROOM_STATIC"
+						},
+						"m_bVisible": { "type": "bool", "value": true },
+						"m_bIsPrivate": { "type": "bool", "value": false },
+						"m_bVisibleInBoxReflection": {
+							"type": "bool",
+							"value": true
+						}
+					},
+					"events": {
+						"Item": { "SetItem": ["cafef30e35162e4a"] },
+						"ItemReady": {
+							"PickupIntoPocket": ["cafef30e35162e4a"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef30e35162e4a",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "HeroItemAction",
+					"factory": "[modules:/zheroitemaction.class].pc_entitytype",
+					"blueprint": "[modules:/zheroitemaction.class].pc_entityblueprint",
+					"properties": {
+						"m_rKeywordsToFind": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe7cccd97fa130"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7cccd97fa130",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "Classicballer ID",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "1e632100-f739-4d18-92b4-ed5f2faf4b0c"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea53c44a6ad27",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "HeroItemAction2",
+					"factory": "[modules:/zheroitemaction.class].pc_entitytype",
+					"blueprint": "[modules:/zheroitemaction.class].pc_entityblueprint",
+					"properties": {
+						"m_rKeywordsToFind": {
+							"type": "SEntityTemplateReference",
+							"value": "cafeede0328a6a38"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe26ea08155ace",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "SignalFork_Void",
+					"factory": "[modules:/zsignalforkentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalforkentity_void.class].pc_entityblueprint",
+					"events": {
+						"Out01": { "GetItem": ["cafea53c44a6ad27"] },
+						"Out02": {
+							"ConsumeFromInventory": ["cafea53c44a6ad27"]
+						}
+					},
+					"outputCopying": {}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeede0328a6a38",
+				{
+					"parent": "cafe4aa1287386a6",
+					"name": "Keyword_ITEM_COIN",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_coin.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_coin.entitytemplate].pc_entityblueprint"
 				}
 			]
 		}

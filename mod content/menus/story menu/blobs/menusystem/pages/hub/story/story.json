@@ -4,7 +4,7 @@
 	"view": "menu3.containers.ScrollingListContainer",
 	"direction": "horizontal",
 	"data": { "direction": "horizontal", "mousewheelstepsize": "480" },
-	"row": -0.75,
+	"row": 0,
 	"nrows": 3,
 	"ncols": 10,
 	"children": {
