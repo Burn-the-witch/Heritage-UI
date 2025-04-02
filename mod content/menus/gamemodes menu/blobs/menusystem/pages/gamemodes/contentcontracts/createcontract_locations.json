@@ -15,8 +15,7 @@
 							}
 						}
 					},
-                    {"set-background": "$res images/backgrounds/menu_bg.jpg"
-							},
+					{ "set-background": "$res images/backgrounds/menu_bg.jpg" },
 					{
 						"set-value": {
 							"target": "$.@global.NoAutoSelectCreateContract",
@@ -48,10 +47,13 @@
 					"view": "menu3.containers.ScrollingTabsContainer",
 					"ncols": 10,
 					"direction": "horizontal",
-                    "actions":[
-							{"select": {
+					"actions": [
+						{
+							"select": {
 								"set-background": "$res images/backgrounds/menu_bg.jpg"
-                }}],
+							}
+						}
+					],
 					"submenunavigation": true,
 					"loopedselection": false,
 					"data": { "direction": "horizontal", "submenu": true },

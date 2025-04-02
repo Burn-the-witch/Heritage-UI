@@ -1,15 +1,13 @@
 {
-	"version": "9.0.0",
+	"version": "10.0.0",
 	"id": "BurnTheWitch.HeritageUI",
 	"name": "Heritage UI",
 	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
 	"description": "A user interface overhaul mod for Hitman: World of Assassination.",
 	"authors": ["Burn, the witch"],
-	"frameworkVersion": "2.33.20",
-	"loadAfter": ["Notex.SimpleKeyEventHelper","HITMAPS.GhostModeEnabler","BurnthewitchRiisikumi.Roulette"],
-	"incompatibilities": [
-		"palach2018.DotCrosshair"
-    ],
+	"frameworkVersion": "2.33.24",
+	"loadAfter": ["Notex.SimpleKeyEventHelper", "HITMAPS.GhostModeEnabler", "BurnthewitchRiisikumi.Roulette"],
+	"incompatibilities": ["palach2018.DotCrosshair"],
 	"localisation": {
 		"english": {
 			"UI_HERITAGE_GO_OFFLINE": "Go Offline",
@@ -290,19 +288,19 @@
 		}
 	},
 	"localisationOverrides": {
-	"003131BA6C4C5074": {
-		"english": {
-			"2078084571": "The Splitter"
+		"003131BA6C4C5074": {
+			"english": {
+				"2078084571": "The Splitter"
+			},
+			"french": {},
+			"italian": {},
+			"german": {},
+			"spanish": {},
+			"russian": {},
+			"chineseSimplified": {},
+			"chineseTraditional": {},
+			"japanese": {}
 		},
-		"french": {},
-		"italian": {},
-		"german": {},
-		"spanish": {},
-		"russian": {},
-		"chineseSimplified": {},
-		"chineseTraditional": {},
-		"japanese": {}
-	},
 		"008D33DE8C75CACB": {
 			"english": {
 				"243861870": "Season 1"
@@ -820,9 +818,7 @@
 			"type": "select",
 			"group": "Location Menu",
 			"blobsFolders": ["mod content/menus/location menu/blobs"],
-			"peacockPlugins": [
-				"mod content/menus/location menu/plugins/featuredcontracts.plugin.js"
-			],
+			"peacockPlugins": ["mod content/menus/location menu/plugins/featuredcontracts.plugin.js"],
 			"enabledByDefault": true
 		},
 		{
@@ -855,7 +851,10 @@
 			"type": "select",
 			"group": "Gamemodes Menu",
 			"blobsFolders": ["mod content/menus/gamemodes menu/blobs"],
-			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js","mod content/menus/gamemodes menu/plugins/menuEdit.plugin.js"],
+			"peacockPlugins": [
+				"mod content/menus/gamemodes menu/plugins/arcade.plugin.js",
+				"mod content/menus/gamemodes menu/plugins/menuEdit.plugin.js"
+			],
 			"enabledByDefault": true
 		},
 		{
@@ -865,7 +864,10 @@
 			"type": "select",
 			"group": "Gamemodes Menu",
 			"blobsFolders": ["mod content/menus/gamemodes menu ghost mode/blobs"],
-			"peacockPlugins": ["mod content/menus/gamemodes menu/plugins/arcade.plugin.js","mod content/menus/gamemodes menu/plugins/menuEditghost.plugin.js"]
+			"peacockPlugins": [
+				"mod content/menus/gamemodes menu/plugins/arcade.plugin.js",
+				"mod content/menus/gamemodes menu/plugins/menuEditghost.plugin.js"
+			]
 		},
 		{
 			"name": "Off",
@@ -932,9 +934,6 @@
 				},
 				"006986A5A3F98191": {
 					"english": {
-						"3089544667": "ICA19 Cherryballer",
-						"2219651365": "HX-10 Splitter",
-						"3326048998": "ICA19 Purple Streak",
 						"80972231": "Custom 5mm Ghost",
 						"114220078": "TAC-SMG Ornamental",
 						"159915413": "Hackl Leviathan Ducky Covert",
@@ -963,6 +962,7 @@
 						"2167584959": "Bartoli Dragon Hunting Rifle",
 						"2168467540": "ICA19 Blackballer",
 						"2191608370": "Bartoli 12G Street Art",
+						"2219651365": "HX-10 Splitter",
 						"2253322208": "Raptor Covert ICA",
 						"2434870416": "ICA19 Street Art",
 						"2495675980": "Krugermeier 2-2 Ancestral",
@@ -970,9 +970,11 @@
 						"2933223810": "DAK X2 Scrap Covert",
 						"2999686978": "Sieger 300 Street Art",
 						"3080273024": "Bartoli Hunting Rifle Covert",
+						"3089544667": "ICA19 Cherryballer",
 						"3113978184": "Bartoli DTI",
 						"3201567076": "ICA TAC 12",
 						"3255803310": "DAK X2 Brine-Damaged",
+						"3326048998": "ICA19 Purple Streak",
 						"3386837480": "Bartoli 12G Sawed-Off Maximalist",
 						"3459315680": "DAK X2 Slapdash Covert",
 						"3489036676": "Bartoli Ancestral Hunting Rifle",
@@ -999,11 +1001,6 @@
 				},
 				"008322D98E1CFE04": {
 					"english": {
-						"2790251990": "Purple Streak Coin",
-						"3518398583": "Football Boot",
-						"1089186032": "Lucky Cat",
-						"1940653787": "Customized Kukri Knife",
-						"2913254817": "VHS Tape",
 						"264649869": "Lethal Easter Egg",
 						"378687878": "Iridescent Katana",
 						"473844920": "Sedative Proximity Mine",
@@ -1013,12 +1010,14 @@
 						"891345639": "Resistance Band",
 						"912885689": "Red Flash Grenade",
 						"1021829317": "Emetic Guru Grenade",
+						"1089186032": "Lucky Cat",
 						"1153451912": "Sedative Gum",
 						"1177362553": "Emetic Pen Syringe",
 						"1367227604": "Club Boom Flightcase",
 						"1423618173": "Emetic Guru Pen Syringe",
 						"1432256677": "Ancestral Knife",
 						"1596987004": "Dragon Briefcase",
+						"1940653787": "Customized Kukri Knife",
 						"1958976691": "Greedy Cane",
 						"1967478934": "Explosive Fountain Pen",
 						"2060281116": "Vinyl Record",
@@ -1027,7 +1026,10 @@
 						"2132802116": "Serpent's Bite",
 						"2359075170": "Brown Leather Briefcase",
 						"2684151890": "Street Art Bat",
+						"2790251990": "Purple Streak Coin",
+						"2913254817": "VHS Tape",
 						"3411454055": "Roar Proximity Flash",
+						"3518398583": "Football Boot",
 						"3611983725": "Makeshift Katana",
 						"3770174342": "Purple Streak Briefcase",
 						"3839233495": "Lucky Cane",
@@ -1102,13 +1104,10 @@
 				},
 				"004B8C5124A49543": {
 					"english": {
-						"2425319722": "Deadly Duck Suit",
-						"101846510": "Movie Star Suit",
-						"2846183182": "Christmas Cosplay Suit",
-						"4168197591": "Bloody Boxer Suit",
 						"39609674": "Bruised Boxer Suit",
 						"60276344": "Beldingford Huntsman Suit",
 						"96317463": "Black Bruiser Suit",
+						"101846510": "Movie Star Suit",
 						"135933874": "Sunset Streak Suit",
 						"243279818": "Scarlet Suit",
 						"320948275": "Super Fan Suit",
@@ -1142,10 +1141,12 @@
 						"2168599423": "Graffiti Hoody Suit",
 						"2202462424": "Temper Suit",
 						"2231831317": "Codename 47 Suit",
+						"2425319722": "Deadly Duck Suit",
 						"2572931238": "Raincoat with Gloves",
 						"2732261783": "Scrap Poncho Suit",
 						"2760943898": "Lucky Ducky Suit",
 						"2803096113": "Rapacious Suit",
+						"2846183182": "Christmas Cosplay Suit",
 						"2874408294": "17's Signature Suit",
 						"2875169229": "Sandman Suit",
 						"2887221963": "Absolution Sniping Suit",
@@ -1163,6 +1164,7 @@
 						"3944984988": "Blue Streak Suit",
 						"4009319363": "Narcissus Suit",
 						"4083485844": "Black Streak Suit",
+						"4168197591": "Bloody Boxer Suit",
 						"4188750001": "Odium Suit"
 					},
 					"french": {},
@@ -2006,22 +2008,22 @@
 			"tooltip": "Heritage UI's improved objective text for the Mission Exit Objective. 'Exfiltrate Mission'",
 			"enabledByDefault": true,
 			"localisationOverrides": {
-		"00F5817876E691F1": {
-			"english": {
-				"1998245905": "Exfiltrate Mission"
+				"00F5817876E691F1": {
+					"english": {
+						"1998245905": "Exfiltrate Mission"
+					},
+					"french": {},
+					"italian": {
+						"1998245905": "Estrazione"
+					},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				}
 			},
-			"french": {},
-			"italian": {
-				"1998245905": "Estrazione"
-			},
-			"german": {},
-			"spanish": {},
-			"russian": {},
-			"chineseSimplified": {},
-			"chineseTraditional": {},
-			"japanese": {}
-		}
-	},
 			"group": "Localization|Mission Exit Terminology"
 		},
 		{
@@ -2037,28 +2039,25 @@
 			"tooltip": "Heritage UI's custom text for the ICA Facility. Reflects the cannonical location that is no longer a secret. 'ICA Facility, Greenland'",
 			"enabledByDefault": true,
 			"localisationOverrides": {
-		"008D33DE8C75CACB": {
-			"english": {
-				"216107613": "Greenland",
-				"803320584": "Greenland",
-				"839967534": "Greenland",
-				"1163205649": "ICA Facility, Greenland",
-				"1174961694": "Greenland",
-				"1626680168": "ICA Facility, Greenland"
+				"008D33DE8C75CACB": {
+					"english": {
+						"216107613": "Greenland",
+						"803320584": "Greenland",
+						"839967534": "Greenland",
+						"1163205649": "ICA Facility, Greenland",
+						"1174961694": "Greenland",
+						"1626680168": "ICA Facility, Greenland"
+					},
+					"french": {},
+					"italian": {},
+					"german": {},
+					"spanish": {},
+					"russian": {},
+					"chineseSimplified": {},
+					"chineseTraditional": {},
+					"japanese": {}
+				}
 			},
-			"french": {
-			},
-			"italian": {
-			},
-			"german": {},
-			"spanish": {
-			},
-			"russian": {},
-			"chineseSimplified": {},
-			"chineseTraditional": {},
-			"japanese": {}
-		}
-	},
 			"group": "Localization|ICA Facility Terminology"
 		},
 		{
