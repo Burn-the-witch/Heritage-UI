@@ -299,7 +299,7 @@ module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 								selectable: false,
 								pressable: false,
 								data: {
-									title: "$loc UI_CONTRACT_KAMIKAZE_TITLE",
+									title: "$loc UI_CONTRACT_KIRROYAL_TITLE",
 									header: "$loc UI_HERITAGE_ET",
 									typeicon: "elusive"
 								}

@@ -699,6 +699,12 @@
 			"OrderIndex": 38
 		}
 	},
+	"TOKEN_OUTFIT_HERO_EASTER_DUCK_SUIT": {
+		"Subtype": "S3",
+		"Properties": {
+			"OrderIndex": 39
+		}
+	},
 	"TOKEN_OUTFIT_HITMANSUIT": {
 		"Subtype": "S0",
 		"Properties": {
@@ -872,6 +878,11 @@
 	"FIREARMS_HERO_PISTOL_FLOWERBALLER": {
 		"Properties": {
 			"OrderIndex": 101
+		}
+	},
+	"FIREARMS_HERO_PISTOL_CHERRYBALLER": {
+		"Properties": {
+			"OrderIndex": 102
 		}
 	},
 	"FIREARMS_HERO_PISTOL_CONCRETEART": {
@@ -1914,6 +1925,12 @@
 			"OrderIndex": 41
 		}
 	},
+	"PROP_TOOL_COIN_T": {
+		"Subtype": "distraction",
+		"Properties": {
+			"OrderIndex": 42
+		}
+	},
 	"PROP_TOOL_GOLD_BAR_SMALL": {
 		"Subtype": "distraction",
 		"Properties": {
@@ -2210,6 +2227,11 @@
 			"OrderIndex": 161
 		}
 	},
+	"PROP_MELEE_KUKRI_KNIFE_LAMBIC": {
+		"Properties": {
+			"OrderIndex": 162
+		}
+	},
 	"PROP_MELEE_DAGGER_ENVY": {
 		"Properties": {
 			"OrderIndex": 171
@@ -2345,6 +2367,11 @@
 	"PROP_MELEE_KETTLEBELL_PENICILLIN": {
 		"Properties": {
 			"OrderIndex": 362
+		}
+	},
+	"PROP_MELEE_FOOTBALL_BOOT": {
+		"Properties": {
+			"OrderIndex": 363
 		}
 	},
 	"PROP_MELEE_MUFFIN_BLUEBERRY": {

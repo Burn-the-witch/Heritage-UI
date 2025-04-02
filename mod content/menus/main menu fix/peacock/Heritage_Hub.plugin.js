@@ -218,7 +218,7 @@ module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
 								view: "menu3.basic.CategoryElement",
 								data: {
 									title: "$loc UI_HERITAGE_DASHBOARD",
-									icon: "21"
+									icon: "background"
 								},
 								actions: {
 									activated: {

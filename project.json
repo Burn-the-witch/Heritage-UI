@@ -1,4 +1,1 @@
-{
-	"$schema": "https://raw.githubusercontent.com/atampy25/quickentity-editor-next/main/src/lib/project-schema.json",
-	"customPaths": []
-}
+{"customPaths":[]}

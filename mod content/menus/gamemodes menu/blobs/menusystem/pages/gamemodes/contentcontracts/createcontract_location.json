@@ -43,9 +43,8 @@
 					}
 				},
 				"select": {
-					"select": {
-						"set-background": "$res images/backgrounds/menu_bg.jpg"
-					},
+                        "select": {
+                            "set-background": "$res images/backgrounds/menu_bg.jpg"},
 					"replace-children": {
 						"target": "headline_container",
 						"children": [
