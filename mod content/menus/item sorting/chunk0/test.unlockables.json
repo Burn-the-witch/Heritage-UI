@@ -697,6 +697,12 @@
 			"OrderIndex": 17
 		}
 	},
+	"TOKEN_OUTFIT_HERO_PURPLESPECIAL_SUIT": {
+		"Subtype": "S0",
+		"Properties": {
+			"OrderIndex": 18
+		}
+	},
 	"FIREARMS_PISTOL_DARTGUN_SEDATIVE": {
 		"Subtype": "evergreen_kill_method_pistol",
 		"Properties": {}
