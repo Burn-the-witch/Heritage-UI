@@ -94,20 +94,20 @@
 					},
 					{
 						"replace-children": {
-                "target": "headline_container",
-                "children": [
-                    {
-                        "view": "menu3.basic.HeadlineElement",
-                        "selectable": false,
-                        "pressable": false,
-                        "data": {
-                            "header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
-                            "title": "$loc $formatstring UI_{$.Location.Id}_CITY",
-                            "typeicon": "location"
-                        }
-                    }
-				]
-            }
+							"target": "headline_container",
+							"children": [
+								{
+									"view": "menu3.basic.HeadlineElement",
+									"selectable": false,
+									"pressable": false,
+									"data": {
+										"header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
+										"title": "$loc $formatstring UI_{$.Location.Id}_CITY",
+										"typeicon": "location"
+									}
+								}
+							]
+						}
 					}
 				],
 				"deselect": [
@@ -128,16 +128,16 @@
 						}
 					},
 					{
-											"replace-children": {
-                "target": "headline_container",
-                "children": [
-                    {
-                        "view": "menu3.basic.HeadlineElement",
-                        "selectable": false,
-                        "pressable": false
-                    }
-                ]
-            }
+						"replace-children": {
+							"target": "headline_container",
+							"children": [
+								{
+									"view": "menu3.basic.HeadlineElement",
+									"selectable": false,
+									"pressable": false
+								}
+							]
+						}
 					}
 				],
 				"accept": {
