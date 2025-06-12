@@ -363,6 +363,7 @@ module.exports = function HUI_STASHPOINT(controller) {
 																			"S5",
 																			"S6",
 																			"S7",
+																			"S71",
 																			"S8",
 																			"S8",
 																			"usercreated",

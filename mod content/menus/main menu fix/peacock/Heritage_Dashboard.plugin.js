@@ -57,6 +57,59 @@ module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 			nrows: 3,
 			ncols: 4,
 			data: {
+				title: "$loc UI_CONTRACT_FRENCHMARTINI_TITLE",
+				header: "$loc UI_HERITAGE_ET",
+				icon: "elusive",
+				image: "$res images/contracts/elusive/s3_frenchmartini/Title.jp"
+			},
+			actions: {
+				accept: [
+					{
+						link: {
+							page: "planning",
+							args: {
+								url: "planning",
+								args: {
+									contractid: "685c527d-2da2-49e7-9e9e-bf7f675ea779",
+									resetescalation: false
+								},
+								contractid: "685c527d-2da2-49e7-9e9e-bf7f675ea779"
+							}
+						}
+					}
+				],
+				select: {
+					"replace-children": {
+						target: "headline_container",
+						children: [
+							{
+								view: "menu3.basic.HeadlineElement",
+								selectable: false,
+								pressable: false,
+								data: {
+									title: "$loc UI_CONTRACT_FRENCHMARTINI_TITLE",
+									header: "$loc UI_HERITAGE_ET",
+									typeicon: "elusive"
+								}
+							}
+						]
+					}
+				},
+				deselect: {
+					"replace-children": {
+						target: "headline_container",
+						children: []
+					}
+				}
+			}
+		},
+		{
+			view: "menu3.basic.MenuTileTall",
+			row: 0,
+			col: 6,
+			nrows: 3,
+			ncols: 4,
+			data: {
 				title: "$loc UI_CONTRACT_TEQUILA_SUNRISE_TITLE",
 				header: "$loc UI_HERITAGE_ET",
 				icon: "elusive",
@@ -2190,10 +2243,10 @@ module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 							args: {
 								url: "planning",
 								args: {
-									contractid: "8813e0a4-08ac-494f-a847-687a2da3582f",
+									contractid: "d4a5f21f-3e4d-4226-9769-0fbe2a5e8639",
 									resetescalation: false
 								},
-								contractid: "8813e0a4-08ac-494f-a847-687a2da3582f"
+								contractid: "d4a5f21f-3e4d-4226-9769-0fbe2a5e8639"
 							}
 						}
 					}

@@ -23,7 +23,7 @@
 			]
 		},
 		"$then": {
-			"view": "menu3.basic.MenuTileTall",
+			"view": "menu3.basic.ItemTileTall",
 			"_comment": "do not change this id - is used by challenge goto location!",
 			"id": "$formatstring {$.Location.Id}_tile",
 			"pressable": "$not $.Location.Properties.IsLocked",
@@ -32,11 +32,16 @@
 					"$if $not $.Location.Properties.IsLocked": {
 						"$then": "$loc $formatstring UI_{$.Location.Id}_CITY",
 						"$else": {
-							"$if $Location.Properties.UpcomingContent": ["$loc $formatstring UI_{$.Location.Id}_COUNTRY"]
+							"$if $Location.Properties.UpcomingContent": {
+								"$then": "$loc $formatstring UI_{$.Location.Id}_COUNTRY"
+							}
 						}
 					}
 				},
 				"icon": "location",
+				"difficultyheader": "$loc UI_MENU_PAGE_DESTINATION_TAB_DIFFICULTY",
+				"difficulty": "NORMAL",
+				"completion": "$formatstring {$loc UI_MENU_PAGE_LOCATION_COMPLETION}  {$.ChallengeCompletion.CompletedChallengesCount,.0f} {$loc UI_DIALOG_SLASH} {$.ChallengeCompletion.ChallengesCount,.0f}",
 				"image": {
 					"$if $not $.Location.Properties.IsLocked": {
 						"$then": "$res $formatstring images/bdm_tiles/{$.Location.Id}/background.jpg",
@@ -89,20 +94,20 @@
 					},
 					{
 						"replace-children": {
-							"target": "headline_container",
-							"children": [
-								{
-									"view": "menu3.basic.HeadlineElement",
-									"selectable": false,
-									"pressable": false,
-									"data": {
-										"header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
-										"title": "$loc $formatstring UI_{$.Location.Id}_CITY",
-										"typeicon": "location"
-									}
-								}
-							]
-						}
+                "target": "headline_container",
+                "children": [
+                    {
+                        "view": "menu3.basic.HeadlineElement",
+                        "selectable": false,
+                        "pressable": false,
+                        "data": {
+                            "header": "$loc $formatstring UI_{$.Location.Id}_COUNTRY",
+                            "title": "$loc $formatstring UI_{$.Location.Id}_CITY",
+                            "typeicon": "location"
+                        }
+                    }
+				]
+            }
 					}
 				],
 				"deselect": [
@@ -123,16 +128,16 @@
 						}
 					},
 					{
-						"replace-children": {
-							"target": "headline_container",
-							"children": [
-								{
-									"view": "menu3.basic.HeadlineElement",
-									"selectable": false,
-									"pressable": false
-								}
-							]
-						}
+											"replace-children": {
+                "target": "headline_container",
+                "children": [
+                    {
+                        "view": "menu3.basic.HeadlineElement",
+                        "selectable": false,
+                        "pressable": false
+                    }
+                ]
+            }
 					}
 				],
 				"accept": {
