@@ -10,7 +10,7 @@
 	"incompatibilities": ["palach2018.DotCrosshair"],
 	"localisation": {
 		"english": {
-			"UI_HERITAGE_GO_OFFLINE": "Go Offline",
+			"UI_HERITAGE_GO_OFFLINE": "Go Offline", 
 			"UI_HERITAGE_FEATURED": "Featured Contract",
 			"UI_HERITAGE_FEATURED_PLURAL": "Featured Contracts",
 			"HUI_MENU_PAGE_DESTINATION_TAB_MISSIONS": "Contracts",
