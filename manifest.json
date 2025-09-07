@@ -795,6 +795,7 @@
 			"type": "select",
 			"group": "Main Menu",
 			"blobsFolders": ["mod content/menus/main menu fix/blobs"],
+			"contentFolders": ["mod content/menus/main menu fix/content"],
 			"peacockPlugins": [
 				"mod content/menus/main menu fix/peacock/Heritage_Dashboard.plugin.js",
 				"mod content/menus/main menu fix/peacock/Heritage_Hub.plugin.js"
@@ -3185,7 +3186,7 @@
 						"1838894700": "<li>Create a distraction.</li><li>Assassinate a target with a lethal throw.</li><li>Assassinate a target in close combat.</li>",
 						"2348599127": "<li>Create a distraction.</li><li>Assassinate a target with a lethal throw.</li><li>Assassinate a target in close combat.</li>",
 						"2589230073": "<li>Create a distraction.</li><li>Assassinate a target with a lethal throw.</li><li>Assassinate a target in close combat.</li>",
-						"2767007869": "Non-Target Assassinated",
+						"2767007869": "Non-Target Eliminated",
 						"2784837974": "Target Assassinated",
 						"2802778879": "<li>Create a distraction.</li><li>Assassinate a target with a lethal throw.</li><li>Assassinate a target in close combat.</li>",
 						"2920352070": "<li>Create a distraction.</li><li>Assassinate a target with a lethal throw.</li><li>Assassinate a target in close combat.</li>"

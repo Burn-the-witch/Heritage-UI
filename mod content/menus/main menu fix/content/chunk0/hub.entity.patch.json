@@ -1,0 +1,21 @@
+{
+	"tempHash": "00C8C314E552073A",
+	"tbluHash": "00D1C7E81D1A7EE4",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"1b2845d74c3fbbcd",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_ridTemplate",
+						"value": {
+							"resource": "[assembly:/_pro/online/default/cloudstorage/resources/menusystem/pages/hub/hub_page_heritage.json].pc_json",
+							"flag": "9F"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

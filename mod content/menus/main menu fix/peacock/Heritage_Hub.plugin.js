@@ -1,7 +1,8 @@
 const loggingInterop_1 = require("@peacockproject/core/loggingInterop")
-;(0, loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Hub replacement active.")
+;(loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Hub replacement active.")
+const { menuSystemDatabase } = require("@peacockproject/core/menus/menuSystem");
 module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
-	controller.configManager.configs.HubPageData = {
+	HubJSON = {
 		$datacontext: {
 			in: "$.data",
 			datavalues: {
@@ -257,7 +258,7 @@ module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
 														$include: "menusystem/pages/hub/dashboard/dashboard_offline.json"
 													},
 													$else: {
-														$include: "menusystem/pages/hub/dashboard/dashboard.json"
+														$include: "menusystem/pages/hub/dashboard/dashboard_peacock.json"
 													}
 												}
 											}
@@ -317,7 +318,7 @@ module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
 											},
 											$else: {
 												$include: {
-													$path: "menusystem/pages/hub/gamemodes/gamemodesoverview.json"
+													$path: "menusystem/pages/hub/gamemodes/gamemodesoverview_heritage.json"
 												}
 											}
 										}
@@ -353,4 +354,19 @@ module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
 			}
 		}
 	}
+menuSystemDatabase.hooks.getDatabaseDiff.tap('my-plugin-name', (configs, gameVersion) => {
+    if (gameVersion === 'h3') {
+        configs.push("menusystem/pages/hub/hub_page_heritage.json");
+
+    }
+});
+
+
+    menuSystemDatabase.hooks.getConfig.tap('my-plugin-name', (configName, gameVersion) => {
+        if(configName === '/pages/hub/hub_page_heritage.json' && gameVersion === 'h3') {
+            return HubJSON;
+        }
+    });
+
+ 
 }
