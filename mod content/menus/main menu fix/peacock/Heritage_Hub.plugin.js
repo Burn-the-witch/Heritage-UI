@@ -1,6 +1,6 @@
 const loggingInterop_1 = require("@peacockproject/core/loggingInterop")
-;(loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Hub replacement active.")
-const { menuSystemDatabase } = require("@peacockproject/core/menus/menuSystem");
+loggingInterop_1.log(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Hub replacement active.")
+const { menuSystemDatabase } = require("@peacockproject/core/menus/menuSystem")
 module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
 	HubJSON = {
 		$datacontext: {
@@ -354,19 +354,15 @@ module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
 			}
 		}
 	}
-menuSystemDatabase.hooks.getDatabaseDiff.tap('my-plugin-name', (configs, gameVersion) => {
-    if (gameVersion === 'h3') {
-        configs.push("menusystem/pages/hub/hub_page_heritage.json");
+	menuSystemDatabase.hooks.getDatabaseDiff.tap("my-plugin-name", (configs, gameVersion) => {
+		if (gameVersion === "h3") {
+			configs.push("menusystem/pages/hub/hub_page_heritage.json")
+		}
+	})
 
-    }
-});
-
-
-    menuSystemDatabase.hooks.getConfig.tap('my-plugin-name', (configName, gameVersion) => {
-        if(configName === '/pages/hub/hub_page_heritage.json' && gameVersion === 'h3') {
-            return HubJSON;
-        }
-    });
-
- 
+	menuSystemDatabase.hooks.getConfig.tap("my-plugin-name", (configName, gameVersion) => {
+		if (configName === "/pages/hub/hub_page_heritage.json" && gameVersion === "h3") {
+			return HubJSON
+		}
+	})
 }
