@@ -1,5 +1,5 @@
 const loggingInterop_1 = require("@peacockproject/core/loggingInterop")
-const { menuSystemDatabase } = require("@peacockproject/core/menus/menuSystem");
+const { menuSystemDatabase } = require("@peacockproject/core/menus/menuSystem")
 ;(0, loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Dashboard replacement active.")
 module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 	xorshift = (t) => {
@@ -3045,17 +3045,15 @@ module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 		]
 		controller.configManager.configs.EiderDashboard.children.$mergearrays[7] = Roulettetile[0]
 	}
-	menuSystemDatabase.hooks.getDatabaseDiff.tap('my-plugin-name', (configs, gameVersion) => {
-    if (gameVersion === 'h3') {
-        configs.push("menusystem/pages/hub/dashboard/dashboard_peacock.json");
+	menuSystemDatabase.hooks.getDatabaseDiff.tap("my-plugin-name", (configs, gameVersion) => {
+		if (gameVersion === "h3") {
+			configs.push("menusystem/pages/hub/dashboard/dashboard_peacock.json")
+		}
+	})
 
-    }
-});
-
-
-    menuSystemDatabase.hooks.getConfig.tap('my-plugin-name', (configName, gameVersion) => {
-        if(configName === '/pages/hub/dashboard/dashboard_peacock.json' && gameVersion === 'h3') {
-            return controller.configManager.configs.EiderDashboard;
-        }
-    });
+	menuSystemDatabase.hooks.getConfig.tap("my-plugin-name", (configName, gameVersion) => {
+		if (configName === "/pages/hub/dashboard/dashboard_peacock.json" && gameVersion === "h3") {
+			return controller.configManager.configs.EiderDashboard
+		}
+	})
 }

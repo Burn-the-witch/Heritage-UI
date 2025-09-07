@@ -1,11 +1,11 @@
 {
-	"version": "11.0.1",
+	"version": "11.0.2",
 	"id": "BurnTheWitch.HeritageUI",
 	"name": "Heritage UI",
 	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
 	"description": "A user interface overhaul mod for Hitman: World of Assassination.",
 	"authors": ["Burn, the witch"],
-	"frameworkVersion": "2.33.26",
+	"frameworkVersion": "2.33.27",
 	"loadAfter": ["Notex.SimpleKeyEventHelper", "HITMAPS.GhostModeEnabler", "BurnthewitchRiisikumi.Roulette"],
 	"incompatibilities": ["palach2018.DotCrosshair"],
 	"localisation": {
