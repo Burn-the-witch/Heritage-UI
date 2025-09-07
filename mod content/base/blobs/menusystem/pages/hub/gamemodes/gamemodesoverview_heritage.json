@@ -1,0 +1,152 @@
+{
+	"controller": "categoryitem",
+	"view": "menu3.basic.CategoryElement",
+	"id": "category_gamemodes",
+	"data": {
+		"title": "$loc UI_MENU_PAGE_HUB_GAMEMODES",
+		"icon": "mission"
+	},
+	"children": [
+		{
+			"controller": "list",
+			"id": "gamemodes_context_controller",
+			"view": "menu3.containers.SimpleButtonTileScrollingListContainer",
+			"direction": "horizontal",
+			"data": { "direction": "horizontal" },
+			"row": 4.25,
+			"nrows": 0.5,
+			"ncols": 10,
+			"children": [
+				{
+					"id": "gamemodes_category_contracts",
+					"view": "menu3.basic.SimpleButtonTile",
+					"nrows": 0.5,
+					"ncols": 2,
+					"pressable": true,
+					"data": {
+						"title": "$loc UI_MENU_PAGE_HUB_CONTRACTS",
+						"header": "$loc UI_MENU_PAGE_HUB_GAMEMODE",
+						"icon": "contract"
+					},
+					"actions": {
+						"select": {
+							"set-value": {
+								"target": "$.@global.CurrentBackgroundImage",
+								"value": "images/backgrounds/gamemode_contracts.jpg"
+							}
+						},
+						"accept": {
+							"link": {
+								"page": "gamemode_contracts",
+								"args": {
+									"url": "contracts",
+									"mode": "dataonly"
+								}
+							}
+						}
+					},
+					"children": [
+						{ "selectable": false, "pressable": false }
+					]
+				},
+				{
+					"id": "gamemodes_category_evergreen",
+					"view": "menu3.basic.SimpleButtonTile",
+					"nrows": 0.5,
+					"ncols": 2,
+					"pressable": true,
+					"data": {
+						"title": "$loc UI_EVERGREEN_TITLE",
+						"header": "$loc UI_MENU_PAGE_HUB_GAMEMODE",
+						"icon": "evergreen_gamemode"
+					},
+					"actions": {
+						"select": {
+							"set-value": {
+								"target": "$.@global.CurrentBackgroundImage",
+								"value": "images/backgrounds/gamemode_evergreen.jpg"
+							}
+						},
+						"accept": {
+							"link": {
+								"page": "gamemode_evergreen",
+								"args": {
+									"locationId": "LOCATION_PARENT_SNUG"
+								}
+							}
+						}
+					},
+					"children": [
+						{ "selectable": false, "pressable": false }
+					]
+				},
+				{
+					"id": "gamemodes_category_arcade",
+					"view": "menu3.basic.SimpleButtonTile",
+					"nrows": 0.5,
+					"ncols": 2,
+					"pressable": true,
+					"data": {
+						"title": "$loc UI_ARCADE_TITLE",
+						"header": "$loc UI_MENU_PAGE_HUB_GAMEMODE",
+						"icon": "arcademode"
+					},
+					"actions": {
+						"select": {
+							"set-value": {
+								"target": "$.@global.CurrentBackgroundImage",
+								"value": "images/backgrounds/gamemode_arcade.jpg"
+							}
+						},
+						"accept": {
+							"link": {
+								"page": "gamemode_arcade",
+								"args": {
+									"url": "hitscategory",
+									"type": "Arcade",
+									"mode": "dataonly"
+								}
+							}
+						}
+					},
+					"children": [
+						{ "selectable": false, "pressable": false }
+					]
+				},
+				{
+					"id": "gamemodes_category_sniper",
+					"view": "menu3.basic.SimpleButtonTile",
+					"nrows": 0.5,
+					"ncols": 2,
+					"pressable": true,
+					"data": {
+						"title": "$loc UI_SNIPER_CHALLENGE_TITLE",
+						"header": "$loc UI_MENU_PAGE_HUB_GAMEMODE",
+						"icon": "sniperrifle"
+					},
+					"actions": {
+						"select": {
+							"set-value": {
+								"target": "$.@global.CurrentBackgroundImage",
+								"value": "images/backgrounds/gamemode_sniper.jpg"
+							}
+						},
+						"accept": {
+							"link": {
+								"page": "gamemode_sniper",
+								"args": {
+									"url": "hitscategory",
+									"type": "Sniper",
+									"mode": "dataonly"
+								}
+							}
+						}
+					},
+					"children": [
+						{ "selectable": false, "pressable": false }
+					]
+				}
+			]
+		}
+	]
+}
