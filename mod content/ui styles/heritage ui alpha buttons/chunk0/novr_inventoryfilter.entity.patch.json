@@ -1,0 +1,18 @@
+{
+"tempHash": "0072BC2B790950B2",
+	"tbluHash": "00DDE321E5355684",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"fa5a8caa1bdf11c1",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_bColorCorrectionEnabled",
+						"value": false
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

@@ -84,7 +84,7 @@ module.exports = function initPlugin(controller) {
 							in: "$.",
 							datavalues: {
 								Title: "$loc UI_HERITAGE_ESC_TITLE",
-								Icon: "54",
+								Icon: "escalation",
 								image: "$res images/challenges/profile_challenges/escalation_s2_tier_9.jpg",
 								Category: "ContractAttack"
 							},

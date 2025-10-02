@@ -58,10 +58,63 @@ module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 			nrows: 3,
 			ncols: 4,
 			data: {
+				title: "$loc UI_CONTRACT_BAIJU_TITLE",
+				header: "$loc UI_HERITAGE_ET",
+				icon: "elusive",
+				image: "$res images/contracts/elusive/s3_baiju/Title.jpg"
+			},
+			actions: {
+				accept: [
+					{
+						link: {
+							page: "planning",
+							args: {
+								url: "planning",
+								args: {
+									contractid: "7a303745-5d33-4db8-814a-3de1dda00a59",
+									resetescalation: false
+								},
+								contractid: "7a303745-5d33-4db8-814a-3de1dda00a59"
+							}
+						}
+					}
+				],
+				select: {
+					"replace-children": {
+						target: "headline_container",
+						children: [
+							{
+								view: "menu3.basic.HeadlineElement",
+								selectable: false,
+								pressable: false,
+								data: {
+									title: "$loc UI_CONTRACT_BAIJU_TITLE",
+									header: "$loc UI_HERITAGE_ET",
+									typeicon: "elusive"
+								}
+							}
+						]
+					}
+				},
+				deselect: {
+					"replace-children": {
+						target: "headline_container",
+						children: []
+					}
+				}
+			}
+		},
+		{
+			view: "menu3.basic.MenuTileTall",
+			row: 0,
+			col: 6,
+			nrows: 3,
+			ncols: 4,
+			data: {
 				title: "$loc UI_CONTRACT_FRENCHMARTINI_TITLE",
 				header: "$loc UI_HERITAGE_ET",
 				icon: "elusive",
-				image: "$res images/contracts/elusive/s3_frenchmartini/Title.jp"
+				image: "$res images/contracts/elusive/s3_frenchmartini/Title.jpg"
 			},
 			actions: {
 				accept: [

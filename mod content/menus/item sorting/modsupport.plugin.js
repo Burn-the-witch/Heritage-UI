@@ -5,7 +5,7 @@ module.exports = function AutoSuitSorter3000(controller) {
 	const allUnlockables = controller.configManager.configs.allunlockables
 	allUnlockables.forEach((unlockable) => {
 		if (unlockable.Type === "disguise") {
-			const validSubtypes = ["disguise", "S0", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S71"]
+			const validSubtypes = ["disguise", "S0", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S71","S72"]
 			if (!validSubtypes.includes(unlockable.Subtype)) {
 				unlockable.Subtype = "S8"
 			}

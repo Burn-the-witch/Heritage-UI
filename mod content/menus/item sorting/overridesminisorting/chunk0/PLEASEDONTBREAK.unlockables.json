@@ -399,12 +399,6 @@
 			"OrderIndex": 17
 		}
 	},
-	"TOKEN_OUTFIT_HERO_SUMMER_YELLOW_REWARD": {
-		"Subtype": "S2",
-		"Properties": {
-			"OrderIndex": 18
-		}
-	},
 	"TOKEN_OUTFIT_CLASSICS_REWARD_BLACK_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
@@ -550,9 +544,9 @@
 		}
 	},
 	"TOKEN_OUTFIT_HERO_DUGONG_SUIT": {
-		"Subtype": "S3",
+		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 14
+			"OrderIndex": 11.1
 		}
 	},
 	"TOKEN_OUTFIT_ANCESTRAL_HERO_SMOOTHSNAKESUIT": {
@@ -586,31 +580,31 @@
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_HERO_RUBYRUDE_SUIT": {
-		"Subtype": "S3",
-		"Properties": {
-			"OrderIndex": 24
-		}
-	},
-	"TOKEN_OUTFIT_REWARD_HERO_NEON_SUIT": {
-		"Subtype": "S3",
-		"Properties": {
-			"OrderIndex": 21
-		}
-	},
-	"TOKEN_OUTFIT_TOMORROWLAND_DJSUIT_REWARD": {
 		"Subtype": "S71",
 		"Properties": {
 			"OrderIndex": 2
 		}
 	},
-	"TOKEN_OUTFIT_REWARD_HERO_DUCKY_SUIT": {
-		"Subtype": "S3",
+	"TOKEN_OUTFIT_REWARD_HERO_NEON_SUIT": {
+		"Subtype": "S71",
 		"Properties": {
-			"OrderIndex": 25
+			"OrderIndex": 3
+		}
+	},
+	"TOKEN_OUTFIT_TOMORROWLAND_DJSUIT_REWARD": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 2
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_DUCKY_SUIT": {
+		"Subtype": "S71",
+		"Properties": {
+			"OrderIndex": 4
 		}
 	},
 	"TOKEN_OUTFIT_TOMORROWLAND_SUIT_REWARD": {
-		"Subtype": "S71",
+		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 1
 		}
@@ -618,25 +612,19 @@
 	"TOKEN_OUTFIT_REWARD_HERO_HALLOWEENSANSPUMPKIN_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 29
+			"OrderIndex": 30
 		}
 	},
 	"TOKEN_OUTFIT_NEWZEALAND_HERO_OPUNTIA_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 30
+			"OrderIndex": 31
 		}
 	},
 	"TOKEN_OUTFIT_HERO_BBW_SUIT": {
-		"Subtype": "S3",
+		"Subtype": "S71",
 		"Properties": {
-			"OrderIndex": 26
-		}
-	},
-	"TOKEN_OUTFIT_REWARD_HERO_PUBLICENEMY_SUIT": {
-		"Subtype": "S2",
-		"Properties": {
-			"OrderIndex": 11
+			"OrderIndex": 5
 		}
 	},
 	"TOKEN_OUTFIT_HERO_H3_LEGACYREWARD_SUIT": {
@@ -646,87 +634,123 @@
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_HERO_CHRISTMASJUMPER_SUIT": {
-		"Subtype": "S3",
-		"Properties": {
-			"OrderIndex": 28
-		}
-	},
-	"TOKEN_OUTFIT_REWARD_HERO_CHRISTMAS_SUIT": {
-		"Subtype": "S3",
-		"Properties": {
-			"OrderIndex": 29
-		}
-	},
-	"TOKEN_OUTFIT_HERO_BUTCHER_SUIT": {
-		"Subtype": "S3",
-		"Properties": {
-			"OrderIndex": 31
-		}
-	},
-	"TOKEN_OUTFIT_REWARD_HERO_SB_SUIT": {
-		"Subtype": "S71",
-		"Properties": {
-			"OrderIndex": 3
-		}
-	},
-	"TOKEN_OUTFIT_REWARD_HERO_SB_PATCH_SUIT": {
-		"Subtype": "S71",
-		"Properties": {
-			"OrderIndex": 4
-		}
-	},
-	"TOKEN_OUTFIT_REWARD_HERO_PEN_FIGHT_SUIT": {
-		"Subtype": "S71",
-		"Properties": {
-			"OrderIndex": 5
-		}
-	},
-	"TOKEN_OUTFIT_REWARD_HERO_PEN_COAT_SUIT": {
-		"Subtype": "S71",
-		"Properties": {
-			"OrderIndex": 6
-		}
-	},
-	"TOKEN_OUTFIT_LAMBIC_KICKBOXER_REWARD": {
 		"Subtype": "S71",
 		"Properties": {
 			"OrderIndex": 7
 		}
 	},
-	"TOKEN_OUTFIT_LAMBIC_KICKBOXER_REWARD_PURPLE": {
+	"TOKEN_OUTFIT_REWARD_HERO_CHRISTMAS_SUIT": {
 		"Subtype": "S71",
 		"Properties": {
 			"OrderIndex": 8
 		}
 	},
-	"TOKEN_OUTFIT_REWARD_HERO_LAMBIC_SUIT": {
+	"TOKEN_OUTFIT_HERO_BUTCHER_SUIT": {
 		"Subtype": "S71",
+		"Properties": {
+			"OrderIndex": 1
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_SB_SUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 3
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_SB_PATCH_SUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 4
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_PEN_FIGHT_SUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 5
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_PEN_COAT_SUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 6
+		}
+	},
+	"TOKEN_OUTFIT_LAMBIC_KICKBOXER_REWARD": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 7
+		}
+	},
+	"TOKEN_OUTFIT_LAMBIC_KICKBOXER_REWARD_PURPLE": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 8
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_LAMBIC_SUIT": {
+		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 9
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_HERO_FRENCHMARTINI_SUIT": {
-		"Subtype": "S71",
+		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 10
 		}
 	},
 	"TOKEN_OUTFIT_FRENCHMARTINI_POKER_REWARD": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 11
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_YELLOW_TRACKSUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 12
+		}
+	},
+	"TOKEN_OUTFIT_REWARD_HERO_BAIJU_SUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 13
+		}
+	},
+	"TOKEN_OUTFIT_HERO_EASTER_DUCK_SUIT": {
+		"Subtype": "S71",
+		"Properties": {
+			"OrderIndex": 9
+		}
+	},
+		"TOKEN_OUTFIT_HERO_SUMMER_YELLOW_REWARD": {
+		"Subtype": "S2",
+		"Properties": {
+			"OrderIndex": 9.1
+		}
+	},
+	"TOKEN_OUTFIT_SINGRAY_SWIMWEAR_REWARD_T": {
+		"Subtype": "S71",
+		"Properties": {
+			"OrderIndex": 10
+		}
+	},
+	"TOKEN_OUTFIT_HERO_BLACKTURTLESPECIAL_SUIT": {
 		"Subtype": "S71",
 		"Properties": {
 			"OrderIndex": 11
 		}
 	},
-	"TOKEN_OUTFIT_HERO_EASTER_DUCK_SUIT": {
-		"Subtype": "S3",
+	"TOKEN_OUTFIT_REWARD_HERO_BURGUNDY_SUIT": {
+		"Subtype": "S71",
 		"Properties": {
-			"OrderIndex": 39
+			"OrderIndex": 12
 		}
 	},
-	"TOKEN_OUTFIT_SINGRAY_SWIMWEAR_REWARD_T": {
+		"TOKEN_OUTFIT_REWARD_HERO_PUBLICENEMY_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 31
+			"OrderIndex": 8.1
 		}
 	},
 	"TOKEN_OUTFIT_HITMANSUIT": {
@@ -766,7 +790,7 @@
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_HERO_LEGACY47_SUIT": {
-		"Subtype": "S0",
+		"Subtype": "S71",
 		"Properties": {
 			"OrderIndex": 6
 		}
@@ -1569,6 +1593,11 @@
 			"OrderIndex": 81
 		}
 	},
+	"TOKEN_PROP_TOOL_CROWBAR_PURPLE_T": {
+		"Properties": {
+			"OrderIndex": 82
+		}
+	},
 	"PROP_TOOL_WRENCH_HANDYMAN": {
 		"Properties": {
 			"OrderIndex": 91
@@ -1702,6 +1731,11 @@
 	"TOKEN_PROP_DEVICE_RUBBERDUCK_REMOTE_EXPLOSIVE_V": {
 		"Properties": {
 			"OrderIndex": 115
+		}
+	},
+	"TOKEN_PROP_DEVICE_DRAGON_RUBBERDUCK_REMOTE_EXPLOSIVE": {
+		"Properties": {
+			"OrderIndex": 117
 		}
 	},
 	"PROP_DEVICE_ICA_C4_REMOTE_EXPLOSIVE": {
@@ -2014,6 +2048,12 @@
 		"Subtype": "distraction",
 		"Properties": {
 			"OrderIndex": 51
+		}
+	},
+		"TOKEN_PROP_TOOL_APPLE_T": {
+		"Subtype": "distraction",
+		"Properties": {
+			"OrderIndex": 52
 		}
 	},
 	"PROP_DISTRACTION_FIRECRACKER": {
@@ -2341,6 +2381,16 @@
 			"OrderIndex": 182
 		}
 	},
+	"TOKEN_PROP_MELEE_JADE_DAGGER": {
+		"Properties": {
+			"OrderIndex": 183
+		}
+	},
+	"TOKEN_PROP_MELEE_SCISSORS_BAIJU": {
+		"Properties": {
+			"OrderIndex": 184
+		}
+	},
 	"PROP_MELEE_PITON": {
 		"Properties": {
 			"OrderIndex": 191
@@ -2483,6 +2533,11 @@
 			"OrderIndex": 381
 		}
 	},
+	"TOKEN_PROP_MELEE_PRETZEL": {
+		"Properties": {
+			"OrderIndex": 382
+		}
+	},
 	"PROP_MELEE_BANANA": {
 		"Properties": {
 			"OrderIndex": 331
@@ -2581,6 +2636,12 @@
 	"PROP_MELEE_CANE_PENICILLIN": {
 		"Properties": {
 			"OrderIndex": 562
+		}
+	},
+	"TOKEN_PROP_MELEE_KALI_STICKS": {
+		"Properties": {
+			"OrderIndex": 563,
+			"LoadoutSlot": "concealedweapon"
 		}
 	}
 }
