@@ -1,0 +1,183 @@
+{
+	"tempHash": "00AAD0F7BF22DE8E",
+	"tbluHash": "0032666550C86A67",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_bDepthOfFieldEnabled",
+						"value": true
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_bHDREnabled",
+						"value": true
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"SetPropertyValue": {
+						"property_name": "BillboardTexture",
+						"value": {
+							"resource": "0059DB06B487B520",
+							"flag": "5F"
+						}
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_fLensBlur",
+						"value": 1.9
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"AddProperty": [
+						"m_eHDRToneMapType",
+						{
+							"type": "ZRenderPostfilterParametersEntity.EHDRToneMapType",
+							"value": "eFilmicRGB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"AddProperty": [
+						"m_vHDRAdaptationMiddleGrayMinMax",
+						{
+							"type": "SVector2",
+							"value": { "x": 0.2, "y": 0.4 }
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"AddProperty": [
+						"m_vHDRAdaptationLuminanceMinMax",
+						{
+							"type": "SVector2",
+							"value": { "x": 0.1, "y": 0.8 }
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{
+					"AddProperty": [
+						"m_vHDRAdaptationSpeed",
+						{
+							"type": "SVector2",
+							"value": { "x": 0.0, "y": 0.0 }
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"0628283349d406f5",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_fBlendInDuration",
+						"value": 0
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"0628283349d406f5",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_fBlendOutDuration",
+						"value": 0
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"bdd9a43c47641714",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_bDepthOfFieldEnabled",
+						"value": true
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe2e2cb97e6860",
+				{
+					"parent": "bdd9a43c47641714",
+					"name": "EventChannelReceiver_void",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec86b1d81440a",
+							"postInit": true
+						}
+					},
+					"events": {
+						"EventReceived": {
+							"GamePause": ["bdd9a43c47641714"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafec86b1d81440a",
+				{
+					"parent": "cafe2e2cb97e6860",
+					"name": "EventToken_Evergreen_AgendaStatus_CourierActive",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "PauseFilter"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

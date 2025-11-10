@@ -1,5 +1,5 @@
 {
-	"version": "11.0.3",
+	"version": "12.0.0",
 	"id": "BurnTheWitch.HeritageUI",
 	"name": "Heritage UI",
 	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
@@ -458,7 +458,56 @@
 			"type": "select",
 			"group": "UI Style",
 			"contentFolders": ["mod content/ui styles/heritage ui alpha buttons"],
-			"blobsFolders": ["mod content/ui styles/blobs"]
+			"blobsFolders": ["mod content/ui styles/blobs"],
+			"enabledByDefault": true
+		},
+		{
+			"name": "Vanilla",
+			"tooltip": "HITMAN WOA's default pause filter.",
+			"image": "framework content/d_pf.png",
+			"type": "select",
+			"group": "Pause Filter"
+		},
+		{
+			"name": "Heritage UI Black",
+			"tooltip": "Heritage UI'S moody black, now a post processing filter. Ideally used with HUI UI Styles.",
+			"image": "framework content/pf_black.png",
+			"type": "select",
+			"group": "Pause Filter",
+			"contentFolders": ["mod content/pause filter/hui black"],
+			"enabledByDefault": true
+		},
+		{
+			"name": "Hitman 2016 Red",
+			"tooltip": "Heritage UI'S custom pause filter inspired by Hitman 2016's iconic red filter. Ideally used with HUI UI Styles.",
+			"image": "framework content/pf_red.png",
+			"type": "select",
+			"group": "Pause Filter",
+			"contentFolders": ["mod content/pause filter/2016 red"]
+		},
+		{
+			"name": "Disabled",
+			"tooltip": "Disables the pause filter. Ideally used with HUI UI Styles.",
+			"image": "framework content/pf_none.png",
+			"type": "select",
+			"group": "Pause Filter",
+			"contentFolders": ["mod content/pause filter/no"]
+		},
+		{
+			"name": "Vanilla",
+			"tooltip": "HITMAN WOA'S default weapon wheel scaling.",
+			"image": "framework content/ww_v.png",
+			"type": "select",
+			"group": "Weapon Wheel"
+		},
+		{
+			"name": "Classic",
+			"tooltip": "Changes the scaling of the weapon wheel to match 2016. Highly reccomended to use with HUI UI Style, or it will not look good due to the background being turned off in HUI.",
+			"image": "framework content/ww_c.png",
+			"type": "select",
+			"group": "Weapon Wheel",
+			"contentFolders": ["mod content/weapon wheel"],
+			"enabledByDefault": true
 		},
 		{
 			"name": "Vanilla (Neue Haas Grotesk)",

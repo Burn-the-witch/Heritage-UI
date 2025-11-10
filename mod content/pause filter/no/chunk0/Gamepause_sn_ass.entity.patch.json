@@ -1,0 +1,20 @@
+{
+	"tempHash": "005E7220E6E7A621",
+	"tbluHash": "00CC1F17694D7C4B",
+	"patch": [
+		{ "SubEntityOperation": ["e3916f33a8431475", { "RemovePropertyByName": "BillboardTexture" }] },
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{ "SetPropertyValue": { "property_name": "m_bColorCorrectionEnabled", "value": false } }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e3916f33a8431475",
+				{ "RemovePlatformSpecificPropertyByName": ["VR", "BillboardTexture"] }
+			]
+		}
+	],
+	"patchVersion": 6
+}

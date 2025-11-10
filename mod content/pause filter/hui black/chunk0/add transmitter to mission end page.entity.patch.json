@@ -1,0 +1,54 @@
+{
+	"tempHash": "0093B7139387B988",
+	"tbluHash": "004D99E9BEC3EA51",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"5b6838fafe285b9e",
+				{
+					"AddOutputCopyConnection": [
+						"PageOpened",
+						"TransmitEvent",
+						"cafee1a14622c3a6"
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee1a14622c3a6",
+				{
+					"parent": "5b6838fafe285b9e",
+					"name": "Event Transmitter",
+					"factory": "0037A7E362011A78",
+					"blueprint": "003D29EFE5AC1BCC",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": true },
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafef202cc16518c"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef202cc16518c",
+				{
+					"parent": "cafee1a14622c3a6",
+					"name": "EventToken_Evergreen_AgendaStatus_CourierActive",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "PauseFilter"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

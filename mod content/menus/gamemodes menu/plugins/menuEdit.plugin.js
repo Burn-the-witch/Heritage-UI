@@ -334,14 +334,14 @@ module.exports = function initPlugin(controller) {
 	// add gamemodesoverview.json to the list of menu pages that need to be fetched from the server
 	menuSystem.menuSystemDatabase.hooks.getDatabaseDiff.tap("MenuEditExamplePlugin", (configs, gameVersion) => {
 		if (gameVersion === "h3") {
-			configs.push("menusystem/pages/hub/gamemodes/gamemodesoverview.json")
+			configs.push("menusystem/pages/hub/gamemodes/gamemodesoverview_heritage.json")
 		}
 	})
 
 	// return the correct gamemodesoverview.json object when asked
 	menuSystem.menuSystemDatabase.hooks.getConfig.tap("MenuEditExamplePlugin", (configName, gameVersion) => {
 		if (gameVersion === "h3") {
-			if (configName === "/pages/hub/gamemodes/gamemodesoverview.json") {
+			if (configName === "/pages/hub/gamemodes/gamemodesoverview_heritage.json") {
 				return menu1
 			}
 		}
