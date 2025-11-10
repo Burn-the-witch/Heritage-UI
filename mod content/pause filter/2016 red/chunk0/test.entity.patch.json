@@ -6,10 +6,7 @@
 			"SubEntityOperation": [
 				"9583a6e6534859c8",
 				{
-					"AddProperty": [
-						"m_isInworldUI",
-						{ "type": "bool", "value": true }
-					]
+					"AddProperty": ["m_isInworldUI", { "type": "bool", "value": true }]
 				}
 			]
 		},

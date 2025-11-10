@@ -6,11 +6,7 @@
 			"SubEntityOperation": [
 				"5b6838fafe285b9e",
 				{
-					"AddOutputCopyConnection": [
-						"PageOpened",
-						"TransmitEvent",
-						"cafee1a14622c3a6"
-					]
+					"AddOutputCopyConnection": ["PageOpened", "TransmitEvent", "cafee1a14622c3a6"]
 				}
 			]
 		},
