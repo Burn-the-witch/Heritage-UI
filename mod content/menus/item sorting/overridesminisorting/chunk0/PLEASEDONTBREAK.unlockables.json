@@ -723,7 +723,7 @@
 			"OrderIndex": 9
 		}
 	},
-		"TOKEN_OUTFIT_HERO_SUMMER_YELLOW_REWARD": {
+	"TOKEN_OUTFIT_HERO_SUMMER_YELLOW_REWARD": {
 		"Subtype": "S2",
 		"Properties": {
 			"OrderIndex": 9.1
@@ -747,7 +747,7 @@
 			"OrderIndex": 12
 		}
 	},
-		"TOKEN_OUTFIT_REWARD_HERO_PUBLICENEMY_SUIT": {
+	"TOKEN_OUTFIT_REWARD_HERO_PUBLICENEMY_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
 			"OrderIndex": 8.1
@@ -2050,7 +2050,7 @@
 			"OrderIndex": 51
 		}
 	},
-		"TOKEN_PROP_TOOL_APPLE_T": {
+	"TOKEN_PROP_TOOL_APPLE_T": {
 		"Subtype": "distraction",
 		"Properties": {
 			"OrderIndex": 52
