@@ -961,8 +961,8 @@
 			"group": "Gamemodes Menu",
 			"blobsFolders": ["mod content/menus/gamemodes menu ghost mode/blobs"],
 			"peacockPlugins": [
-				"mod content/menus/gamemodes menu/plugins/arcade.plugin.js",
-				"mod content/menus/gamemodes menu/plugins/menuEditghost.plugin.js"
+				"mod content/menus/gamemodes menu ghost mode/plugins/arcade.plugin.js",
+				"mod content/menus/gamemodes menu ghost mode/plugins/menuEditghost.plugin.js"
 			]
 		},
 		{
