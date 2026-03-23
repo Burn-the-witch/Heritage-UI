@@ -216,97 +216,97 @@
   "TOKEN_OUTFIT_REWARD_GREENLAND_HERO_TRAININGSUITWITHGLOVES": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 3 
+			"OrderIndex": 2.1
 		}
 	},
 	"TOKEN_OUTFIT_PARIS_HERO_PARISSUIT": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 4
+			"OrderIndex": 3
 		}
 	},
 	"TOKEN_OUTFIT_HERO_PARISSUITANDGLOVES": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 5
+			"OrderIndex": 4
 		}
 	},
 	"TOKEN_OUTFIT_SAPIENZA_HERO_SAPIENZASUIT": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 6
+			"OrderIndex": 5
 		}
 	},
 	"TOKEN_OUTFIT_SAPIENZA_HERO_SAPIENZASUIT_NOGLASSES": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 7
+			"OrderIndex": 6
 		}
 	},
 	"TOKEN_OUTFIT_HERO_SAPIENZASUITANDGLOVES": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 8
+			"OrderIndex": 7
 		}
 	},
 	"TOKEN_OUTFIT_MARRAKESH_HERO_MARRAKESHSUIT": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 9
+			"OrderIndex": 8
 		}
 	},
 	"TOKEN_OUTFIT_HERO_MARRAKESHSUITANDGLOVES": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 10
+			"OrderIndex": 9
 		}
 	},
 	"TOKEN_OUTFIT_BANGKOK_HERO_BANGKOKSUIT": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 11
+			"OrderIndex": 10
 		}
 	},
 	"TOKEN_OUTFIT_HERO_BANGKOKSUITANDGLOVES": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 12
+			"OrderIndex": 11
 		}
 	},
 	"TOKEN_OUTFIT_COLORADO_HERO_COLORADOSUIT": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 13
+			"OrderIndex": 12
 		}
 	},
 	"TOKEN_OUTFIT_HERO_COLORADOSUIT_ALTERNATIVE": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 14
+			"OrderIndex": 13
 		}
 	},
 	"TOKEN_OUTFIT_HOKKAIDO_HERO_HOKKAIDOSUIT": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 15
+			"OrderIndex": 14
 		}
 	},
 	"TOKEN_OUTFIT_HERO_HOKKAIDOSUIT_ET_ALTERNATIVE": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 16
+			"OrderIndex": 15
 		}
 	},
 	"TOKEN_OUTFIT_HERO_SANTACLAUS_SUIT": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 17
+			"OrderIndex": 16
 		}
 	},
 	"TOKEN_OUTFIT_HERO_PLAGUEDOCTOR": {
 		"Subtype": "S1",
 		"Properties": {
-			"OrderIndex": 18
+			"OrderIndex": 17
 		}
 	},
 	"TOKEN_OUTFIT_NEWZEALAND_HERO_NEWZEALANDSUIT": {
@@ -552,7 +552,7 @@
 	"TOKEN_OUTFIT_HERO_DUGONG_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 11
+			"OrderIndex": 11.1
 		}
 	},
 	"TOKEN_OUTFIT_ANCESTRAL_HERO_SMOOTHSNAKESUIT": {
@@ -654,7 +654,7 @@
   "TOKEN_OUTFIT_REWARD_HERO_GNOME": {
 		"Subtype": "S71",
 		"Properties": {
-			"OrderIndex": 9 
+			"OrderIndex": 8.1
 		}
 	},
 	"TOKEN_OUTFIT_HERO_BUTCHER_SUIT": {
@@ -774,7 +774,7 @@
 	"TOKEN_OUTFIT_HERO_SUMMER_YELLOW_REWARD": {
 		"Subtype": "S71",
 		"Properties": {
-			"OrderIndex": 11 
+			"OrderIndex": 10.1
 		}
 	},
 	"TOKEN_OUTFIT_SINGRAY_SWIMWEAR_REWARD_T": {
@@ -804,7 +804,7 @@
 	"TOKEN_OUTFIT_REWARD_HERO_PUBLICENEMY_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 11
+			"OrderIndex": 10.1
 		}
 	},
 	"TOKEN_OUTFIT_HITMANSUIT": {
@@ -1585,7 +1585,7 @@
 	},
 	"FIREARMS_SNIPER_DRUZHINA_34_ICA": {
 		"Properties": {
-			"OrderIndex": 182
+			"OrderIndex": 181.1
 		}
 	},
 	"FIREARMS_HERO_SNIPER_MAKESHIFT": {
@@ -1695,7 +1695,7 @@
 	},
   "PROP_TOOL_WRENCH_PURPLE_A": {
 		"Properties": {
-			"OrderIndex": 93
+			"OrderIndex": 92.1
 		}
 	},
 	"PROP_TOOL_SCREWDRIVER_PROFESSIONAL": {
@@ -1705,7 +1705,7 @@
 	},
   "PROP_TOOL_SCREWDRIVER_PURPLE_A": {
 		"Properties": {
-			"OrderIndex": 103
+			"OrderIndex": 101.1
 		}
 	},
 	"PROP_DEVICE_ICA_MODULAR_REMOTE_EMP": {
@@ -1780,7 +1780,7 @@
 	},
 	"PROP_DEVICE_BELLINI_FIGURE_REMOTE_EXPLOSIVE": {
 		"Properties": {
-			"OrderIndex": 52
+			"OrderIndex": 51.1
 		}
 	},
 	"PROP_DEVICE_ICA_RUBBERDUCK_REMOTE_EXPLOSIVE": {
@@ -1830,12 +1830,12 @@
 	},
 	"TOKEN_PROP_DEVICE_RUBBERDUCK_REMOTE_EXPLOSIVE_CREATOR_A": {
 		"Properties": {
-			"OrderIndex": 115
+			"OrderIndex": 114.1
 		}
 	},
 	"TOKEN_PROP_DEVICE_RUBBERDUCK_REMOTE_EXPLOSIVE_V": {
 		"Properties": {
-			"OrderIndex": 116
+			"OrderIndex": 115
 		}
 	},
 	"TOKEN_PROP_DEVICE_DRAGON_RUBBERDUCK_REMOTE_EXPLOSIVE": {
@@ -1910,7 +1910,7 @@
 	},
 "TOKEN_PROP_DEVICE_TGA_A_RUBBERDUCK_REMOTE_FLASH": {
 		"Properties": {
-			"OrderIndex": 233
+			"OrderIndex": 232.1
 		}
 	},
 	"PROP_DEVICE_ICA_MODULAR_PROXIMITY_EXPLOSIVE": {
@@ -1960,7 +1960,7 @@
 	},
 "TOKEN_PROP_DEVICE_TGA_B_RUBBERDUCK_PROXIMITY_EXPLOSIVE": {
 		"Properties": {
-			"OrderIndex": 312
+			"OrderIndex": 311.2
 		}
 	},
 	"PROP_DEVICE_ICA_C4_PROXIMITY_EXPLOSIVE": {
@@ -1990,7 +1990,7 @@
 	},
 	"TOKEN_PROP_DEVICE_BAIJU_RUBBERDUCK_PROXIMITY_CONCUSSION": {
 		"Properties": {
-			"OrderIndex": 362
+			"OrderIndex": 361.1
 		}
 	},
 	"PROP_EXPLOSIVE_GRENADE_FRAG": {
@@ -2000,7 +2000,7 @@
 	},
 	"TOKEN_PROP_EXPLOSIVE_DYNAMITE_BELLINI_T": {
 		"Properties": {
-			"OrderIndex": 372
+			"OrderIndex": 371.1
 		}
 	},
 	"PROP_EXPLOSIVE_NITROGLYCERINE": {
@@ -2171,7 +2171,7 @@
   "PROP_MELEE_PURPLE_EASTEREGG_A": {
 		"Subtype": "distraction",
 		"Properties": {
-			"OrderIndex": 45
+			"OrderIndex": 44.1
 		}
 	},
 	"PROP_TOOL_COIN_T": {
@@ -2305,7 +2305,7 @@
 "TOKEN_PROP_DEVICE_FILUR_RUBBERDUCK_PROXIMITY_EMETIC": {
 		"Subtype": "poison",
 		"Properties": {
-			"OrderIndex": 112
+			"OrderIndex": 111.1
 		}
 	},
 
