@@ -1,5 +1,5 @@
 const loggingInterop_1 = require("@peacockproject/core/loggingInterop")
-;(0, loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Arcade Page overriden.")
+;(0, loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Hit UI] Arcade Page overriden.")
 module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 	controller.configManager.configs.ArcadePageTemplate = {
 		id: "gamemodearcade_root",

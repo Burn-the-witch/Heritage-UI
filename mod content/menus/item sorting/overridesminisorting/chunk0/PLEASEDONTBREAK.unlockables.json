@@ -213,6 +213,12 @@
 			"OrderIndex": 2
 		}
 	},
+  "TOKEN_OUTFIT_REWARD_GREENLAND_HERO_TRAININGSUITWITHGLOVES": {
+		"Subtype": "S1",
+		"Properties": {
+			"OrderIndex": 2.1
+		}
+	},
 	"TOKEN_OUTFIT_PARIS_HERO_PARISSUIT": {
 		"Subtype": "S1",
 		"Properties": {
@@ -645,6 +651,12 @@
 			"OrderIndex": 8
 		}
 	},
+  "TOKEN_OUTFIT_REWARD_HERO_GNOME": {
+		"Subtype": "S71",
+		"Properties": {
+			"OrderIndex": 8.1
+		}
+	},
 	"TOKEN_OUTFIT_HERO_BUTCHER_SUIT": {
 		"Subtype": "S71",
 		"Properties": {
@@ -717,6 +729,42 @@
 			"OrderIndex": 13
 		}
 	},
+  	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_GOWN": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 14
+		}
+	},
+  	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_SLIMSHADY": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 15
+		}
+	},
+   	"TOKEN_OUTFIT_HERO_FILUR_SUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 17
+		}
+	},
+ 	"TOKEN_OUTFIT_REWARD_HERO_FILUR_SUIT": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 18
+		}
+	},
+   	"TOKEN_OUTFIT_REWARD_HERO_FILUR_OUTBREAK": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 19
+		}
+	},
+    	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_EMINEM": {
+		"Subtype": "S72",
+		"Properties": {
+			"OrderIndex": 16
+		}
+	},
 	"TOKEN_OUTFIT_HERO_EASTER_DUCK_SUIT": {
 		"Subtype": "S71",
 		"Properties": {
@@ -724,9 +772,9 @@
 		}
 	},
 	"TOKEN_OUTFIT_HERO_SUMMER_YELLOW_REWARD": {
-		"Subtype": "S2",
+		"Subtype": "S71",
 		"Properties": {
-			"OrderIndex": 9.1
+			"OrderIndex": 10.1
 		}
 	},
 	"TOKEN_OUTFIT_SINGRAY_SWIMWEAR_REWARD_T": {
@@ -747,10 +795,16 @@
 			"OrderIndex": 12
 		}
 	},
+	"TOKEN_OUTFIT_REWARD_HERO_SOLSTICE_SUIT_DUCK_T": {
+		"Subtype": "S71",
+		"Properties": {
+			"OrderIndex": 13
+		}
+	},
 	"TOKEN_OUTFIT_REWARD_HERO_PUBLICENEMY_SUIT": {
 		"Subtype": "S2",
 		"Properties": {
-			"OrderIndex": 8.1
+			"OrderIndex": 10.1
 		}
 	},
 	"TOKEN_OUTFIT_HITMANSUIT": {
@@ -790,9 +844,9 @@
 		}
 	},
 	"TOKEN_OUTFIT_REWARD_HERO_LEGACY47_SUIT": {
-		"Subtype": "S71",
+		"Subtype": "S0",
 		"Properties": {
-			"OrderIndex": 6
+			"OrderIndex": 25
 		}
 	},
 	"TOKEN_OUTFIT_HERO_WINTER_SUIT": {
@@ -1086,6 +1140,16 @@
 			"OrderIndex": 351
 		}
 	},
+  "FIREARMS_HERO_PISTOL_BELLINI_A": {
+		"Properties": {
+			"OrderIndex": 352
+		}
+	},
+   "FIREARMS_HERO_PISTOL_FILUR": {
+		"Properties": {
+			"OrderIndex": 353
+		}
+	},
 	"PROP_CONTAINER_SUITCASE_ICA": {
 		"Properties": {
 			"OrderIndex": 1
@@ -1174,6 +1238,17 @@
 	"PROP_CONTAINER_SUITCASE_ICA_T": {
 		"Properties": {
 			"OrderIndex": 162
+		}
+	},
+	"PROP_CONTAINER_SUITCASE_DJ_BAG": {
+		"Properties": {
+			"OrderIndex": 163
+		}
+	},
+
+	"PROP_CONTAINER_SUITCASE_SNIPERCASE_ICA": {
+		"Properties": {
+			"OrderIndex": 164
 		}
 	},
 	"FIREARMS_HERO_SMG_TAC_SMG": {
@@ -1508,6 +1583,11 @@
 			"OrderIndex": 181
 		}
 	},
+	"FIREARMS_SNIPER_DRUZHINA_34_ICA": {
+		"Properties": {
+			"OrderIndex": 181.1
+		}
+	},
 	"FIREARMS_HERO_SNIPER_MAKESHIFT": {
 		"Properties": {
 			"OrderIndex": 191
@@ -1588,6 +1668,11 @@
 			"OrderIndex": 71
 		}
 	},
+	"TOKEN_PROP_TOOL_KEYCARD_HACKER_FILUR": {
+		"Properties": {
+			"OrderIndex": 72
+		}
+	},
 	"PROP_TOOL_BURGLARCROWBAR": {
 		"Properties": {
 			"OrderIndex": 81
@@ -1608,9 +1693,19 @@
 			"OrderIndex": 92
 		}
 	},
+  "PROP_TOOL_WRENCH_PURPLE_A": {
+		"Properties": {
+			"OrderIndex": 92.1
+		}
+	},
 	"PROP_TOOL_SCREWDRIVER_PROFESSIONAL": {
 		"Properties": {
 			"OrderIndex": 101
+		}
+	},
+  "PROP_TOOL_SCREWDRIVER_PURPLE_A": {
+		"Properties": {
+			"OrderIndex": 101.1
 		}
 	},
 	"PROP_DEVICE_ICA_MODULAR_REMOTE_EMP": {
@@ -1683,6 +1778,11 @@
 			"OrderIndex": 51
 		}
 	},
+	"PROP_DEVICE_BELLINI_FIGURE_REMOTE_EXPLOSIVE": {
+		"Properties": {
+			"OrderIndex": 51.1
+		}
+	},
 	"PROP_DEVICE_ICA_RUBBERDUCK_REMOTE_EXPLOSIVE": {
 		"Properties": {
 			"OrderIndex": 61
@@ -1726,6 +1826,11 @@
 	"TOKEN_PROP_DEVICE_RUBBERDUCK_REMOTE_EXPLOSIVE_SHOWCASE": {
 		"Properties": {
 			"OrderIndex": 114
+		}
+	},
+	"TOKEN_PROP_DEVICE_RUBBERDUCK_REMOTE_EXPLOSIVE_CREATOR_A": {
+		"Properties": {
+			"OrderIndex": 114.1
 		}
 	},
 	"TOKEN_PROP_DEVICE_RUBBERDUCK_REMOTE_EXPLOSIVE_V": {
@@ -1803,6 +1908,11 @@
 			"OrderIndex": 232
 		}
 	},
+"TOKEN_PROP_DEVICE_TGA_A_RUBBERDUCK_REMOTE_FLASH": {
+		"Properties": {
+			"OrderIndex": 232.1
+		}
+	},
 	"PROP_DEVICE_ICA_MODULAR_PROXIMITY_EXPLOSIVE": {
 		"Properties": {
 			"OrderIndex": 241
@@ -1848,6 +1958,11 @@
 			"OrderIndex": 311
 		}
 	},
+"TOKEN_PROP_DEVICE_TGA_B_RUBBERDUCK_PROXIMITY_EXPLOSIVE": {
+		"Properties": {
+			"OrderIndex": 311.2
+		}
+	},
 	"PROP_DEVICE_ICA_C4_PROXIMITY_EXPLOSIVE": {
 		"Properties": {
 			"OrderIndex": 321
@@ -1873,9 +1988,19 @@
 			"OrderIndex": 361
 		}
 	},
+	"TOKEN_PROP_DEVICE_BAIJU_RUBBERDUCK_PROXIMITY_CONCUSSION": {
+		"Properties": {
+			"OrderIndex": 361.1
+		}
+	},
 	"PROP_EXPLOSIVE_GRENADE_FRAG": {
 		"Properties": {
 			"OrderIndex": 371
+		}
+	},
+	"TOKEN_PROP_EXPLOSIVE_DYNAMITE_BELLINI_T": {
+		"Properties": {
+			"OrderIndex": 371.1
 		}
 	},
 	"PROP_EXPLOSIVE_NITROGLYCERINE": {
@@ -1921,6 +2046,11 @@
 	"PROP_EXPLOSIVE_MAGNESIUM_POWDER": {
 		"Properties": {
 			"OrderIndex": 441
+		}
+	},
+	"PROP_DISTRACTION_FIRECRACKER": {
+		"Properties": {
+			"OrderIndex": 442
 		}
 	},
 	"PROP_EXPLOSIVE_GRENADE_CONCUSSION": {
@@ -2038,6 +2168,12 @@
 			"OrderIndex": 43
 		}
 	},
+  "PROP_MELEE_PURPLE_EASTEREGG_A": {
+		"Subtype": "distraction",
+		"Properties": {
+			"OrderIndex": 44.1
+		}
+	},
 	"PROP_TOOL_COIN_T": {
 		"Subtype": "distraction",
 		"Properties": {
@@ -2084,6 +2220,11 @@
 	"PROP_DEVICE_ICA_MODULAR_REMOTE_MUSICDISTRACTION": {
 		"Properties": {
 			"OrderIndex": 111
+		}
+	},
+	"TOKEN_PROP_DEVICE_FRENTINI_RUBBERDUCK_REMOTE_DISTRACTION": {
+		"Properties": {
+			"OrderIndex": 112
 		}
 	},
 	"PROP_DEVICE_ICA_MICRO_AUDIO_DISTRACTION": {
@@ -2166,6 +2307,13 @@
 			"OrderIndex": 111
 		}
 	},
+"TOKEN_PROP_DEVICE_FILUR_RUBBERDUCK_PROXIMITY_EMETIC": {
+		"Subtype": "poison",
+		"Properties": {
+			"OrderIndex": 111.1
+		}
+	},
+
 	"PROP_POISON_VIAL_FAST": {
 		"Subtype": "poison",
 		"Properties": {
@@ -2316,6 +2464,11 @@
 			"OrderIndex": 73
 		}
 	},
+"TOKEN_PROP_MELEE_FIBERWIRE_RED_TIE_A": {
+		"Properties": {
+			"OrderIndex": 74
+		}
+	},
 	"PROP_MELEE_COMBAT_KNIFE": {
 		"Properties": {
 			"OrderIndex": 81
@@ -2416,6 +2569,13 @@
 	"PROP_MELEE_DUGONG_GRIPHOOK": {
 		"Properties": {
 			"OrderIndex": 221,
+			"LoadoutSlot": "gear"
+		}
+	},
+
+	"TOKEN_PROP_MELEE_SICKLE_FILUR": {
+		"Properties": {
+			"OrderIndex": 222,
 			"LoadoutSlot": "gear"
 		}
 	},
@@ -2536,6 +2696,12 @@
 	"TOKEN_PROP_MELEE_PRETZEL": {
 		"Properties": {
 			"OrderIndex": 382
+		}
+	},
+
+	"TOKEN_PROP_MELEE_JAR_BELLINI_A": {
+		"Properties": {
+			"OrderIndex": 383
 		}
 	},
 	"PROP_MELEE_BANANA": {

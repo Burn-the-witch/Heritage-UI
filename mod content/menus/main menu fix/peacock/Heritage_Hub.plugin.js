@@ -1,5 +1,5 @@
 const loggingInterop_1 = require("@peacockproject/core/loggingInterop")
-loggingInterop_1.log(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Hub replacement active.")
+loggingInterop_1.log(loggingInterop_1.LogLevel.INFO, "[Hit UI] Hub replacement active.")
 const { menuSystemDatabase } = require("@peacockproject/core/menus/menuSystem")
 module.exports = function HUI_PEACOCK_MENU_HUB(controller) {
 	HubJSON = {

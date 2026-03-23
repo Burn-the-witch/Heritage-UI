@@ -1,6 +1,6 @@
 const loggingInterop_1 = require("@peacockproject/core/loggingInterop")
 const { menuSystemDatabase } = require("@peacockproject/core/menus/menuSystem")
-;(0, loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Heritage UI] Dashboard replacement active.")
+;(0, loggingInterop_1.log)(loggingInterop_1.LogLevel.INFO, "[Hit UI] Dashboard replacement active.")
 module.exports = function HUI_PEACOCK_MENU_DASHBOARD(controller) {
 	xorshift = (t) => {
 		let e = t

@@ -7,17 +7,6 @@
 				"e3916f33a8431475",
 				{
 					"SetPropertyValue": {
-						"property_name": "m_bDepthOfFieldEnabled",
-						"value": true
-					}
-				}
-			]
-		},
-		{
-			"SubEntityOperation": [
-				"e3916f33a8431475",
-				{
-					"SetPropertyValue": {
 						"property_name": "m_bHDREnabled",
 						"value": true
 					}
