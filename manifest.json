@@ -1,11 +1,11 @@
 {
-	"version": "13.0.0",
+	"version": "14.0.0",
 	"id": "BurnTheWitch.HeritageUI",
 	"name": "Hit UI",
 	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
 	"description": "An opinionated UI overhaul by Max.",
 	"authors": ["Max"],
-	"frameworkVersion": "2.33.32",
+	"frameworkVersion": "2.33.35",
 	"loadAfter": ["Notex.SimpleKeyEventHelper", "HITMAPS.GhostModeEnabler", "BurnthewitchRiisikumi.Roulette"],
 	"incompatibilities": ["palach2018.DotCrosshair"],
 	"localisation": {
@@ -1332,7 +1332,7 @@
 			"type": "select",
 			"group": "Main Menu Background",
 			"blobsFolders": ["mod content/backgrounds/Hit UI Black/blobs"],
-						"enabledByDefault": true
+			"enabledByDefault": true
 		},
 		{
 			"name": "Hit UI (Redux)",
@@ -1468,7 +1468,7 @@
 			"type": "select",
 			"group": "Destination Backgrounds",
 			"blobsFolders": ["mod content/dest bgs/HUI Black/blobs"],
-						"enabledByDefault": true
+			"enabledByDefault": true
 		},
 		{
 			"name": "Hit UI (Classic)",
@@ -1706,10 +1706,10 @@
 			"localisationOverrides": {
 				"00DF7B76782F9DF1": {
 					"english": {
-						"1960224926": "Bartoli 75LK",
-						"2124547953": "MANYPASS",
 						"826307778": "DSO Operative with Gloves",
-						"1807848207": "DSO Operative"
+						"1807848207": "DSO Operative",
+						"1960224926": "Bartoli 75LK",
+						"2124547953": "MANYPASS"
 					},
 					"french": {},
 					"italian": {},
@@ -1742,7 +1742,6 @@
 				},
 				"006986A5A3F98191": {
 					"english": {
-						"816226064": "Bartoli PRNK",
 						"80972231": "Custom 5mm Ghost",
 						"114220078": "TAC-SMG Ornamental",
 						"159915413": "Hackl Leviathan Ducky Covert",
@@ -1753,6 +1752,7 @@
 						"546170036": "DAK X2 Special Covert",
 						"585698583": "ICA19 F/A Ducky Covert",
 						"784179770": "Kalmer 2",
+						"816226064": "Bartoli PRNK",
 						"976265004": "HWK99 Covert",
 						"1152286900": "ICA19 Whiteballer",
 						"1165829667": "Bartoli 0R",
@@ -1811,22 +1811,13 @@
 				},
 				"008322D98E1CFE04": {
 					"english": {
-						"16885725": "Chainsaw Duck",
-						"419320878": "Dynamite",
-						"3776224786": "IOI Award Duck",
-						"2811521764":"IOI Creator Duck",
-						"1921102639": "Tracksuit Duck",
-						"4240549434": "Poker Face Duck",
-						"1208680309": "Influential Duck",
-						"3589829665": "Purple Streak Wrench",
-						"1518465842": "Purple Streak Screwdriver",
-						"1130739102": "Mom's Spaghetti",
-						"4260172020": "Reinforced Red Tie",
 						"12552151": "Casino Plaque",
+						"16885725": "Chainsaw Duck",
 						"163621939": "Classic Duck",
 						"264649869": "Lethal Easter Egg",
 						"362218065": "Proximity C4 Mk III",
 						"378687878": "Iridescent Katana",
+						"419320878": "Dynamite",
 						"473844920": "Sedative Proximity Mine",
 						"558330162": "IOI Showcase Duck",
 						"571095698": "Cat's Claw",
@@ -1840,15 +1831,19 @@
 						"1027159718": "Rope",
 						"1089186032": "Lucky Cat",
 						"1122450144": "Remote C4 Mk III",
+						"1130739102": "Mom's Spaghetti",
 						"1153451912": "Sedative Gum",
 						"1177362553": "Emetic Pen Syringe",
 						"1199040880": "Fire Cracker",
+						"1208680309": "Influential Duck",
 						"1285854356": "Devil Duck",
 						"1286139107": "Purple Streak Crowbar",
 						"1367227604": "Club Boom Flightcase",
 						"1423618173": "Emetic Guru Pen Syringe",
 						"1432256677": "Ancestral Knife",
+						"1518465842": "Purple Streak Screwdriver",
 						"1596987004": "Dragon Briefcase",
+						"1921102639": "Tracksuit Duck",
 						"1940653787": "Customized Kukri Knife",
 						"1958976691": "Greedy Cane",
 						"1967478934": "Explosive Fountain Pen",
@@ -1862,19 +1857,24 @@
 						"2359075170": "Brown Leather Briefcase",
 						"2684151890": "Street Art Bat",
 						"2790251990": "Purple Streak Coin",
+						"2811521764": "IOI Creator Duck",
 						"2913254817": "VHS Tape",
 						"3411454055": "Roar Proximity Flash",
 						"3449576886": "Classic Fiber Wire",
 						"3518398583": "Football Boot",
+						"3589829665": "Purple Streak Wrench",
 						"3611983725": "Makeshift Katana",
 						"3643977275": "Casino Chip",
 						"3770174342": "Purple Streak Briefcase",
+						"3776224786": "IOI Award Duck",
 						"3839233495": "Lucky Cane",
 						"3870856120": "Purple Streak Duck",
 						"4103224383": "Gilded Wrench",
 						"4178568037": "Majestic Sabre",
 						"4194997898": "Straitjacket Belt",
 						"4200240817": "Ornamental Katana",
+						"4240549434": "Poker Face Duck",
+						"4260172020": "Reinforced Red Tie",
 						"4261183628": "Disruptor Kettlebell"
 					},
 					"french": {},
@@ -1955,10 +1955,6 @@
 				},
 				"004B8C5124A49543": {
 					"english": {
-						"2243182304": "Eminem's Fit",
-						"3796310040": "Slim Shady's Fit",
-						"549831869": "Christmas Comrade Suit",
-						"3858358392": "Solstice Suit",
 						"39609674": "Bruised Boxer Suit",
 						"60276344": "Beldingford Huntsman Suit",
 						"96317463": "Black Bruiser Suit",
@@ -1970,6 +1966,7 @@
 						"320948275": "Super Fan Suit",
 						"452583055": "Plague Doctor Suit",
 						"528053047": "Royale Black Tuxedo",
+						"549831869": "Christmas Comrade Suit",
 						"558511020": "Purple Streak Swimwear",
 						"598520579": "MMA Suit",
 						"615312987": "Raincoat",
@@ -2003,6 +2000,7 @@
 						"2168599423": "Graffiti Hoody Suit",
 						"2202462424": "Temper Suit",
 						"2231831317": "Codename 47 Suit",
+						"2243182304": "Eminem's Fit",
 						"2425319722": "Deadly Duck Suit",
 						"2572931238": "Raincoat with Gloves",
 						"2664290684": "Bruce Lee's Tracksuit",
@@ -2026,7 +2024,9 @@
 						"3617998863": "Master Freelancer Suit",
 						"3750001361": "Red Dragon Suit",
 						"3762946900": "Butcher Suit",
+						"3796310040": "Slim Shady's Fit",
 						"3852548481": "Martial Artist Uniform",
+						"3858358392": "Solstice Suit",
 						"3944984988": "Blue Streak Suit",
 						"4009319363": "Narcissus Suit",
 						"4083485844": "Black Streak Suit",

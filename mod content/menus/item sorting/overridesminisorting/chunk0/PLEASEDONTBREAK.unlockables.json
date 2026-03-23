@@ -213,7 +213,7 @@
 			"OrderIndex": 2
 		}
 	},
-  "TOKEN_OUTFIT_REWARD_GREENLAND_HERO_TRAININGSUITWITHGLOVES": {
+	"TOKEN_OUTFIT_REWARD_GREENLAND_HERO_TRAININGSUITWITHGLOVES": {
 		"Subtype": "S1",
 		"Properties": {
 			"OrderIndex": 2.1
@@ -651,7 +651,7 @@
 			"OrderIndex": 8
 		}
 	},
-  "TOKEN_OUTFIT_REWARD_HERO_GNOME": {
+	"TOKEN_OUTFIT_REWARD_HERO_GNOME": {
 		"Subtype": "S71",
 		"Properties": {
 			"OrderIndex": 8.1
@@ -729,37 +729,37 @@
 			"OrderIndex": 13
 		}
 	},
-  	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_GOWN": {
+	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_GOWN": {
 		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 14
 		}
 	},
-  	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_SLIMSHADY": {
+	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_SLIMSHADY": {
 		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 15
 		}
 	},
-   	"TOKEN_OUTFIT_HERO_FILUR_SUIT": {
+	"TOKEN_OUTFIT_HERO_FILUR_SUIT": {
 		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 17
 		}
 	},
- 	"TOKEN_OUTFIT_REWARD_HERO_FILUR_SUIT": {
+	"TOKEN_OUTFIT_REWARD_HERO_FILUR_SUIT": {
 		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 18
 		}
 	},
-   	"TOKEN_OUTFIT_REWARD_HERO_FILUR_OUTBREAK": {
+	"TOKEN_OUTFIT_REWARD_HERO_FILUR_OUTBREAK": {
 		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 19
 		}
 	},
-    	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_EMINEM": {
+	"TOKEN_OUTFIT_REWARD_HERO_BELLINI_EMINEM": {
 		"Subtype": "S72",
 		"Properties": {
 			"OrderIndex": 16
@@ -1140,12 +1140,12 @@
 			"OrderIndex": 351
 		}
 	},
-  "FIREARMS_HERO_PISTOL_BELLINI_A": {
+	"FIREARMS_HERO_PISTOL_BELLINI_A": {
 		"Properties": {
 			"OrderIndex": 352
 		}
 	},
-   "FIREARMS_HERO_PISTOL_FILUR": {
+	"FIREARMS_HERO_PISTOL_FILUR": {
 		"Properties": {
 			"OrderIndex": 353
 		}
@@ -1693,7 +1693,7 @@
 			"OrderIndex": 92
 		}
 	},
-  "PROP_TOOL_WRENCH_PURPLE_A": {
+	"PROP_TOOL_WRENCH_PURPLE_A": {
 		"Properties": {
 			"OrderIndex": 92.1
 		}
@@ -1703,7 +1703,7 @@
 			"OrderIndex": 101
 		}
 	},
-  "PROP_TOOL_SCREWDRIVER_PURPLE_A": {
+	"PROP_TOOL_SCREWDRIVER_PURPLE_A": {
 		"Properties": {
 			"OrderIndex": 101.1
 		}
@@ -1908,7 +1908,7 @@
 			"OrderIndex": 232
 		}
 	},
-"TOKEN_PROP_DEVICE_TGA_A_RUBBERDUCK_REMOTE_FLASH": {
+	"TOKEN_PROP_DEVICE_TGA_A_RUBBERDUCK_REMOTE_FLASH": {
 		"Properties": {
 			"OrderIndex": 232.1
 		}
@@ -1958,7 +1958,7 @@
 			"OrderIndex": 311
 		}
 	},
-"TOKEN_PROP_DEVICE_TGA_B_RUBBERDUCK_PROXIMITY_EXPLOSIVE": {
+	"TOKEN_PROP_DEVICE_TGA_B_RUBBERDUCK_PROXIMITY_EXPLOSIVE": {
 		"Properties": {
 			"OrderIndex": 311.2
 		}
@@ -2168,7 +2168,7 @@
 			"OrderIndex": 43
 		}
 	},
-  "PROP_MELEE_PURPLE_EASTEREGG_A": {
+	"PROP_MELEE_PURPLE_EASTEREGG_A": {
 		"Subtype": "distraction",
 		"Properties": {
 			"OrderIndex": 44.1
@@ -2302,7 +2302,7 @@
 			"OrderIndex": 111
 		}
 	},
-"TOKEN_PROP_DEVICE_FILUR_RUBBERDUCK_PROXIMITY_EMETIC": {
+	"TOKEN_PROP_DEVICE_FILUR_RUBBERDUCK_PROXIMITY_EMETIC": {
 		"Subtype": "poison",
 		"Properties": {
 			"OrderIndex": 111.1
@@ -2459,7 +2459,7 @@
 			"OrderIndex": 73
 		}
 	},
-"TOKEN_PROP_MELEE_FIBERWIRE_RED_TIE_A": {
+	"TOKEN_PROP_MELEE_FIBERWIRE_RED_TIE_A": {
 		"Properties": {
 			"OrderIndex": 74
 		}
