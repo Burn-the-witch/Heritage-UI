@@ -1,5 +1,5 @@
 {
-	"version": "14.0.1",
+	"version": "14.0.2",
 	"id": "BurnTheWitch.HeritageUI",
 	"name": "Hit UI",
 	"updateCheck": "https://github.com/Burn-the-witch/Heritage-UI/releases/latest/download/updates.json",
@@ -1749,6 +1749,7 @@
 						"268002322": "HX-10 Militia",
 						"291383916": "Sieger 300 Rude Ruby",
 						"372752044": "TAC-4 AR Ornamental",
+						"508273131": "Sieger 300 Ornamental",
 						"546170036": "DAK X2 Special Covert",
 						"585698583": "ICA19 F/A Ducky Covert",
 						"784179770": "Kalmer 2",
@@ -1797,8 +1798,7 @@
 						"3938717844": "DAK Covert Gold",
 						"4275385097": "ICA TAC 12 Covert",
 						"4287068859": "ICA19 Redballer",
-						"4292903895": "Custom 5mm Ducky",
-						"508273131": "Sieger 300 Ornamental"
+						"4292903895": "Custom 5mm Ducky"
 					},
 					"french": {},
 					"italian": {},
@@ -1905,7 +1905,7 @@
 						"2944947255": "ICA Briefcase Executive",
 						"3578533398": "Jarl's Sabre",
 						"3779994366": "ICA Briefcase Executive Mk II"
-          },
+					},
 					"french": {},
 					"italian": {},
 					"german": {},
