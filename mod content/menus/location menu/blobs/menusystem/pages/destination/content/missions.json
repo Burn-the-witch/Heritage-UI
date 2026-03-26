@@ -515,7 +515,7 @@
 									]
 								}
 							}
-						},	
+						},
 						{
 							"$if": {
 								"$condition": {
@@ -2328,7 +2328,7 @@
 																			}
 																		}
 																	},
-                                  {
+																	{
 																		"view": "menu3.basic.MenuTileTall",
 																		"row": 0,
 																		"col": 4,
@@ -3223,7 +3223,7 @@
 																			}
 																		}
 																	},
-{
+																	{
 																		"view": "menu3.basic.MenuTileTall",
 																		"row": 0,
 																		"col": 2,
