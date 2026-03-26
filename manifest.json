@@ -438,7 +438,7 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "HITMAN WOA's default UI.",
-			"image": "framework content/UI_Base.webp",
+			"image": "framework content/ui_base.webp",
 			"type": "select",
 			"group": "UI Style"
 		},
@@ -1409,7 +1409,7 @@
 		{
 			"name": "Hit UI (Redux)",
 			"tooltip": "Hit UI's loading screen, remade for the WOA release.",
-			"image": "framework content/ls_R.webp",
+			"image": "framework content/ls_r.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/Heritage Redux/content"]
@@ -1425,7 +1425,7 @@
 		{
 			"name": "Hitman 2016",
 			"tooltip": "Hitman 2016's timeless loading screen.",
-			"image": "framework content/LS_16.webp",
+			"image": "framework content/ls_16.webp",
 			"type": "select",
 			"group": "Loading Background",
 			"contentFolders": ["mod content/loading screens/2016/content"]
@@ -1573,7 +1573,7 @@
 		{
 			"name": "Hit UI",
 			"tooltip": "Hit UI'S custom career menu.",
-			"image": "framework content/CAREER_HUI.webp",
+			"image": "framework content/Career_HUI.webp",
 			"type": "select",
 			"group": "Career Menu",
 			"blobsFolders": ["mod content/menus/career menu/blobs"],
@@ -1623,7 +1623,7 @@
 		{
 			"name": "Hit UI",
 			"tooltip": "Hit UI'S custom story menu.",
-			"image": "framework content/cp_hui.webp",
+			"image": "framework content/CP_HUI.webp",
 			"type": "select",
 			"group": "Campaign Menu",
 			"blobsFolders": ["mod content/menus/story menu/blobs"],
@@ -1632,7 +1632,7 @@
 		{
 			"name": "Vanilla",
 			"tooltip": "WOA's default gamemodes menu.",
-			"image": "framework content/GM_V.webp",
+			"image": "framework content/gm_v.webp",
 			"type": "select",
 			"group": "Gamemodes Menu"
 		},
@@ -1798,7 +1798,7 @@
 						"4275385097": "ICA TAC 12 Covert",
 						"4287068859": "ICA19 Redballer",
 						"4292903895": "Custom 5mm Ducky",
-						"508273131:": "Sieger 300 Ornamental"
+						"508273131": "Sieger 300 Ornamental"
 					},
 					"french": {},
 					"italian": {},
@@ -1904,9 +1904,8 @@
 						"2161820740": "A rusty, old pirate sabre. Owned by Jarl, Son of Hanne, first mate to the Dread Pirate 'The Black Almond.'",
 						"2944947255": "ICA Briefcase Executive",
 						"3578533398": "Jarl's Sabre",
-						"3779994366": "ICA Briefcase Executive Mk II",
-						"1720810067445573": "Sunset Duck"
-					},
+						"3779994366": "ICA Briefcase Executive Mk II"
+          },
 					"french": {},
 					"italian": {},
 					"german": {},

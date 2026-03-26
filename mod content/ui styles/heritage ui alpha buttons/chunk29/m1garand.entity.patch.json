@@ -107,7 +107,7 @@
 					"SetPropertyValue": {
 						"property_name": "m_pImageRID",
 						"value": {
-							"resource": "[assembly:/_pro/online/default/cloudstorage/resources/images/evergreen/gamechangers/129_hot_killmethod_escapng.png].pc_gfx",
+							"resource": "[assembly:/_pro/online/default/cloudstorage/resources/images/evergreen/gamechangers/129_hot_killmethod_escaping.png].pc_gfx",
 							"flag": "5F"
 						}
 					}
