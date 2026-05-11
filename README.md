@@ -6,4 +6,4 @@ An opinionated UI overhaul by Max.
 
 ---
 
-`BurnTheWitch.HeritageUI` v14.0.2, by Max. This README was automatically generated from the mod's manifest.
+`BurnTheWitch.HeritageUI` v14.0.3, by Max. This README was automatically generated from the mod's manifest.
