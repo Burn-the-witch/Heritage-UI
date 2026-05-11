@@ -1168,7 +1168,7 @@
 		{
 			"name": "Classic",
 			"tooltip": "Changes the scaling of the weapon wheel to match 2016. Highly reccomended to use with HUI UI Style, or it will not look good due to the background being turned off in HUI.",
-			"image": "framework content/ww_c.png",
+			"image": "framework content/ww_C.png",
 			"type": "select",
 			"group": "Weapon Wheel",
 			"contentFolders": ["mod content/weapon wheel"],
